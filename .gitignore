@@ -10,3 +10,5 @@ _posts_drafts
 .sass-cache
 css/compiled/*.css
 js/compiled/*.js
+.sass-cache
+_server
