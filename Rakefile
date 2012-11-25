@@ -34,7 +34,9 @@ task :compass do
 end
 
 
-# ignore the "bit" stuff.. only relevant to my custom jekyll fork
+#
+# Make creating posts easier
+#
 
 desc 'create new post or bit. args: type (post, bit), title, future (# of days)'
 # rake new type=(bit|post) future=0 title="New post title goes here" slug="slug-override-title"
@@ -90,7 +92,7 @@ desc "Deploy to S3"
 task :deploy do
   sh "jekyll"
   sh "s3cmd sync _site/* s3://www.shalinvs.tk"
-  sh "rm -rf _site js/compiled css/compiled"
+  sh "rm -rf _site"
   sh "coffee --compile"
   sh "jekyll --lsi"
 end

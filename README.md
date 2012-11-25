@@ -1,33 +1,37 @@
-# [Shalinvs.tk](http://shalinvs.tk) Blog
+# [Shalin Shah's](http://www.shalinvs.tk) Blog
 
 Copyright (c) 2012 Shalin Shah
 
-Hi, I'm Shalin Shah and this is the source code for my blog, [http://feross.org](http://feross.org). Feel free to browse the source, fork at will, and [ask me questions](http://twitter.com/FreeTheFeross). Sharing is caring!
+Hi, I'm Shalin Shah and this is the source code for my blog, [http://www.shalinvs.tk](http://shalinvs.tk). You can fork this, recreate this, browse the code, and [ask me some questions about this](https://www.twitter.com/shlns)!
+
+## How I Built It
+
+The posts are written in html and Markdown. This blog is powered by a Ruby app called [Jekyll](http://github.com/mojombo/jekyll). Jekyll is a ruby based static site generator that takes the language Liquid and Markdown tp generate a static site with HTML files. Jekyll is just pure awesome. Some of the best things about it:
+
+- Jekyll can be served with almost any web server, since the output of Jekyll is just flat, static HTML files.
+- Very easily create a feed for feedburner and sitemap for SEO (see [atom.xml](http://www.shalinvs.tk/atom.xml) and [sitemap.xml](http://www.shalinvs.tk/sitemap.xml))
+- Use AWESOME and very productive JavaScript and CSS tools like Coffeescript and SASS
+- The blog requires less maintainance (no fixing site speed, or maintianing other bugs like in Wordpress)
+- No posts stored in database where you can easily lose valuable posts (You can use github for keeping your files now)
+- You can get it so fast that it can be under 300ms to load the website (when I first created this, before all the mods, I got a load time of [around 100ms](http://tools.pingdom.com/fpt/#!/eO6wv6GzZ/http://www.shalinvs.tk/blog))
+
+I host the site on Amazon S3 <b>and</b> my own server, but I only use my server for the redirection and `.htaccess`. All the files are on Amazon S3. I use CNAME's to host it on two different things. I find it very convenient because all my files are located in one place, and .htaccess is located in another place so if I lose one, the other doesn't get effected. 
 
 
-## How it's built
+## Design
 
-All my posts are written in Markdown. The blog is powered by [Jekyll](http://github.com/mojombo/jekyll), a static site generator that takes Markdown blog posts and converts them into HTML files. The benefit of this approach are many:
+This is a fully responsive blog design with the scss being compiled with the compass gem and becoming normal css. The heirarchy of the blog is pretty self-explanitory. The layouts are in the _layouts folder the posts are in the _posts folder and so on. If you ever decide to fork this repo, please feel free to do so. But please, use your own design because I would not like to see hundreds of other blogs with the same design as mine. Thanks for that!
 
-- The blog can be served with almost any web server, since the output of Jekyll is just flat HTML files.
-- The whole blog can easily be version controlled.
-- The blog requires less maintainance (goodbye out-of-date Wordpress installations!)
+## Finally, publishing
 
-I also wrote a simple Node.js/MySQL app to track the number of page views on each blog post. It's pretty straightforward.
+Publishing is probably the easiest part of this whole process. As I explained above, I host my files with Amazon S3, so I could generate the _site folder with Jekyll and then upload it to S3. But that's slow and clunky. So, I use s3cmd to take care of this for me. As you can probably see in my `Rakefile`, I have a s3cmd deploy set up. So to deploy it, all I have to do is type rake, and it pretty much does everything: compiles coffeescript and scss and deploys to S3. So that is basically how my blog works. Hope you enjoy every bit of this and don't be shy to contact me if you find mistakes and bugs!
 
-I host the actual site on my own server, since I have a Jekyll plugin (and GitHub Pages doesn't support Jekyll plugins). Also, GitHub isn't going to run that Node.js app for me. Also, I like being in control of my website hosting (seriously, being a [sharecropper](http://www.tbray.org/ongoing/When/200x/2003/07/12/WebsThePlace) sucks).
+Thanks for reading, I really appreciate it!
 
 
-## Deploying
-
-I wrote a few simple rake tasks for deploying. Take a look at the `Rakefile` -- it's pretty self-explanatory.
-
-I serve the site with nginx and run the Node.js app using Supervisord (in case the app decides to crash).
-
-That's pretty much it.
 
 
-## The blog design
 
-If you decided to fork, please create your own blog design, don't use mine. I don't want to see fifty other blogs that look the same as mine. Thanks for understanding!
+
+
 
