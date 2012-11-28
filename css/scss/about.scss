@@ -1,0 +1,67 @@
+// For About Page
+    // Content Boxes
+    .box{padding:40px 0px;}
+
+    .box.two-thirds-left .box-left{width:600px;float:left;}
+    .box.two-thirds-left .box-right{width:300px;float:right;}
+
+    .box.two-thirds-right .box-left{width:300px;float:left;}
+    .box.two-thirds-right .box-right{width:600px;float:right;}
+
+    .box.half .box-left{width:450px;float:left;}
+    .box.half .box-right{width:450px;float:right;}
+
+    // Custom content
+    .box.iam{background:url(/images/design-and-code.png) no-repeat; height:300px;background-position:center;background-size:300px 300px}
+      .box.iam .box-left{width:280px;}
+      .box.iam .box-right{width:280px;}
+      
+    .box.big-text{font-size:61px; color:#afafaf; font-style:italic; text-align:center; letter-spacing:-5px;}
+
+    // Bar Chart
+    ul.bar{list-style:none; padding-top:20px;}
+      ul.bar li{height:35px; color:#FFF; text-align:left; font-style:italic; font-size:12px; line-height:35px; padding:0px 20px;margin-bottom:1px;}
+        
+        ul.bar li.red{background:#bc0000;}
+        ul.bar li.aqua{background:#63b7bb;}
+        ul.bar li.yellow{background:#ffaf00;}
+        ul.bar li.green{background:#8bbe00;}
+        ul.bar li.orange{background:#ff9000;}
+        ul.bar li.blue{background:#0096cd;}
+        ul.bar li.pink{background:#eaad9d;}
+        ul.bar li.diamond-blue{background:#0EBFE9;}
+        ul.bar li.black{background:#000000;}
+        ul.bar li.white{background:#ffffff;}
+        
+        ul.bar li.one{width:60px;}
+        ul.bar li.two{width:160px;}
+        ul.bar li.three{width:260px;}
+        ul.bar li.four{width:360px;}
+        ul.bar li.five{width:460px;}
+        ul.bar li.six{width:560px;}
+          
+    // Stats
+    ul.stats{list-style:none; padding-top:20px;}
+      ul.stats li{clear:both;height:34px;}
+      ul.stats .number{float:right; font-style:italic; font-size:16px;}
+      ul.stats .page-views{background-position:-205px -377px;}
+      ul.stats .alexa{background-position:-231px -377px;}
+      ul.stats .pr{background-position:-257px -377px;}
+      ul.stats .facebook{background-position:-283px -377px;}
+      ul.stats .back-links{background-position:-309px -377px;}
+      ul.stats .twitter{background-position:-335px -377px;}
+      ul.stats .comments{background-position:-361px -377px;}
+
+    .left{float:left;}
+    .right{float:right;}
+    .align-r{text-align:right;}
+    .align-l{text-align:left;}
+    .clr{clear:both;}
+    .line{border-bottom:#DDD 1px solid;}
+    .border-no{border:none !important;}
+    .margin-r{margin-right:20px;}
+    .margin-r-no{margin-right:0px !important;}
+    .pad-t{padding-top:20px;}
+    .pad-t-no{padding-top: 0px !important;}
+    .pad-l-no{padding-left:0px !important;}
+    .pad-r-no{padding-right:0px !important;}

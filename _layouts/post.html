@@ -4,11 +4,19 @@ class: post
 ---
 
 <div class="postHeader">
-  <h1><a href="{{ page.url }}/">{{ page.title }}</a></h1>
+  <div class="title">
+    <div id="big">
+      <a href="{{ page.url }}/">{{ page.title }}</a>
+    
+      <div class="date">
+        <time datetime="{{page.date | date: "%Y-%m-%d"}}">{{ page.date | date: "%B %e, %Y" }}</time>                  
+      </div>
+    </div>
+  </div>  
+  
 
   <div class="byline">
     <span>By <a href="/about/" title="Shalin Shah">Shalin Shah</a></span>
-    <time datetime="{{page.date | date: "%Y-%m-%d"}}">{{ page.date | date: "%B %e, %Y" }}</time>
     
     <span class="entry-category">
     Tags: 
