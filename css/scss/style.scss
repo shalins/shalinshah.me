@@ -384,7 +384,7 @@ margin: 2.5em 0 0.2em 0;
 .date {
   background-color: $gray;
   height: 60px;
-  width: 60px;
+  width: 75px;
   color: #ffffff;
   font-size:15px;
   text-align:center;
@@ -562,6 +562,34 @@ ul.listing {
   }
 }
 
+.social {
+  padding:2px;
+}
+.social img {
+  width: 50px;
+  length:50px
+}
+.social img#eml {
+  margin: 20px;
+}
+.social img#fb {
+  margin: 25px;
+}
+.social img#tw {
+  margin: 30px;
+}
+.social img#pnt {
+  margin: 35px;
+}
+.social img#lnkd {
+  margin: 40px;
+}
+.social img#gpls {
+  margin: 45px; 
+}
+.social img#drbl {
+  margin: 50px;
+}
 
 // Pygments syntax highlighting
 

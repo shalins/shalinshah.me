@@ -58,7 +58,9 @@ class: post
         </a>
         Hey, thanks for reading! I'm <a href="/about/">Shalin Shah</a>, a web designer, mobile developer, and graphic designer.
       </p>
-      {% if page.hn %}<p>Go crazy over at <a href="{{ page.hn }}">Hacker News</a>.</p>{% endif %}
+      {% if page.hn %}
+        <p>You can hate, love, or make fun of this post, over at <a href="{{ page.hn }}">Hacker News</a>.</p>
+      {% endif %}
       <p>
         If you enjoyed this article, you should <a href="https://twitter.com/shlns" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @shlns</a> or sign up to get an email whenever I write something new:
         <input style="width:177px" type="email" name="email" placeholder="tony@starkindustries.com"/>
@@ -68,11 +70,27 @@ class: post
       </p>
     </form>
 
-    <p>You should share this with your friends!</p>
+    <p style="color:black;"><strong>You like this? Then you should share it with your friends!</strong></p>
 
-    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.shalinvs.tk{{ page.url }}/" data-text="{{ page.title | xml_escape }}" data-via="shlns" data-size="medium" data-related="shlns">Tweet</a>
+   
 
-    <div class="fb-like" data-href="http://shalinvs.tk{{ page.url }}/" data-send="false" data-width="450" data-show-faces="true"></div>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.shalinvs.tk{{ page.url }}/" data-text="{{ page.title | xml_escape }}" data-via="shlns" data-size="large" data-related="shlns">Tweet</a>
+
+    <div class="g-plusone"></div>
+
+    <div class="fb-like" data-href="http://wwwshalinvs.tk{{ page.url }}/" data-layout="button_count" data-send="true" data-width="570" data-show-faces="true"></div>
+
+    
+    <!-- GOOGLE PLUS SCRIPT TAG -->
+     <script type="text/javascript">
+      (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+      })();
+    </script>
+    
+
   </section>
 
 

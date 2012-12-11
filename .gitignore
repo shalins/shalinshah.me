@@ -12,3 +12,4 @@ css/compiled/*.css
 js/compiled/*.js
 .sass-cache
 _server
+_notes

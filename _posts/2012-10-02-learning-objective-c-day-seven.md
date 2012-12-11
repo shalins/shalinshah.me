@@ -26,10 +26,6 @@ That's it really. It probably took me less than ten total hours spent on the act
 
 I'll write about it soon (maybe in a month) after the app goes on the app store
 
-<!-- <img src="" />
-<img src="" />
-<img src="" />
-<img src="" /> -->
 
 
 <p>

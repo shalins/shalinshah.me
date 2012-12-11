@@ -17,6 +17,14 @@ The posts are written in html and Markdown. This blog is powered by a Ruby app c
 
 I host the site on Amazon S3 <b>and</b> my own server, but I only use my server for the redirection and `.htaccess`. All the files are on Amazon S3. I use CNAME's to host it on two different things. I find it very convenient because all my files are located in one place, and .htaccess is located in another place so if I lose one, the other doesn't get effected. 
 
+## Features
+
+This blog has some very awesome features and plugins located in the _plugins directory. Some of the awesome things it can do include:
+- compiling SCSS and CoffeeScript
+- generating an RSS Feed
+- a tag generator for custom post tags
+- an awesome sitemap.xml generator containing all of your posts
+- custom image formatter with links
 
 ## Design
 
