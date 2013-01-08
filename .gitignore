@@ -6,6 +6,7 @@ _posts_drafts
 
 *.swp
 *~
+*.psd
 
 .sass-cache
 css/compiled/*.css
