@@ -260,13 +260,14 @@ img {
 
 // Header
 
-header[role="banner"] {
+#header {
   text-align: center;
   h1 {
+
     border-bottom: none;
-    font-family: $serif-caps;
+    font-family: 'Capriola';
     font-size: 4em;
-    font-weight: normal;
+    font-weight: bold;
     line-height: 1.5em;
     margin: 40px 0 10px 0;
 
@@ -277,10 +278,11 @@ header[role="banner"] {
   }
   a {
     #{$link} {
+      color: $lightblue;
       text-decoration: none;
     }
     #{$focus} {
-      border-bottom: 6px solid $blue;
+      border-bottom: 6px solid $lightblue;
     }
   }
 }
@@ -497,7 +499,7 @@ a.prev, a.next {
   white-space: nowrap;
   z-index: 2;
 
-  &:hover { opacity: 1; }
+  &:hover { opacity: 1 !important; }
 
   &.hidden, &.hidden:hover { display: none; }
 

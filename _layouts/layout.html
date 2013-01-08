@@ -1,84 +1,67 @@
 <!doctype html>
 <html>
 <head>
-
   <!--
-
-  Shalin Shah
-  http://www.shalinvs.tk/
-  
-
+    Shalin Shah
+    http://www.shalinvs.tk/
   -->
-
-  {% capture meta_desc %}{% if page.summary %}{{ page.summary }}{% else %}Shalin Shah{% endif %}{% endcapture %}
-
-  <title>{% if page.class == "home" %}{{ page.title }}{% else %} {{ page.title }} &raquo; Shalin Shah{% endif %}</title>
-  <meta property="og:title" content="{% if page.class == 'home' %}{{ page.title }}{% else %} {{ page.title }} &raquo; Shalin Shah{% endif %}" />
-
-
-  <meta name="google-site-verification" content="RZsPuqLhMe5NQsaYn6rXk6apYq21PZFq4Dmk7Xd6XZo" />
-  <meta name="description" content="{{ meta_desc }}">
-  <meta property="og:description" content="{{ meta_desc }}" />
-
-  <meta property="og:type" content="article" />
-  {% if page.tags %}{% for tag in page.tags %}<meta property="article:tag" content="{{ tag | replace: '-', ' ' }}" />{% endfor %}{% endif %}
-
-  <link rel="Shortcut Icon" type="image/x-icon" href="/favicon-shalin-newest.png" />
-  <meta property="og:image" content="/favicon-shalin-newest.png" />
-  
-  <link type="text/plain" rel="author" href="http://www.shalinvs.tk/me.txt" />
-  <meta property="article:author" content="http://www.shalinvs.tk/about/" />
-  <link href="https://plus.google.com/105718561776352763084/posts" relc="author" />
-
-  {% if page.class == "post" %}
-  <link rel="canonical" href="http://www.shalinvs.tk/{{ page.url }}/" />
-  <meta property="og:url" content="http://www.shalinvs.tk{{ page.url }}/" />
-  {% elsif page.class == "home" %}
-  <link rel="canonical" href="http://www.shalinvs.tk/" />
-  <meta property="og:url" content="http://www.shalinvs.tk/" />
-  {% endif %}
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="alternate" type="application/atom+xml" title="Shalin Shah's Blog" href="http://feeds.feedburner.com/shalin/shah" />
-  <link rel="stylesheet" href="/css/compiled/style.css" />
-  {% if page.class == "about" %}<link rel="stylesheet" href="/css/compiled/about.css" />{% endif %}
-
-
-  <!-- Page Fade-In Loader -->
-  <style>
-    .page-loading{opacity: 0;}
-    .page-active, .page-inactive {opacity: 1 !important;-moz-transition: 0.2s opacity ease-in;-webkit-transition: 0.2s opacity ease-in;transition: 0.2s opacity ease-in;}
-  </style>
-  <script type="text/javascript">
-    (function() {
-      var config = {
-        scriptTimeout: 200
-      };
-      var h=document.getElementsByTagName("html")[0];h.className+=" page-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)page-loading(\s|$)/g," ");h.className+=" page-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config);h.className+="page-active"}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
-    })();
-  </script>
-
-
+  {% capture meta_desc %}{% if page.summary %}{{ page.summary }}{% else %}Shalin Shah is a 13 year old kid who enjoys programming, web-design, mobile app development, and graphic design. He builds things to make his and other people's lives easier. He occasionally blogs.{% endif %}{% endcapture %}
+  <!-- TITLE -->
+    <title>{% if page.class == "home" %}{{ page.title }}{% else %} {{ page.title }} &raquo; Shalin Shah{% endif %}</title>
+    <meta property="og:title" content="{% if page.class == 'home' %}{{ page.title }}{% else %} {{ page.title }} &raquo; Shalin Shah{% endif %}" />
+  <!-- RESPONSIVE LOADER -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- GOOGLE SITE VERIFICATION -->
+    <meta name="google-site-verification" content="RZsPuqLhMe5NQsaYn6rXk6apYq21PZFq4Dmk7Xd6XZo" />
+  <!-- DESCRIPTION -->
+    <meta name="description" content="{{ meta_desc }}">
+    <meta property="og:description" content="{{ meta_desc }}" />
+  <!-- ICON -->
+    <link rel="Shortcut Icon" type="image/x-icon" href="/favicon-shalin-newest.png" />
+    <meta property="og:image" content="/favicon-shalin-newest.png" />
+  <!-- ABOUT -->
+    <link type="text/plain" rel="author" href="http://www.shalinvs.tk/me.txt" />
+    <link href="https://plus.google.com/105718561776352763084/posts" relc="author" />
+    <meta property="article:author" content="http://www.shalinvs.tk/about/" />
+    <link href='http://fonts.googleapis.com/css?family=Capriola' rel='stylesheet' type='text/css'>
+  <!-- CANONICAL -->
+    {% if page.class == "post" %}
+    <link rel="canonical" href="http://www.shalinvs.tk/{{ page.url }}/" />
+    <meta property="og:url" content="http://www.shalinvs.tk{{ page.url }}/" />
+    {% elsif page.class == "home" %}
+    <link rel="canonical" href="http://www.shalinvs.tk/" />
+    <meta property="og:url" content="http://www.shalinvs.tk/" />
+    {% endif %}
+  <!-- ARTICLE (TYPE) -->
+    <meta property="og:type" content="article" />
+    {% if page.tags %}{% for tag in page.tags %}<meta property="article:tag" content="{{ tag | replace: '-', ' ' }}" />{% endfor %}{% endif %}
+  <!-- FEED -->
+    <link rel="alternate" type="application/atom+xml" title="Shalin Shah's Blog" href="http://feeds.feedburner.com/shalin/Shah" />  
+  <!-- STYLE -->
+    <link rel="stylesheet" href="/css/compiled/style.css" />
+    {% if page.class == "about" %}<link rel="stylesheet" href="/css/compiled/about.css" />{% endif %}
+    <link href='http://fonts.googleapis.com/css?family=Capriola' rel='stylesheet' type='text/css'>
+  <!-- ASYNC TYPEKIT LOADER WITH FADE -->
+    <style>
+      .page-loading{opacity: 0;}
+      .page-active, .page-inactive {opacity: 1 !important;-moz-transition: 0.2s opacity ease-in;-webkit-transition: 0.2s opacity ease-in;transition: 0.2s opacity ease-in;}
+    </style>
+    <script type="text/javascript">
+      (function() {
+        var config = {
+          scriptTimeout: 200
+        };
+        var h=document.getElementsByTagName("html")[0];h.className+=" page-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)page-loading(\s|$)/g," ");h.className+=" page-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config);h.className+="page-active"}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+      })();
+    </script>
 </head>
 <body class="{{ page.class }}">
   <div id="container">
 
-    <header role="banner">
+    <header id="header">
       <!-- Main Banner/Header -->
-      <h1 style="color:#00CCFF;"><a href="http://www.shalinvs.tk">{% if page.class == "resume" %}Shalin Shah{% else %}Shalin{% endif %}</a></h1>
-
-      <!-- Primary Navigation -->
-      <nav class="header primary-nav alignright">
-        <ul id="menu-primary-navigation" class="header-nav">
-          <li id="menu-item-6" class="menu-item menu-item-type-custom menu-item-object-custom">
-            <a href="/about/">About</a>
-          </li>
-          <!-- <li id="menu-item-8" class="menu-item menu-item-type-custom menu-item-object-custom">
-            <a href="/portfolio/">Projects</a>
-          </li> -->
-        </ul>     
-      </nav>
+      <h1><a href="http://www.shalinvs.tk">{% if page.class == "resume" %}SHALIN SHAH{% else %}SHALIN{% endif %}</a></h1
+      
     </header>
 
 
@@ -122,11 +105,19 @@
     <!-- Twitter -->
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
+    <!-- G PLUS SCRIPT TAG -->
+     <script type="text/javascript">
+      (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+      })();
+    </script>
+
   {% endif %}
 
   <!-- Google Analytics -->
     <script type="text/javascript">
-
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-34246687-1']);
       _gaq.push(['_trackPageview']);
@@ -136,9 +127,8 @@
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
-
     </script>    
-  
+
   <!-- StatCounter -->
     <script type="text/javascript">
       var sc_project=8210349; 
@@ -147,31 +137,6 @@
     </script>
     <script type="text/javascript" src="http://www.statcounter.com/counter/counter.js"></script>
 
-  <!-- Start of Woopra Code -->
-    <!-- <script type="text/javascript">
-    // function woopraReady(tracker) {
-    //     tracker.setDomain('shalinvs.tk');
-    //     tracker.setIdleTimeout(300000);
-    //     tracker.track();
-    //     return false;
-    // }
-    // (function() {
-    //     var wsc = document.createElement('script');
-    //     wsc.src = document.location.protocol+'//static.woopra.com/js/woopra.js';
-    //     wsc.type = 'text/javascript';
-    //     wsc.async = true;
-    //     var ssc = document.getElementsByTagName('script')[0];
-    //     ssc.parentNode.insertBefore(wsc, ssc);
-    // })();
-     </script> -->
-<!-- End of Woopra Code -->
-
-<script src="/js/libraries.js"></script>
-
-<!-- Start of Sticky Code -->
-<!-- <script src="//static.getclicky.com/js" type="text/javascript"></script>
-<script type="text/javascript">try{ clicky.init(100548984); }catch(e){}</script> -->
-<!-- End of Sticky Code -->
-
+    <script src="/js/libraries.js"></script>
 </body>
 </html>

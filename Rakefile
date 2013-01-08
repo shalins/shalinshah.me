@@ -93,6 +93,6 @@ task :deploy do
   sh "jekyll"
   sh "s3cmd sync _site/* s3://www.shalinvs.tk"
   sh "rm -rf _site"
-  sh "coffee --compile"
+  sh "compass compile"
   sh "jekyll --lsi"
 end

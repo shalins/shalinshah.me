@@ -51,12 +51,12 @@
   });
 
   $(window).load(function() {
-    var $ad, $banner, $copy, $meta, $navLinks, $nextLink, $window, bannerBottom, copyBottom, copyHeight, copyOffset, copyTop, maxOpacity, minOpacity, onScrollOrResize;
+    var $ad, $copy, $header, $meta, $navLinks, $nextLink, $window, copyBottom, copyHeight, copyOffset, copyTop, headerBottom, maxOpacity, minOpacity, onScrollOrResize;
     if ($('body').hasClass('post')) {
       maxOpacity = 0.8;
       minOpacity = 0.3;
-      $banner = $('[role="banner"]');
-      bannerBottom = $banner.offset().top + $banner.height();
+      $header = $('#header');
+      headerBottom = $header.offset().top + $header.height();
       $meta = $('.meta');
       $copy = $('.copy');
       copyOffset = 100;
@@ -76,8 +76,8 @@
         $nextLink.removeClass('hidden');
         if (windowScrollTop < 0) {
           opacity = maxOpacity;
-        } else if (windowScrollTop <= bannerBottom) {
-          opacity = maxOpacity - ((windowScrollTop / bannerBottom) * (maxOpacity - minOpacity));
+        } else if (windowScrollTop <= headerBottom) {
+          opacity = maxOpacity - ((windowScrollTop / headerBottom) * (maxOpacity - minOpacity));
         } else if (windowBottom < copyTop) {
           opacity = minOpacity;
         } else if (windowBottom < copyBottom) {
