@@ -2,6 +2,7 @@
 old: true
 layout: post
 title: "Learning Objective C - Day Six"
+image: /stuff/aerial03-2013-02-13-1535.jpg
 tags:
 - Coding
 - Me
@@ -9,7 +10,7 @@ tags:
 - Objective-C
 ---
 
-### Building App Day 2
+### Building App Day 3
 
 Got a ton more stuff done with my app. I have a name for it: Ideya. I figured out how to build a rating system. I have also spent a lot of time on photoshop making the graphics for my app. I am still trying to develop a unique icon for the app.
 

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Set Up Your Amazon EC2"
+image: /stuff/iterm2.png
 tags:
 - Tutorial
 - Tips and Tricks
@@ -11,12 +12,12 @@ So, if you want have an Amazon EC2 instance to run <a href="http://www.wordpress
 
 Also, If I'm going too slow, I'm sorry, but please bare with me because I made this tutorial for people that had and didn't have any prior experience. 
 
-<h2>Step 1: Create an Account</h2>
+## Step 1: Create an Account
 
 Obviously, you need to create your AWS account; you can sign up <a href="http://aws.amazon.com/ec2/" target="_blank">here</a>. You have to provide your credit card to register and you'll need a valid phone number because Amazon will call you as part of the process. Amazon offers a <strong>Free Usage Tier</strong>, which is great to explore the services and even host real apps without being charged. You should look at the <a href="http://aws.amazon.com/free/" target="_blank">details</a>.
 
 
-<h2>Step 2: Create an Instance</h2>
+## Step 2: Create an Instance
 
 Now that you have an account, we can proceed to creating our instance.
 So, go to your management console, and then click the EC2 tab (it should be under the Compute and Networking section)
@@ -40,7 +41,7 @@ MYSQL (add rule)
 
 Then, finally launch you instance.
 
-<h2>Step 3: SSH into your Instance</h2>
+## Step 3: SSH into your Instance
 
 On the sidebar, click on the tab "Elastic IP's" and find the button that says "Allocate New Address"
 Make sure EC2 is selected and click "Yes, Allocate". Once you do that, you want to click on the address you created and select "Associate Address" and associate it to your instance.
@@ -168,7 +169,7 @@ Then configure all the stuff it tells you to.
 
 <h3>Keep MySQL In Good Shape</h3>
 
-Over time your MySQL tables will get fragmented and queries will take longer to complete. You can keep your tables in top shape by regularly running OPTIMIZE TABLE on all your tables. But, since you’ll never remember to do this regularly, we should set up a cron job to do this.
+Over time your MySQL tables will get fragmented and queries will take longer to complete. You can keep your tables in top shape by regularly running OPTIMIZE TABLE on all your tables. But, since you'll never remember to do this regularly, we should set up a cron job to do this.
 
 Open up your crontab file:
 <code>crontab -e</code>

@@ -1,106 +1,104 @@
 ---
 layout: layout
 class: post
+style: /css/compiled/post.css
 ---
-
-<div class="postHeader">
-  <div class="title">
-    <div id="big">
-      <a href="{{ page.url }}/">{{ page.title }}</a>
-    
-      <div class="date">
-        <time datetime="{{page.date | date: "%Y-%m-%d"}}">{{ page.date | date: "%B %e, %Y" }}</time>                  
+<div class="row center">
+  <div class="span8 offset2">  
+    <div class="postHeader">
+      <div class="title">
+        <div id="big">
+        <h1 itemprop="headline" id="post"><a href="{{ page.url }}/">{{ page.title }}</a></h1>
+        </div>
+      </div>  
+      
+      <div class="byline">
+        <span>By <a href="/about/" title="Shalin Shah">Shalin Shah</a></span>
+        <time datetime="{{page.date | date: "%Y-%m-%d"}}">{{ page.date | date: "%B %e, %Y" }}</time>
+        Tagged with
+        <ul class="tags">
+          {% for tag in page.tags %}
+          <li><a href="/tag/{{ tag }}/">{{ tag | replace: '-', ' ' }}</a></li>
+          {% endfor %}
+        </ul>
+        </span>
       </div>
     </div>
-  </div>  
-  
+    <br>
+    {% if page.class == "post" %}
+      <div id="featured-wrap">
+        <img width="1400" height="1060" src="{{ page.image }}" class=" " />
+      </div>
+    {% endif %}
+      <br><br>
+      <br>
+    <article>
+      {{ content }}
+    </article>
 
-  <div class="byline">
-    <span>By <a href="/about/" title="Shalin Shah">Shalin Shah</a></span>
-    
-    <span class="entry-category">
-    Tags: 
-    <ul class="tags">
-      {% for tag in page.tags %}
-      <li><a href="/tag/{{ tag }}/">{{ tag | replace: '-', ' ' }}</a></li>
-      {% endfor %}
-    </ul>
-  </span>
-  </div>
-
-  {% include ad.html %}
-
-</div>
-
-<article>
-
-  {{ content }}
-
-  <!-- {% if site.related_posts %}<p>(If you liked this, you might like <a href="{{ site.related_posts[0].url }}/">{{ site.related_posts[0].title }}</a>.)</p>{% endif %} -->
-
-</article>
-
-<section class="meta">
-  <h3>
-    Social Stuff
-    <a class="rss" href="http://feeds.feedburner.com/shalin/shah" title="Subscribe to Shalin's feed">
-      <img src="/images/rss.png" alt="RSS Feed Icon" />
-    </a>
-  </h3>
-
-  <section class="copy">
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)) js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-    <form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=shalin/shah', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
-
-      <p>
-        <a href="https://twitter.com/shlns" class="avatar">
-          <img src="/images/s-small.png" height="50" width="50" alt="Shalin Shah" />
+    <section class="meta">
+      <h3>
+        Social Stuff
+        <a class="rss" href="http://feeds.feedburner.com/shalin/shah" title="Subscribe to Shalin's feed">
+          <img src="/images/rss.png" alt="RSS Feed Icon" />
         </a>
-        Hey, thanks for reading! I'm <a href="/about/">Shalin Shah</a>, a web designer, mobile developer, and graphic designer.
-      </p>
-      {% if page.hn %}
-        <p>You can hate, love, or make fun of this post, over at <a href="{{ page.hn }}">Hacker News</a>.</p>
+      </h3>
+
+      <section class="copy">
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)) js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        <form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=shalin/shah', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+
+          <p>
+            <a href="https://twitter.com/shlns" class="avatar">
+              <img src="/images/s-small.png" height="100" width="100" alt="Shalin Shah" />
+            </a>
+            Hey, thanks for reading! I'm <a href="/about/">Shalin Shah</a>, a web designer, mobile developer, and graphic designer.
+          </p>
+          {% if page.hn %}
+            <p>You can hate, love, or make fun of this post, over at <a href="{{ page.hn }}">Hacker News</a>.</p>
+          {% endif %}
+          <p>
+            If you enjoyed this article, you should <a href="https://twitter.com/shlns" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @shlns</a> or sign up to get an email whenever I write something new:
+            <input style="width:177px" type="email" name="email" placeholder="tony@starkindustries.com"/>
+            <input type="hidden" value="shalin/shah" name="uri"/>
+            <input type="hidden" name="loc" value="en_US"/>
+            <input class="btn btn-large btn-primary" type="submit" value="Go" />
+          </p>
+        </form>
+
+        <p style="color:black;"><strong>You like this? Then you should share it with your friends!</strong></p>
+
+       
+
+        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.shalinvs.tk{{ page.url }}/" data-text="{{ page.title | xml_escape }}" data-via="shlns" data-size="large" data-related="shlns">Tweet</a>
+
+        <div class="g-plusone"></div>
+
+        <div class="fb-like" data-href="http://wwwshalinvs.tk{{ page.url }}/" data-layout="button_count" data-send="true" data-width="570" data-show-faces="true"></div>
+      </section>
+
+
+      {% if page.previous.url %}
+        <a class="prev" href="{{ page.previous.url }}/" title="Previous Post: {{ page.previous.title }}">{{ page.previous.title }}</a>
       {% endif %}
-      <p>
-        If you enjoyed this article, you should <a href="https://twitter.com/shlns" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @shlns</a> or sign up to get an email whenever I write something new:
-        <input style="width:177px" type="email" name="email" placeholder="tony@starkindustries.com"/>
-        <input type="hidden" value="shalin/shah" name="uri"/>
-        <input type="hidden" name="loc" value="en_US"/>
-        <input type="submit" value="Subscribe" />
-      </p>
-    </form>
-
-    <p style="color:black;"><strong>You like this? Then you should share it with your friends!</strong></p>
-
-   
-
-    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.shalinvs.tk{{ page.url }}/" data-text="{{ page.title | xml_escape }}" data-via="shlns" data-size="large" data-related="shlns">Tweet</a>
-
-    <div class="g-plusone"></div>
-
-    <div class="fb-like" data-href="http://wwwshalinvs.tk{{ page.url }}/" data-layout="button_count" data-send="true" data-width="570" data-show-faces="true"></div>
-  </section>
+      {% if page.next.url %}
+        <a class="next" href="{{ page.next.url }}/" title="Next Post: {{ page.next.title }}">{{ page.next.title }}</a>
+      {% endif %}
 
 
-  {% if page.previous.url %}
-    <a class="prev" href="{{ page.previous.url }}/" title="Previous Post: {{ page.previous.title }}">{{ page.previous.title }}</a>
-  {% endif %}
-  {% if page.next.url %}
-    <a class="next" href="{{ page.next.url }}/" title="Next Post: {{ page.next.title }}">{{ page.next.title }}</a>
-  {% endif %}
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+          var disqus_shortname = 'shalinvs';
+          var disqus_developer = (window.location.hostname == 'localhost') ? 1 : 0;
+          var disqus_url = 'http://www.shalinvs.tk{{ page.url }}/';
 
-
-  <div id="disqus_thread"></div>
-  <script type="text/javascript">
-      var disqus_shortname = 'shalinvs';
-      var disqus_developer = (window.location.hostname == 'localhost') ? 1 : 0;
-      var disqus_url = 'http://www.shalinvs.tk{{ page.url }}/';
-
-      (function() {
-                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</section>
+          (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
+  </div>
+</div>

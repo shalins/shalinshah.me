@@ -3,65 +3,103 @@ layout: layout
 title: "Shalin Shah's Blog"
 class: home
 ---  
-<div class="left">
-  <h2>My Blog Posts
-    <a class="rss" href="http://feeds.feedburner.com/shalin/shah" title="My Feed!">
-      <img src="/images/rss.png" alt="RSS Feed Icon" />
-    </a>
-  </h2>
-  <ul class="listing">
-    {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}/">{{ post.title }}</a>
-      <time datetime="{{post.date | date: "%Y-%m-%d"}}">
-        {{ post.date | date: "%B %e, %Y" }}{% if post.github %}.
-        Code on <a href="{{ post.github }}">GitHub</a>.
-        {% endif %}
-      </time>
-    </li>
-    {% endfor %}
-  </ul>
-</div>
+          <div class="right">
+            <div class="span4">
+              <br><br><br>
+              <div id="social" class="home_social">
+                <ul class="gallery">
+                  <li>
+                    <a class="thumb" href="http://www.facebook.com/shalinvs" target="_blank"><span>
+                      <img src="/stuff/facebook.png" alt="Facebook" /></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="thumb" href="http://www.twitter.com/shlns" target="_blank"><span><img src="/stuff/twitter.png" alt="Twitter" />
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="thumb" href="http://www.linkedin.com/in/shalins" target="_blank"><span><img src="/stuff/linkedin.png" 
+                    alt="Linkedin"  /> </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="thumb" href="http://www.dribbble.com/sln" target="_blank"><span><img src="/stuff/dribbble.png"
+                    alt="Dribbble" /></span>
+                  </a>
+                </li>
+                <li>
+                  <a class="thumb" href="mailto:shalinvs@gmail.com" target="_blank"><span><img src="/stuff/email.png"
+                    alt="Email" /></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+              <br> <br> <br><br> <br>
+                <p>
+                  Hey, I'm <strong>Shalin Shah</strong> and welcome to my blog. I am just a kid that is bent on changing the world.
+                </p><br>
+                
+                <a class="avatar" href="/about/" title="Shalin Shah">
+                  <img src="https://lh4.googleusercontent.com/-X0LCoSaBZBc/UXMQWfSVt0I/AAAAAAAAAWg/VgBZzco9tro/w767-h768/IMG_2807.JPG" alt="Me"/>
+                </a>
+                <br><br><br>
+                <!-- Tweets -->
+  <a class="twitter-timeline" href="https://twitter.com/shlns" data-widget-id="334902310926958592">Tweets by @shlns</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
-<div class="right">
-  <h2>Hello!</h2>
-  <div class="bio">
-    <p>
-      Hey, I'm <strong>Shalin Shah</strong> and welcome to my blog.
-    </p>
-    <p>
-      Get to <a href="/about/" class="strong">know me</a>!
-      <br>Follow me on <a href="https://twitter.com/shlns">Twitter</a>.
-      <br>Or, just shoot me email at <a href="mailto:shalinvs@gmail.com">shalinvs@gmail.com</a>.
-    </p>
+                  <br><br><br>
 
-    <!-- <a class="avatar" href="/about/" title="Shalin Shah">
-      <img src="/images/shalin.jpg" alt="Me"/>
-    </a> -->
-    {% include ad.html %}
-  </div>
-  <h2>Projects</h2>
-  <ul class="listing">
-    <li>
-      <a href="http://middleschoolnotes.org">Middle School Notes</a>
-      <span>Best way to study for notes and get your grades up!</span>
-    </li>
-    <li>
-      <a href="http://www.ideyaapp.tk">Ideya</a>
-      <span>With this simple yet useful tool, never forget your brilliant ideas again!</span>
-    </li>
-  </ul>
-  <h2>Subscribe</h2>
-  <ul class="listing">
-    <li>
-    <form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=shalin/shah', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
-        If you like my posts, you should sign up to get an email whenever I write something new:
-        <input style="width:177px" type="email" name="email" placeholder="tony@starkindustries.com"/>
-        <input type="hidden" value="shalin/shah" name="uri"/>
-        <input type="hidden" name="loc" value="en_US"/>
-        <input type="submit" value="Subscribe" />
-      </p>
-    </form>
-    </li>
-  </ul>
-</div>
+              
+              <h2>Subscribe</h2><br>
+                <p>If you like my posts, you should sign up to get an email whenever I write something new:</p><br>
+                <form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=shalin/shah', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+                    <input style="width:177px" type="email" name="email" placeholder="tony@starkindustries.com"/>
+                    <input type="hidden" value="shalin/shah" name="uri"/>
+                    <input type="hidden" name="loc" value="en_US"/>
+                    <input class="btn btn-large btn-primary" type="submit" value="Go" />
+                  </p>
+                </form>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="row">
+          {% for post in site.posts %}              
+            <div class="span7">    
+              <article role="article">
+                <section class="read-more">
+                  <br><br>
+                    <h1 class="entry-title"><a href="{{ post.url }}" rel="bookmark" title="{{ post.title }}">{{ post.title }}</a></h1><br>
+                    <span class="published">
+                      <div class="entry-meta">
+                        By Shalin Shah on <time datetime="{{post.date | date: "%Y-%m-%d"}}">
+                        {{ post.date | date: "%B %e, %Y" }}
+                        </time></span>
+                        <div class="right">
+                          <!-- <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.shalinvs.tk{{ page.url }}/" data-text="{{ page.title | xml_escape }}" data-via="shlns" data-size="small" data-related="shlns">Tweet</a> -->
+                          <!--<script src="http://connect.facebook.net/en_US/all.js#appId=227683463924663&amp;xfbml=1"></script>
+                          <div class="fb-like" data-href="http://wwwshalinvs.tk{{ page.url }}/" data-layout="button_count" data-send="false" data-width="80" data-show-faces="false"></div>
+                          <div id="fb-root"></div>-->
+                        </div>                         
+                      </div><!-- .entry-meta -->
+                    </span><br><br>
+                      <div id="featured-wrap-other">
+                        <img src="{{ post.image }}" class=" " />
+                      </div>
+                    <br>
+                    <br>
+                    <p>{{ post.content | strip_html | truncatewords: 50 }}</p><br>
+                    <div class="span2">
+                      <a href="{{ post.url }}" class="btn btn-large btn-primary">Read more &rarr;</a>
+                    </div>
+                </section> <!-- end article section -->          
+              </article> <!-- end article -->
+              <br>
+            </div>
+        {% endfor %}           
+          </div>      
+
+                        
+              

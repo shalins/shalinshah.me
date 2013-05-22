@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Never Forget Your Ideas"
+image: /stuff/light-bulb-drawing.jpg
 tags:
 - Me
 - Side Projects

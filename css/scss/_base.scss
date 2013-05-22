@@ -22,12 +22,14 @@ $red: #E22C29;
 $lightblue: #00CCFF;
 $blue: #2094ca;
 
+$white: #FFF;
 $lightestGray: #EEE;
 $lighterGray: #CCC;
 $lightGray: #999;
 $gray: #666;
 $darkGray: #555;
 $darkerGray: #333;
+$black: #000;
 
 $bgColor: #FFFEFB;
 $adColor: desaturate(darken($bgColor, 3%), 60%);
@@ -41,5 +43,3 @@ $adBorderColor: $lightestGray;
 // Misc
 $link   : '&:link, &:visited';
 $focus  : '&:hover, &:focus, &:active';
-
-

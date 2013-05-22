@@ -2,34 +2,15 @@
 layout: layout
 title: About Shalin Shah
 class: about
-
+style: /css/compiled/about.css
+image: /stuff/grass_2-2013-02-13-1534.jpg
 ---
 
 
-<h1 style="color:black;font-size:60px;" align="center">A page just about me!</h1>
+
+<!-- <h1 style="color:black;font-size:60px;" align="center">A page just about me!</h1>
 <div class="box two-thirds-right line">
 <div class="box-left">
-<p><img src="http://www.shalinvs.tk/images/shalin.jpg" alt="Shalin Shah" /></p>
-
-</div>
-<div class="box-right">
-<h2>Who is this Shalin kid?</h2>
-Hi. I am <strong>Shalin Shah</strong> &lt;<a href="mailto:shalinvs@gmail.com">shalinvs@gmail.com</a>&gt; I&#8217;m just a kid livin&#8217; it up in the sunny California<br />
-I do web-stuff, hacking, gaming, and designing.
-<p>I&#8217;m interested in startups, design, and all other fun stuff!<br />
-    I build websites and apps to make my life easier and maybe make yours, too. I hope someday, I will change the lives of millions of people.<br />
-<br />
-I hope you like my work, and thanks for visiting. I really appreciate it. </p>
-
-I am on <a href="http://news.ycombinator.com/user?id=shalinshah" target="_blank">hacker news</a></p>
-<p>Thanks for reading this, I really appreciate it.<br />
-
-
-<br />If you like what I have done, please <a href="https://twitter.com/shlns" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false" target="_blank">Follow me</a>.
-
-<h3>Credit:</h3>
-<p>This was made possible by the Jekyll open-source framework and <a href="http://feross.org">Feross Aboukhadijeh's</a> Design.</p>
-
 
 </div>
 <div class="clr"></div>
@@ -83,6 +64,94 @@ I am on <a href="http://news.ycombinator.com/user?id=shalinshah" target="_blank"
 <div class="clear"></div>
 </div>
 
-<div class="box big-text line">
-  &#8220; Risking nothing means risking everything. &#8221;
-</div>
+
+-->
+<div class="row">
+	    <div class="span8">
+		<h1>About Me</h1><br>
+		<p>Hi. I am <strong>Shalin Shah</strong> &lt;<a href="mailto:shalinvs@gmail.com">shalinvs@gmail.com</a>&gt; I&#8217;m a 13 year old kid livin&#8217; it up in the sunny California.<br /><br>
+		I do website development, grpahic designing, mobile programming, and gaming. I&#8217;m interested in startups, design, and all other fun stuff! I build websites and apps to make my life easier and maybe make yours, too. I hope someday, I will change the lives of millions of people.<br /><br />
+		I hope you like my work, and thanks for visiting. I really appreciate it.
+		I am on <a href="http://news.ycombinator.com/user?id=shalinshah" target="_blank">hacker news</a>. If you like what I have done, please <a href="https://twitter.com/shlns" target="_blank">follow me</a>.</p>
+		
+
+
+	    			<section id="bar-chart" class="dark nopad-b">
+					<div  class="col-12">	    				
+							<br><br><h2>Skills</h2><br><br>
+							<ul class="bar-chart">
+								<li class="axis">
+									<div class="strength">Jedi</div>
+									<div class="strength">Ninja</div>
+									<div class="strength">Geek</div>
+									<div class="strength">Newbie</div>
+								</li><li id="aqua" class="aqua p-95">
+									<div class="percent">95<span>%</span></div>
+									<div class="skill">HTML/CSS</div>
+								</li><li id="pink" class="pink  p-90">
+									<div class="percent">90<span>%</span></div>
+									<div class="skill">Linux</div>
+								</li><li id="yellow" class="yellow p-80">
+									<div class="percent">80<span>%</span></div>
+									<div class="skill">Objective-C</div>
+								</li><li id="brown" class="brown p-65">
+									<div class="percent">65<span>%</span></div>
+									<div class="skill">Photoshop</div>
+								</li><li id="red" class="red p-40">
+									<div class="percent">40<span>%</span></div>
+									<div class="skill">Ruby On Rails</div>
+								</li></ul>
+				</div>
+				</section>
+		</div>
+							
+
+
+		<div class="right">
+		    <div class="span3">
+						<h2>Fun Facts.</h2><br>		
+							<p>I can solve a Rubik's cube in <i><strong>under 35 seconds</strong></i></p>
+							<p>I can run a mile in 6 minutes</p>
+							<p>I can ride a bike with no hands</p>
+							<p>My favorite subject is math :)</p>
+							<p>I play the violin in an orchestra</p>
+							<p>I love Doctor Who</p>
+							<br>
+						<h2>I code.</h2><br>		
+							<p>HTML</p>
+							<p>CSS</p>
+							<p>Front End Development</p>
+							<p>Objective-C</p>
+							<p>SEO</p>
+							<p>Mobile Development</p>
+							<br>
+						<h2>I also design.</h2><br>		
+							<p>Website Design</p>
+							<p>User Interface Design</p>
+							<p>Graphic Design</p>
+							<p>App Design</p>
+			</div>
+		</div>
+</div> 
+	<br><br><br>
+	<div class="box big-text line">
+		  		&#8220; Risking nothing means risking everything. &#8221;
+	</div>
+
+		<script src="http://www.adhamdannaway.com/wp-content/themes/ad/js/script.js"></script>
+		<script type="text/javascript">
+		//If browser is IE8 or older we show IE specific page
+		if(ie < 9){ieMessage();}
+		/* Call functions when dom is ready */
+		$(document).ready(function() {
+			// Preload the page with jPreLoader
+			$('body').jpreLoader({
+				showSplash: true
+			}, function() {	
+				// Animate the header first			
+				$('#header').stop().animate({'opacity': '1', 'top':'0'}, 1000);
+					animateAbout();
+			});
+		});
+		</script>
+

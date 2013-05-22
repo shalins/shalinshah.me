@@ -2,6 +2,7 @@
 old: true
 layout: post
 title: "Learning Objective C - Day Seven (Last Day)"
+image: /stuff/iphone-5-black-front-full-2.jpg
 tags:
 - Coding
 - Me

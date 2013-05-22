@@ -16,11 +16,11 @@
       .box.iam .box-left{width:280px;}
       .box.iam .box-right{width:280px;}
       
-    .box.big-text{font-size:61px; color:#afafaf; font-style:italic; text-align:center; letter-spacing:-5px;}
+    .box.big-text{font-size:61px; color:#afafaf; text-align:center; letter-spacing:-5px;}
 
     // Bar Chart
     ul.bar{list-style:none; padding-top:20px;}
-      ul.bar li{height:35px; color:#FFF; text-align:left; font-style:italic; font-size:12px; line-height:35px; padding:0px 20px;margin-bottom:1px;}
+      ul.bar li{height:35px; color:#FFF; text-align:left; font-size:15px; line-height:35px; padding:0px 20px;margin-bottom:1px;}
         
         ul.bar li.red{background:#bc0000;}
         ul.bar li.aqua{background:#63b7bb;}
@@ -40,17 +40,6 @@
         ul.bar li.five{width:460px;}
         ul.bar li.six{width:560px;}
           
-    // Stats
-    ul.stats{list-style:none; padding-top:20px;}
-      ul.stats li{clear:both;height:34px;}
-      ul.stats .number{float:right; font-style:italic; font-size:16px;}
-      ul.stats .page-views{background-position:-205px -377px;}
-      ul.stats .alexa{background-position:-231px -377px;}
-      ul.stats .pr{background-position:-257px -377px;}
-      ul.stats .facebook{background-position:-283px -377px;}
-      ul.stats .back-links{background-position:-309px -377px;}
-      ul.stats .twitter{background-position:-335px -377px;}
-      ul.stats .comments{background-position:-361px -377px;}
 
     .left{float:left;}
     .right{float:right;}
@@ -65,3 +54,39 @@
     .pad-t-no{padding-top: 0px !important;}
     .pad-l-no{padding-left:0px !important;}
     .pad-r-no{padding-right:0px !important;}
+
+
+    .rounded-top,.bar-chart li{-moz-border-radius-topleft:3px;-moz-border-radius-topright:3px;-webkit-border-top-left-radius:3px;-webkit-border-top-right-radius:3px}.text-shadow-black,.bar-chart .percent,.bar-chart .skill,a.button,.submit{text-shadow:0 -1px 0 rgba(0,0,0,.25)}.text-shadow-white,.bar-chart .strength,.concept,.header-center h3{text-shadow:0 1px 1px #fff}
+    #bar-chart{display:none}
+
+    #bar-chart{display:block}
+    .bar-chart{list-style:none;height:450px;position:relative;background:url(http://www.adhamdannaway.com/wp-content/themes/ad/images/axis.png) repeat-x;padding:0}
+    .bar-chart li{display:inline-block;width:16%;height:100%;text-align:center;font-weight:700;color:#FFF;position:relative;font-size:18px;font-size:1.8rem;margin:0 1.8% 0 0;border:#BBB solid 1px;vertical-align:bottom;border-bottom:#BBB solid 1px;-webkit-box-shadow:inset 0 1px 0 0 rgba(255,255,255,.6);-moz-box-shadow:inset 0 1px 0 0 rgba(255,255,255,.6);box-shadow:inset 0 1px 0 0 rgba(255,255,255,.6)}
+
+    .bar-chart li:nth-child(6n){margin-right:0}
+    .bar-chart .percent{opacity:.3;position:absolute;bottom:60px;font-size:45px;font-size:4.5rem;width:100%}.bar-chart .percent span{font-size:24px;font-size:2.4rem}
+    .bar-chart .skill{position:absolute;bottom:20px;width:100%;font-size:12px;font-size:1.2rem}
+    .bar-chart .p-40{height:40%}
+    .bar-chart .p-60{height:60%}
+    .bar-chart .p-65{height:65%}
+    .bar-chart .p-75{height:75%}
+    .bar-chart .p-80{height:80%}
+    .bar-chart .p-90{height:90%}
+    .bar-chart .p-95{height:95%}
+    .bar-chart .aqua{border-color:#8dc5be;background-color:#b0dbd6;background-image:-webkit-gradient(linear,left bottom,left top,color-stop(0, #5fb2a8),color-stop(1, #b0dbd6));background-image:-ms-linear-gradient(bottom, #5fb2a8, #b0dbd6);background-image:-webkit-linear-gradient(bottom, #5fb2a8, #b0dbd6);background-image:-moz-linear-gradient(center bottom, #5fb2a8 0, #b0dbd6 100%);background-image:-o-linear-gradient(bottom, #5fb2a8, #b0dbd6)}
+    .bar-chart .pink{border-color:#ebc0b5;background-color:#f4dcd6;background-image:-webkit-gradient(linear,left bottom,left top,color-stop(0, #e1ae9e),color-stop(1, #f4dcd6));background-image:-ms-linear-gradient(bottom, #e1ae9e, #f4dcd6);background-image:-webkit-linear-gradient(bottom, #e1ae9e, #f4dcd6);background-image:-moz-linear-gradient(center bottom, #e1ae9e 0, #f4dcd6 100%);background-image:-o-linear-gradient(bottom, #e1ae9e, #f4dcd6)}
+
+    .bar-chart .yellow{border-color:#10A2C4;background-color:#0EBFE9;background-image:-webkit-gradient(linear,left bottom,left top,color-stop(0, #45B6D1),color-stop(1, #0EBFE9));background-image:-ms-linear-gradient(bottom, #45B6D1, #0EBFE9);background-image:-webkit-linear-gradient(bottom, #45B6D1, #0EBFE9);background-image:-moz-linear-gradient(center bottom, #45B6D1 0, #0EBFE9 100%);background-image:-o-linear-gradient(bottom, #45B6D1, #0EBFE9)}
+
+    .bar-chart .brown{border-color:#D17600;background-color:#ff9000;background-image:-webkit-gradient(linear,left bottom,left top,color-stop(0, #FFA200),color-stop(1, #ff9000));background-image:-ms-linear-gradient(bottom, #FFA200, #ff9000);background-image:-webkit-linear-gradient(bottom, #FFA200, #ff9000);background-image:-moz-linear-gradient(center bottom, #FFA200 0, #ff9000 100%);background-image:-o-linear-gradient(bottom, #FFA200, #ff9000)}
+
+    .bar-chart .red{border-color:#e14949;background-color:#da6d6c;background-image:-webkit-gradient(linear,left bottom,left top,color-stop(0, #ca4544),color-stop(1, #da6d6c));background-image:-ms-linear-gradient(bottom, #ca4544, #da6d6c);background-image:-webkit-linear-gradient(bottom, #ca4544, #da6d6c);background-image:-moz-linear-gradient(center bottom, #ca4544 0, #da6d6c 100%);background-image:-o-linear-gradient(bottom, #ca4544, #da6d6c)}
+
+    .bar-chart li.axis{width:8%;border:0;}
+    .bar-chart .strength{color:#888;margin:-.6em 0 96px 0;font-size:12px;font-size:1.2rem;font-weight:400}
+    .face .coder,.face .designer{width:25%;top:5em}
+    .col-12{width:100%;margin:0}
+    .align-r{text-align:right!important}
+    .nopad-b{padding-bottom:0!important}
+    
+    //.row{clear:both;max-width:1040px;margin:0 auto}.row.alt [class^="col-"]{float:right;margin:0 0 0 3.84615384615%}[class^="col-"]{float:left;margin:0 3.84615384615% 0 0;list-style:none;position:relative}[class^="col-"]:last-child,.row.alt [class^="col-"]:last-child{margin:0}

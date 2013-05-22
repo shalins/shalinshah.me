@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "We all live in the past"
+image: /stuff/6342786391_301644bd64_o-2013-02-13-1535.jpg
 tags:
 - Me
 - Thoughts

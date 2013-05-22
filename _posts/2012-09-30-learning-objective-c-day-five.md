@@ -2,6 +2,7 @@
 old: true
 layout: post
 title: "Learning Objective C - Day Five"
+image: /stuff/8069570666_94d567a5a3_h.jpeg
 tags:
 - Coding
 - Me

@@ -2,13 +2,13 @@
 old: true
 layout: post
 title: "Why Hacking Is Awesome"
+image: /stuff/geekhacking.jpg
 tags:
 - Hacking
 - Me
 - Thoughts
 ---
 
-<img title="Hacking" src="/images/posts/Hack.jpg" alt="Hacking" />
 ## <br />Not All Hacking Is <strong>BAD.</strong>
 First of all, it is a mentality built by people that hacking is bad. And I disagree. Hacking someone's personal information and stealing their identity or doing damage or destructive things is bad. But not all hacker do that, especially not me.
 

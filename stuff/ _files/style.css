@@ -1,0 +1,92 @@
+body {
+  font-family: "Lucida Grande", Lucida, Verdana, sans-serif;
+}
+#container {
+  background-color: #f7fbd4; border-color: gray; width:800px;
+  border-style: solid;
+}
+h1#header {
+  width: 709px;
+  height: 196px;
+  background: url(wizard.png) no-repeat;
+}
+h1#header a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+label.keyword, label.article {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+input.keyword {
+  padding: .2em;
+  border: 1px solid #b5b5b5;
+  font-size: 1.1em;
+  /*margin-top: -.2em;*/
+}
+textarea.article {
+  width: 650px;
+  height: 350px;
+}
+input.submit {
+  padding: 5px;
+  color: white;
+  background-color: #8c4716;
+  border: 1px solid silver;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+#news h2 {
+  font-size: 1em;
+  font-weight: normal;
+  font-style: normal;
+}
+#news a {
+  font-weight: bold;
+}
+#tabmenu {
+	color: #000;
+	border-bottom: 2px solid gray;
+	margin: 12px 0px 0px 0px;
+	padding: 0px;
+	z-index: 1;
+	padding-left: 10px }
+
+#tabmenu li {
+	display: inline;
+	overflow: hidden;
+	list-style-type: none; }
+
+#tabmenu a, a.active {
+	color: #DEDECF;
+	background: #636443;
+	font: bold 1em "Trebuchet MS", Arial, sans-serif;
+	border: 2px solid gray;
+	padding: 2px 5px 0px 5px;
+	margin: 0;
+	text-decoration: none; }
+
+#tabmenu a.active {
+	background: #ABAD85;
+	border-bottom: 3px solid #ABAD85; }
+
+#tabmenu a:hover {
+	color: #fff;
+	background: #ADC09F; }
+
+#tabmenu a:visited {
+	color: #E8E9BE; }
+
+#tabmenu a.active:hover {
+	background: #ABAD85;
+	color: #DEDECF; }
+
+#toolform {
+	background: #ABAD85;
+	padding: 20px;
+	border: 2px solid gray;
+	border-top: none;
+	z-index: 2;	}

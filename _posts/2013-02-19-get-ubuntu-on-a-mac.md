@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Installing Ubuntu on a Mac"
+image: http://3.bp.blogspot.com/-yXFJ_2wREoI/UBt1WHzaopI/AAAAAAAAAZo/f-yG6vwhRZI/s1600/0.jpg
 tags:
 - Tutorial
 - Tips and Tricks
@@ -65,7 +66,7 @@ I should also add that I don't usually bother adding Swap space but you may wish
 
 <img src="/images/posts/reboot.jpg">
 
-Reboot you Mac and select Linux from the rEFIt bootloader when it comes up. If you’re using a bluetooth keyboard you will need to press a button on your keyboard and wait a second before you are able to select boot entries with rEFIt. But other than that, congradualtions, you now have Linux Ubuntu running on you Mac!
+Reboot you Mac and select Linux from the rEFIt bootloader when it comes up. If you're using a bluetooth keyboard you will need to press a button on your keyboard and wait a second before you are able to select boot entries with rEFIt. But other than that, congradualtions, you now have Linux Ubuntu running on you Mac!
 
 
 

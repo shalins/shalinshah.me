@@ -2,14 +2,13 @@
 old: true
 layout: post
 title: "Learning Objective C - Day One"
+image: /stuff/8230856113_de95fd666f_h.jpg
 tags:
 - Coding
 - Me
 - Side Projects
 - Objective-C
 ---
-
-<img src="http://www.byterevel.com/wp-content/uploads/2011/06/objc.png" alt="Objective-C" />
 
 I have just decided that I should learn my first object-oriented language, Objective-C. Objective-C is for iOS and Mac development and it creates beautiful products. I have a few ideas for apps, but I'm going to learn it first.
 
