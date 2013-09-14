@@ -1,504 +1,300 @@
-@font-face {
-	font-family: 'icomoon';
-	src: url('/fonts/icomoon.eot');
-	src: url('/fonts/icomoon.eot?#iefix') format('embedded-opentype'),
-		 url('/fonts/icomoon.woff') format('woff'),
-		 url('/fonts/icomoon.ttf') format('truetype'),
-		 url('/fonts/icomoon.svg#icomoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
+.portf{min-height:600px;border-bottom:4px solid #DAD7D7;overflow-x:hidden;max-width:100%;height:100%;margin-bottom:none;display:block;}.sl-head{text-transform:uppercase;letter-spacing:3px;margin-top:10%;text-align:center;font-size:40px;}.portf:after{display:table;clear:both;content:"";}.wrap-alt{width:86vw;margin:0 auto;max-width:1600px;}
+.portf .case-wrap {
+    margin: 7% auto;
+    width: 100%;
+}
+.sl4 {
+    min-height: 90%;
+    height: auto;
+    -webkit-transition: opacity .4s ease-in-out;
+    -moz-transition: opacity .4s ease-in-out;
+    transition: opacity .4s ease-in-out;
+    border-bottom: none;
 }
 
-/* Windows Chrome ugly fix http://stackoverflow.com/questions/13674808/chrome-svg-font-rendering-breaks-layout/14345363#14345363 */
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-	@font-face {
-		font-family: 'icomoon';
-		src: url('/fonts/icomoon.svg#icomoon') format('svg');
-	};
+.portf .case-wrap {
+    margin: 7% auto;
+    width: 100%;
 }
 
-body, html { font-size: 15px; padding: 0; margin: 0;}
-.con-team, .con-blog, .con-home, .con-portfolio, .con-services, .con-contact, .con-menu {
-	font-family: 'icomoon';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
+.case-list ol {
+    display: inline-block;
+    list-style: none;
+    width: 100%;
 }
 
-.con-team:before {
-	content: "\e000";
+.wrap-alt .flexi {
+    width: 100%;
+    display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  display: -webkit-flex;
+    -webkit-flex-direction: row;
+    -webkit-flex-wrap: wrap;
 }
 
-.con-blog:before {
-	content: "\e001";
+.wrap-alt .flexi > div {
+    border: 8px solid rgba(255,255,255,1);
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    width: 48%;
+    margin: 1%;
+    -webkit-transition: opacity .4s ease-in-out;
+    -moz-transition: opacity .4s ease-in-out;
+    transition: opacity .4s ease-in-out;
 }
 
-.con-home:before {
-	content: "\e002";
+.flexi .case-title {
+    display: block;
+    width: 100%;
+    background: white;
+    opacity: 1;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    left: 0;
 }
 
-.con-portfolio:before {
-	content: "\e003";
+.flexi div h1 {
+   margin-bottom: 0;
+   margin-top: 0;
+   text-align: center;
+   letter-spacing: 1px;
+   font-size: 36px;
+   margin-top: 0;
+   line-height: 54px;
+   top: 5%;
+   z-index: 10;
+   position: absolute;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis; 
+   width: 100%;
+   display: block;
 }
 
-.con-services:before {
-	content: "\e004";
+.flexi p {
+    margin-bottom: 0;
+    top: 25%;
+    width: 90%;
+    font-size: 18px;
+    line-height: 27px;
+    z-index: 100;
+    left: 6%;
+    position: absolute;
+}
+ 
+
+.case-list li {
+    float: left;
+    display: block;
+    border: 8px solid rgba(255,255,255,1);
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    width: 48%;
+    margin: 1%;
+    box-shadow: 0 4px #E0E0E0;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
 }
 
-.con-contact:before {
-	content: "\e005";
+.case-list li:hover {
+    box-shadow: 0 6px #E0E0E0;
+    bottom: 2px;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+        /* Animations 
+    -webkit-animation: hoverSmall 3s infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation: hoverSmall 3s infinite;
+    -moz-animation-timing-function: ease-in-out; 
+    */
 }
 
-.con-menu:before {
-	content: "\f0c9";
+.case-list li:active {
+    box-shadow: 0 0px #e0e0e0;
+    bottom: 0;
+    -webkit-animation: none;
+    -moz-animation: none;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 
-a, li {
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+.case-list li:last-child {
+    margin-bottom: 10%;
 }
 
-
-/* Global CSS that are applied for all screen sizes */
-
-.nav ul {
-	max-width: 1300px;
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	font-size: 1.5em;
-	font-weight: 300;
+.case-list:hover > a {
+    opacity: .5;
 }
 
-.nav li span {
-	display: block;
-}
-
-.nav a {
-	display: block;
-	color: rgba(249, 249, 249, .9);
-	text-decoration: none;
-	-webkit-transition: color .5s, background .5s, height .5s;
-	-moz-transition: color .5s, background .5s, height .5s;
-	-o-transition: color .5s, background .5s, height .5s;
-	-ms-transition: color .5s, background .5s, height .5s;
-	transition: color .5s, background .5s, height .5s;
-}
-
-.nav i{
-	/* Make the font smoother for Chrome */
-	-webkit-transform: translate3d(0, 0, 0);
-	-moz-transform: translate3d(0, 0, 0);
-	-o-transform: translate3d(0, 0, 0);
-	-ms-transform: translate3d(0, 0, 0);
-	transform: translate3d(0, 0, 0);
-}
-
-/* Remove the blue Webkit background when element is tapped */
-
-a, button {
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-
-/* Hover effect for the whole navigation to make the hovered item stand out */
-
-.no-touch .nav ul:hover a {
-	color: rgba(249, 249, 249, .5);
-}
-
-.no-touch .nav ul:hover a:hover {
-	color: rgba(249, 249, 249, 0.99);
-}
-
-/* Adding some background color to the different menu items */
-
-.nav li:nth-child(6n+1) {
-	background: rgb(5, 195, 157);
-}
-
-.nav li:nth-child(6n+2) {
-	background: rgb(0, 188, 255);
-}
-
-.nav li:nth-child(6n+3) {
-	background: rgb(22, 145, 190);
-}
-
-.nav li:nth-child(6n+4) {
-	background: rgb(22, 107, 162);
-}
-
-.nav li:nth-child(6n+5) {
-	background: rgb(27, 54, 71);
-}
-
-.nav li:nth-child(6n+6) {
-	background: rgb(21, 40, 54);
-}
-
-/* For screen bigger than 800px */
-@media (min-width: 50em) {
-
-	/* Transforms the list into a horizontal navigation */
-	.nav li {
-		float: left;
-		width: 16.66666666666667%;
-		text-align: center;
-		-webkit-transition: border .5s;
-		-moz-transition: border .5s;
-		-o-transition: border .5s;
-		-ms-transition: border .5s;
-		transition: border .5s;
-	}
-
-	.nav a {
-		display: block;
-		width: auto;
-	}
-
-	/* hover, focused and active effects that add a little colored border to the different items */
-	.no-touch .nav li:nth-child(6n+1) a:hover,
-	.no-touch .nav li:nth-child(6n+1) a:active,
-	.no-touch .nav li:nth-child(6n+1) a:focus {
-		border-bottom: 4px solid rgb(0, 159, 122);
-	}
-
-	.no-touch .nav li:nth-child(6n+2) a:hover,
-	.no-touch .nav li:nth-child(6n+2) a:active,
-	.no-touch .nav li:nth-child(6n+2) a:focus {
-		border-bottom: 4px solid rgb(4, 142, 192);
-	}
-
-	.no-touch .nav li:nth-child(6n+3) a:hover,
-	.no-touch .nav li:nth-child(6n+3) a:active,
-	.no-touch .nav li:nth-child(6n+3) a:focus {
-		border-bottom: 4px solid rgb(12, 110, 149);
-	}
-
-	.no-touch .nav li:nth-child(6n+4) a:hover,
-	.no-touch .nav li:nth-child(6n+4) a:active,
-	.no-touch .nav li:nth-child(6n+4) a:focus {
-		border-bottom: 4px solid rgb(10, 75, 117);
-	}
-
-	.no-touch .nav li:nth-child(6n+5) a:hover,
-	.no-touch .nav li:nth-child(6n+5) a:active,
-	.no-touch .nav li:nth-child(6n+5) a:focus {
-		border-bottom: 4px solid rgb(16, 34, 44);
-	}
-
-	.no-touch .nav li:nth-child(6n+6) a:hover,
-	.no-touch .nav li:nth-child(6n+6) a:active,
-	.no-touch .nav li:nth-child(6n+6) a:focus {
-		border-bottom: 4px solid rgb(9, 18, 25);
-	}
-
-	/* Placing the icon */
-	
-	.con {
-		padding-top: 1.4em;
-	}
-
-	.con + span {
-		margin-top: 2.1em;
-		-webkit-transition: margin .5s;
-		-moz-transition: margin .5s;
-		-o-transition: margin .5s;
-		-ms-transition: margin .5s;
-		transition: margin .5s;
-	}
-
-	/* Animating the height of the element*/
-	.nav a {
-		height: 9em;
-	}
-
-	.no-touch .nav a:hover ,
-	.nav a:active ,
-	.nav a:focus {
-		height: 10em;
-	}	
-
-	/* Making the text follow the height animation */
-	.no-touch .nav a:hover .con + span {
-		margin-top: 3.2em;
-		-webkit-transition: margin .5s;
-		-moz-transition: margin .5s;
-		-o-transition: margin .5s;
-		-ms-transition: margin .5s;
-		transition: margin .5s;
-	}
-
-	/* Positioning the icons and preparing for the animation*/
-	.nav i {
-		position: relative;
-		display: inline-block;
-		margin: 0 auto;
-		padding: 0.4em;
-		border-radius: 50%;
-		font-size: 1.8em;
-		box-shadow: 0 0 0 30px transparent;
-		background: rgba(255,255,255,0.1);
-		-webkit-transform: translate3d(0, 0, 0);
-		-moz-transform: translate3d(0, 0, 0);
-		-o-transform: translate3d(0, 0, 0);
-		-ms-transform: translate3d(0, 0, 0);
-		transform: translate3d(0, 0, 0);
-		-webkit-transition: box-shadow .6s ease-in-out;
-		-moz-transition: box-shadow .6s ease-in-out;
-		-o-transition: box-shadow .6s ease-in-out;
-		-ms-transition: box-shadow .6s ease-in-out;
-		transition: box-shadow .6s ease-in-out;
-	}	
-	
-	/* Animate the box-shadow to create the effect */
-	.no-touch .nav a:hover i,
-	.no-touch .nav a:active i,
-	.no-touch .nav a:focus i {		
-		box-shadow: 0 0 0 0 rgba(255,255,255,0.2);
-		-webkit-transition: box-shadow .4s ease-in-out;
-		-moz-transition: box-shadow .4s ease-in-out;
-		-o-transition: box-shadow .4s ease-in-out;
-		-ms-transition: box-shadow .4s ease-in-out;
-		transition: box-shadow .4s ease-in-out;
-	}
-		
-}
-
-@media (min-width: 50em) and (max-width: 61.250em) {
-
-	/* Size and font adjustments to make it fit into the screen*/
-	.nav ul {
-		font-size: 1.2em;
-	}
-
-}
-
-/* The "tablet" and "mobile" version */
-
-@media (max-width: 49.938em) {		
-	
-	/* Instead of adding a border, we transition the background color */
-	.no-touch .nav ul li:nth-child(6n+1) a:hover,
-	.no-touch .nav ul li:nth-child(6n+1) a:active,
-	.no-touch .nav ul li:nth-child(6n+1) a:focus {
-		background: rgb(227, 119, 20);
-	}
-
-	.no-touch .nav li:nth-child(6n+2) a:hover,
-	.no-touch .nav li:nth-child(6n+2) a:active,
-	.no-touch .nav li:nth-child(6n+2) a:focus {
-		background: rgb(245, 160, 41);
-	}
-
-	.no-touch .nav li:nth-child(6n+3) a:hover,
-	.no-touch .nav li:nth-child(6n+3) a:active,
-	.no-touch .nav li:nth-child(6n+3) a:focus {
-		background: rgb(44, 168, 219);
-	}
-
-	.no-touch .nav li:nth-child(6n+4) a:hover,
-	.no-touch .nav li:nth-child(6n+4) a:active,
-	.no-touch .nav li:nth-child(6n+4) a:focus {
-		background: rgb(31, 120, 176);
-	}
-
-	.no-touch .nav li:nth-child(6n+5) a:hover,
-	.no-touch .nav li:nth-child(6n+5) a:active,
-	.no-touch .nav li:nth-child(6n+5) a:focus {
-		background: rgb(39, 70, 90);
-	}
-
-	.no-touch .nav li:nth-child(6n+6) a:hover,
-	.no-touch .nav li:nth-child(6n+6) a:active,
-	.no-touch .nav li:nth-child(6n+6) a:focus {
-		background: rgb(32, 54, 68);
-	}
-
-	.nav ul li {
-		-webkit-transition: background 0.5s;
-		-moz-transition: background 0.5s;
-		-o-transition: background 0.5s;
-		-ms-transition: background 0.5s;
-		transition: background 0.5s;
-	}	
-
-}
-
-/* CSS specific to the 2x3 columns version */
-@media (min-width:32.5em) and (max-width: 49.938em) {
-	
-	/* Creating the 2 column layout using floating elements once again */
-	.nav li {
-		display: block;
-		float: left;
-		width: 50%;
-	}
-	
-	/* Adding some padding to make the elements look nicer*/
-	.nav a {
-		padding: 0.8em;		
-	}
-
-	/* Displaying the icons on the left, and the text on the right side using inlin-block*/
-	.nav li span, 
-	.nav li span.con {
-		display: inline-block;
-	}
-
-	.nav li span.con {
-		width: 50%;
-	}
-
-	.nav li .con + span {
-		font-size: 1em;
-	}
-
-	.con + span {
-		position: relative;
-		top: -0.2em;
-	}
-
-	/* Adaptating to the icons to animate the size and border of the rounded background in a more discreet way */
-	.nav li i {
-		display: inline-block;
-		padding: 8% 9%;
-		border: 4px solid transparent;
-		border-radius: 50%;
-		font-size: 1.5em;
-		background: rgba(255,255,255,0.1);
-		-webkit-transition: border .5s;
-		-moz-transition: border .5s;
-		-o-transition: border .5s;
-		-ms-transition: border .5s;
-		transition: border .5s;
-	}
-
-	/* Transition effect on the border color */
-	.no-touch .nav li:hover i,
-	.no-touch .nav li:active i,
-	.no-touch .nav li:focus i {
-		border: 4px solid rgba(255,255,255,0.1);
-	}
-	
-}
-
-/* Adapting the font size and width for smaller screns*/
-@media (min-width: 32.5em) and (max-width: 38.688em) {
-	
-	.nav li span.con {
-		width: 50%;
-	}
-
-	.nav li .con + span {
-		font-size: 0.9em;
-	}
-}
-
-/* Styling the toggle menu link and hiding it */
-.nav .navtoogle{
-	display: none;	
-	width: 100%;
-	padding: 0.5em 0.5em 0.8em;
-	font-family: 'Lato',Calibri,Arial,sans-serif;
-	font-weight: normal;
-	text-align: left;
-	color: rgb(7, 16, 15);
-	font-size: 1.2em;
-	background: none;	
-	border: none;
-	border-bottom: 4px solid rgb(221, 221, 221);
-	cursor: pointer;
+.case-list:hover > a:hover {
+    opacity: 1;
 }
 
 
-.con-menu {
-	position: relative;
-	top: 3px;
-	line-height: 0;
-	font-size: 1.6em;
+.case-img {
+    position: relative;
+    display: block;
+    z-index: 10;
+    width: 100%;
+    height: 300px;
+    border-radius: 4px;
+    background-position: center center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
 }
 
-@media (max-width: 32.438em) {
-
-	/* Unhiding the styled menu link */
-	.nav .navtoogle{
-		margin: 0;
-		display: block;
-	}
-	
-	/* Animating the height of the navigation when the button is clicked */
-	
-	/* When JavaScript is disabled, we hide the menu */
-	.no-js .nav ul {
-		max-height: 30em;
-		overflow: hidden;
-	}
-	
-	/* When JavaScript is enabled, we hide the menu */
-	.js .nav ul {
-		max-height: 0em;
-		overflow: hidden;
-	}
-	
-	/* Displaying the menu when the user has clicked on the button*/
-	.js .nav .active + ul {		
-		max-height: 30em;
-		overflow: hidden;
-		-webkit-transition: max-height .4s;
-		-moz-transition: max-height .4s;
-		-o-transition: max-height .4s;
-		-ms-transition: max-height .4s;
-		transition: max-height .4s;
-	}
-
-	/* Adapting the layout of the menu for smaller screens : icon on the left and text on the right*/
-	
-	.nav li span {
-		display: inline-block;
-		height: 100%;
-	}
-
-	.nav a {
-		padding: 0.5em;		
-	}
-	
-	.con + span {
-		margin-left: 1em;
-		font-size: 0.8em;
-	}
-	
-	/* Adding a left border of 8 px with a different color for each menu item*/
-	.nav li:nth-child(6n+1) {
-		border-left: 8px solid rgb(174, 78, 1);
-	}
-
-	.nav li:nth-child(6n+2) {
-		border-left: 8px solid rgb(191, 117, 20);
-	}
-
-	.nav li:nth-child(6n+3) {
-		border-left: 8px solid rgb(13, 111, 150);
-	}
-
-	.nav li:nth-child(6n+4) {
-		border-left: 8px solid rgb(10, 75, 117);
-	}
-
-	.nav li:nth-child(6n+5) {
-		border-left: 8px solid rgb(16, 34, 44);
-	}
-
-	.nav li:nth-child(6n+6) {
-		border-left: 8px solid rgb(9, 18, 25);
-	}
-
-	/* make the nav bigger on touch screens */
-	.touch .nav a {
-		padding: 0.8em;
-	}
+.case-list h1 {
+   margin-bottom: 0;
+   margin-top: 0;
+   letter-spacing: 1px;
+   font-size: 36px;
+   margin-top: 0;
+   line-height: 54px;
+   top: 5%;
+   z-index: 10;
+   position: absolute;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis; 
+   width: 100%;
+   display: block;
+   text-align: center;
 }
 
+.case-list .case-title {
+    display: block;
+    width: 100%;
+    background: white;
+    opacity: 1;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    left: 0;
+}
+
+.case-deets {
+    background: #EBE8E8;
+    height: 400px;
+    width: 100%;
+    border-radius: 4px;
+    display: block;
+    position: absolute;
+    top: 0;
+    z-index: 50;
+    opacity: 0;
+    left: 0px;
+    -webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
+}
+
+.case-deets:hover {
+    opacity: 1;
+    -webkit-transition: opacity .3s ease-in-out;
+    -moz-transition: opacity .3s ease-in-out;
+    transition: opacity .3s ease-in-out;
+}
+
+@media only screen and (min-width: 1200px) {
+    .case-list li {
+        width: 31%;
+    }
+    
+    .wrap-alt .flexi > div {
+        width: 31%
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    
+    .wrap-alt .flexi > div {
+        width: 100%
+    }
+    
+    .case-list ol {
+        display: block;
+        list-style: none;
+    }
+    .case-list li {
+        float: none;
+        margin: 0 auto;
+        width: 100%;
+        margin-bottom: 3%;
+    }
+    .case img {
+        display: none;
+    }
+}
+
+.case-list .case-title {
+    display: block;
+    width: 100%;
+    background: white;
+    opacity: 1;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    left: 0;
+}
+
+.case-deets {
+    background: #EBE8E8;
+    height: 400px;
+    width: 100%;
+    border-radius: 4px;
+    display: block;
+    position: absolute;
+    top: 0;
+    z-index: 50;
+    opacity: 0;
+    left: 0px;
+    -webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
+}
+
+.case-deets:hover {
+    opacity: 1;
+    -webkit-transition: opacity .3s ease-in-out;
+    -moz-transition: opacity .3s ease-in-out;
+    transition: opacity .3s ease-in-out;
+}
+
+.case-list p {
+    margin-bottom: 0;
+    top: 25%;
+    width: 90%;
+    font-size: 18px;
+    line-height: 27px;
+    z-index: 100;
+    left: 6%;
+    color: #504a46;
+    position: absolute;
+}
+
+.case-list a:hover {
+    color: #21bd63;
+}
+
+.case-list a h1:hover {
+    color: #43d4e5;
+    -webkit-transition: color .3s ease-in-out;
+    -moz-transition: color .3s ease-in-out;
+    transition: color .3s ease-in-out;
+}
+
+.sl-head {
+    margin-top: 8%;  
+}

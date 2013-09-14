@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Installing Ubuntu on a Mac"
-image: http://3.bp.blogspot.com/-yXFJ_2wREoI/UBt1WHzaopI/AAAAAAAAAZo/f-yG6vwhRZI/s1600/0.jpg
+image: /stuff/macbuntu.png
+identity: ubuntumac
 tags:
 - Tutorial
 - Tips and Tricks
@@ -12,7 +13,9 @@ I have a 13 inch Macbook Pro and I just wanted to see if I could get Ubuntu runn
 ## Step 1: Install rEFIt
 
 'rEFIt' is an beautiful (think BURG) boot-interrupter that allows you to boot between OS X and your Linux distribution(s) of choice.
-<img src="/images/posts/rEFIt.jpg">
+
+<center><img src="/images/posts/rEFIt.jpg"></center>
+
 Unlike a typical PC where the GRUB boot-loader is used to present your dual-boot options, Intel Mac users need to install something extra. rEFIt is really easy to install and should only take like 5 minutes. It only has 3 steps!
 
 1. Download the [rEFIt-0.14.dmg](http://prdownloads.sourceforge.net/refit/rEFIt-0.14.dmg?download) disk image and extract it (double-click on it)
@@ -27,7 +30,7 @@ And you're done! Incase any issues arise, rEFIt has a [troubleshooting section](
 Partitioning your hard-drive is basically creating parts of if or resizing it.
 We need to make some extra space for our Ubuntu install so we will need to create a partition.
 
-<img src="/images/posts/partition.jpg">
+<center><img src="/images/posts/partition.jpg"></center>
 
 To partition your disk, just:
 
@@ -40,13 +43,13 @@ Be generous when you choose the amount of space because changing it later on can
 
 ## Step three: Set up Ubuntu Disk
 
-<img src="/images/posts/ubuntudisk.png" width="200px">
+<center><img src="/images/posts/ubuntudisk.png" width="200px"></center>
 
 Phew! If you have the Ubuntu installer disk ready, skip this step. Okay so, first you have to [download the Ubuntu OS](http://www.ubuntu.com/download/desktop) and burn onto a disk that has about 800 MB of free memory (you need 791.3 MB to be exact). That is if you got the Ubuntu 12.10 64 Bit one. After you download it (fast or slow depending on your internet connection), you can burn the disk with Disk Utility or with Finder (I used Finder). That should be pretty easy to do.
 
 ## Step 4: Reboot with a LiveCD
 
-<img src="/images/posts/ubuntu-livecd.jpg">
+<center><img src="/images/posts/ubuntu-livecd.jpg"></center>
 
 Pop your cd right into your computer and then reboot. Upon reboot, press "c" to boot from the cd you just popped in. 
 
@@ -64,7 +67,7 @@ I should also add that I don't usually bother adding Swap space but you may wish
 
 ## Step 5: Reboot (and you're done!)
 
-<img src="/images/posts/reboot.jpg">
+<center><img src="/images/posts/reboot.jpg"></center>
 
 Reboot you Mac and select Linux from the rEFIt bootloader when it comes up. If you're using a bluetooth keyboard you will need to press a button on your keyboard and wait a second before you are able to select boot entries with rEFIt. But other than that, congradualtions, you now have Linux Ubuntu running on you Mac!
 

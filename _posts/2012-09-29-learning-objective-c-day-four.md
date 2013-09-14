@@ -2,7 +2,8 @@
 old: true
 layout: post
 title: "Learning Objective C - Day Four"
-image: /stuff/8205091096_e7c31cca37_h.jpg
+image: /images/illustrations/touch.png
+identity: objectivec
 tags:
 - Coding
 - Me

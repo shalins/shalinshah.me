@@ -3,6 +3,7 @@ old: true
 layout: post
 title: "Why Hacking Is Awesome"
 image: /stuff/geekhacking.jpg
+identity: hacking
 tags:
 - Hacking
 - Me

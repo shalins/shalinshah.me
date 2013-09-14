@@ -1,76 +1,26 @@
 ---
 layout: layout
 class: tags
-image: /stuff/big_3efd59638923c8e347ae49df55b8c1d9c1e102f1-2013-02-13-1535.jpg
 ---
-  <div class="twelvecol clearfix">
-
-    <h1 class="archive-title h2"><span>{{page.title}}</span></h1>
-
-<!--     <ul class="listing">
-      {% for post in site.posts %}
-      {% for tag in post.tags %}
-      {% if tag == page.tag %}
-      <li class="clearfix">
-        <a href="{{ post.url }}/">{{ post.title }}</a>
-        <time datetime="{{post.date | date: "%Y-%m-%d"}}">
-          {{ post.date | date: "%B %e, %Y" }}.
-          {% if post.github %}
-          Code on <a href="{{ post.github }}">GitHub</a>.
-          {% endif %}
-          Tagged with 
-          <ul class="tags">
-            {% for tag in post.tags %}
-            <li><a href="/tag/{{ tag }}/">{{ tag | replace: '-', ' ' }}</a></li>
-            {% endfor %}
-          </ul>.
-        </time>
-
-      </li>
-      {% endif %}
-      {% endfor %}
-      {% endfor %}
-    </ul> -->
-
-    <!-- 
- -->
-
-    <article id="post-11" class=" status-publish format-standard hentry category-travel tag-post tag-travel-2 clearfix" role="article">
-      {% for post in site.posts %}
-      {% for tag in post.tags %}
-      {% if tag == page.tag %}
-      <header class="article-header">
-        <br><br>
-        <span class="published">
-          <time datetime="{{post.date | date: "%Y-%m-%d"}}">
-            {{ post.date | date: "%B %e, %Y" }}.
-            {% if post.github %}
-            Code on <a href="{{ post.github }}">GitHub</a>.
-            {% endif %}
-          </time>
-        </span>
-        <h1 class="search-title"><a href="{{ post.url }}/">{{ post.title }}</a></h1>
-        Tagged with {% for tag in post.tags %}
-            <a href="/tag/{{ tag }}/">{{ tag | replace: '-', ' ' }}</a>&nbsp;&nbsp;
-            {% endfor %}
-        <section class="entry-content clearfix">
-          <a class="read-more" href="{{ post.url }}/" title="{{ post.title }}/">Read It</a>
-        </section> <!-- end article section -->
-      </header> <!-- end article header -->
-      <footer class="article-footer">
-      </footer> <!-- end article footer -->
-      {% endif %}
-      {% endfor %}
-      {% endfor %}
-    </article> <!-- end article -->
-    <p>
-      Or, see <a href="/blog">all blog posts</a>.
-    </p>
-
-
-
-<!--   {% for tag in post.tags %}
-  <li class="inline archive_list"><a class="tag_list_link" href="/tag/{{ tag }}/">{{ tag | replace: '-', ' ' }}</a></li>
-  {% endfor %} -->
-
+<br><br><br><br><br><br><br><br>
+<h1 id="cyan">{{page.title}}</h1>
+<div class="journal-teaser">
+{% for post in site.posts %}
+{% for tag in post.tags %}
+{% if tag == page.tag %}
+ <ul class="journal-list left-slide">
+   <li>
+    <span class="journal-teaser-thumbnail"><a href="{{ post.url }}" title="{{ post.title }}"><img  class="featured-image-small" src="{{ post.image }}" width="190" height="190" /></a></span>
+    <h4><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h4>
+    <p class="date">{{ post.date | date: "%B %e, %Y" }}</p>
+    <p class="entry">{{ post.content | strip_html | truncatewords: 25 }}</p>
+   </li>
+ </ul>
+{% endif %}
+{% endfor %}
+{% endfor %}       
+</div>    
+<h2>
+  Or, see <a href="/blog">all blog posts</a>.
+</h2>
 </div>  

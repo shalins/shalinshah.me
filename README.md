@@ -20,7 +20,7 @@ I host the site on Amazon S3 <b>and</b> my own server, but I only use my server 
 ## Features
 
 This blog has some very awesome features and plugins located in the _plugins directory. Some of the awesome things it can do include:
-- compiling SCSS and CoffeeScript
+- compiling SCSS and CoffeeScript (the current version does not use coffescript and only some scss)
 - generating an RSS Feed
 - a tag generator for custom post tags
 - an awesome sitemap.xml generator containing all of your posts
@@ -32,7 +32,7 @@ This is a fully responsive blog design with the scss being compiled with the com
 
 ## Finally, publishing
 
-Publishing is probably the easiest part of this whole process. As I explained above, I host my files with Amazon S3, so I could generate the _site folder with Jekyll and then upload it to S3. But that's slow and clunky. So, I use s3cmd to take care of this for me. As you can probably see in my `Rakefile`, I have a s3cmd deploy set up. So to deploy it, all I have to do is type rake, and it pretty much does everything: compiles coffeescript and scss and deploys to S3. So that is basically how my blog works. Hope you enjoy every bit of this and don't be shy to contact me if you find mistakes and bugs!
+Publishing is probably the easiest part of this whole process. As I explained above, I host my files with Amazon S3, so I could comiple the site to the _site folder with the `jekyll` command and then upload it to S3 manually. But that's slow and clunky. So, I use s3cmd to take care of this for me. As you can probably see in my `Rakefile`, I have a s3cmd deploy set up. So to deploy it, all I have to do is type `rake`, and it pretty much does everything: compiles coffeescript and scss and deploys to S3. So that is basically how my blog works. Hope you enjoy every bit of this and don't be shy to contact me if you find mistakes and bugs!
 
 Thanks for reading, I really appreciate it!
 

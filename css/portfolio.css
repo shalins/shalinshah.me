@@ -1,0 +1,158 @@
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+.text-center {
+    text-align: center;
+}
+.text-justify {
+    text-align: justify;
+}
+.hide {
+    display: none;
+}
+img {
+    display: block;
+}
+textarea {
+    height: auto;
+    min-height: 50px;
+}
+select {
+    width: 100%}
+
+footer:before, footer:after, section:before, section:after {
+    content: " ";
+    display: table;
+}
+.view {
+    width: 100%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+.view .mask, .view .content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.7);
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+.mask {
+    color: #fff;
+}
+.view img {
+    display: block;
+    position: relative;
+}
+.effect .mask {
+    opacity: 0;
+    overflow: visible;
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+}
+.effect .mask .button-call-white h5, .effect .mask .c-button-call-white h5, .effect .mask .contact-forms input[type="submit"] h5, .contact-forms .effect .mask input[type="submit"] h5 {
+    color: #fff;
+}
+.effect .mask .button-call-white, .effect .mask .c-button-call-white, .effect .mask .contact-forms input[type="submit"], .contact-forms .effect .mask input[type="submit"] {
+    padding: 10px;
+}
+.effect .mask .subtext a {
+    color: #fff;
+}
+.effect .mask .subtext a:hover {
+    color: #99140c;
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+}
+.effect:hover .mask {
+    opacity: .9;
+    position: absolute;
+    padding-top: 20%;
+    background-color: #ef4036;
+}
+.effect:hover .mask h5, .effect:hover .mask a {
+    color: #fff;
+}
+.effect:hover .mask .button-call-white:hover, .effect:hover .mask .c-button-call-white:hover, .effect:hover .mask .contact-forms input[type="submit"]:hover, .contact-forms .effect:hover .mask input[type="submit"]:hover {
+    background-color: #fff;
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+}
+.effect:hover .mask .button-call-white:hover h5, .effect:hover .mask .c-button-call-white:hover h5, .effect:hover .mask .contact-forms input[type="submit"]:hover h5, .contact-forms .effect:hover .mask input[type="submit"]:hover h5 {
+    color: #ef4036;
+}
+.work-item {
+    position: relative;
+    padding-left: 0.9375em;
+    padding-right: 0.9375em;
+    width: 33.33333%;
+    float: left;
+    padding: 10px;
+    display: block;
+}
+
+.footer-one ul li {
+    list-style-type: none;
+}
+.footer-one li {
+    position: relative;
+    padding-left: 0.9375em;
+    padding-right: 0.9375em;
+    width: 100%;
+    float: left;
+    padding-left: 0;
+}
+.footer-two ul li {
+    list-style-type: none;
+}
+.footer-two li {
+    position: relative;
+    padding-left: 0.9375em;
+    padding-right: 0.9375em;
+    width: 100%;
+    float: left;
+    padding-left: 0;
+}
+
+
+@media only screen and (max-width: 767px) {
+.nav-item {
+    position: relative;
+    padding-left: 0.9375em;
+    padding-right: 0.9375em;
+    width: 25%;
+    float: left;
+}
+.about-vid-left, .about-vid, .about-three, .about-two, .about-one, .blog-main, .blog-right, .blog-right-single, .about-left, .about-right, .main-holder, .footer-one, .footer-two, .footer-two-item, .nav-items, .nav-brand, .front-left, .front-right, .blog-item, .work-item {
+    position: relative;
+    padding-left: 0.9375em;
+    padding-right: 0.9375em;
+    width: 100%;
+    left: 0%;
+    right: auto;
+    float: left;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+
+}

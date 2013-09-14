@@ -2,7 +2,8 @@
 old: true
 layout: post
 title: "Learning Objective C - Day Seven (Last Day)"
-image: /stuff/iphone-5-black-front-full-2.jpg
+image: /images/illustrations/touch.png
+identity: objectivec
 tags:
 - Coding
 - Me

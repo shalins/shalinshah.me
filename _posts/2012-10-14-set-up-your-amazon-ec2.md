@@ -2,6 +2,7 @@
 layout: post
 title: "Set Up Your Amazon EC2"
 image: /stuff/iterm2.png
+identity: ec2
 tags:
 - Tutorial
 - Tips and Tricks
@@ -28,7 +29,7 @@ Click the big "Launch Instance" button. Make sure "Classic Wizard" is selected a
 Instance details: Select the Instance Type you want to use. I chose Micro because it's free (t1.micro).
 Create a new key pair. Enter a name for your key pair (i.e. shalin) and download your key pair (i.e. shalin.pem).
 
-<em><strong>NOTE: DO NOT give anyone you key pair. It the access key to your whole instance. Don't lose or delete it either, otherwise you won't be able to connect to your instance!</strong></em>
+<em><strong>NOTE: DO NOT give anyone your key pair. It the access key to your whole instance. Don't lose or delete it either, otherwise you won't be able to connect to your instance!</strong></em>
 
 
 Select the create new security group, give it a name and description, and then, for the create the new rule, select:
@@ -50,7 +51,7 @@ Once your instance is running, you can ssh into it. SSH stands for secure shell.
 
 First, you need to identify the address of your instance: Select the instance in the AWS Management Console, and look for the Public DNS in the instance description (bottom part of the screen).
 
-<img src="/images/posts/EC2%20Management%20Console.png" />
+<center><img src="/images/posts/EC2%20Management%20Console.png" /></center>
 
 Then, open up the terminal application. For mac, click &#8984; Command + Space and search terminal or open the terminal app. For linux, go the terminal app.
 
@@ -61,7 +62,7 @@ And change the .pem file's full path and name.
 Then Connect:
 <code>ssh -i Downloads/shalin.pem ec2-user@<em>ec2-your-public-dns-of-your-instance.amazonaws.com</em></code>
 or you can type 
-<code>ssh -i Downloads/shalin.pem ec2-user@<em>you ip you just associated</em></code> either one works.
+<code>ssh -i Downloads/shalin.pem ec2-user@<em>your ip you just associated</em></code> either one works.
 Make sure you change the .pem file's full path and name and your public DNS.
 
 Hit "Enter", you will be asked: "Are you sure you want to continue connecting (yes/no)?" Type <em><strong>yes</strong></em>.
@@ -73,12 +74,9 @@ Okay, so now you've most likely followed everything in this tutorial successfull
 Here are the basic terminal commands
 <ul>
 	<li>The <code>man</code> command is for a manual or help on something. (i.e. <code>man ls</code>)</li>
-	<li>The <code>ls</code> command is to view the items in the directory.
-</li>
-	<li>The <code>cd</code> command is to go into or out of a folder (directory) like this <code>cd /</code> moves you to the very very main directory and <code>cd ../</code> moves you back one directory.
-</li>
-	<li>The <code>sudo</code> command is to become the Super-User, meaning you can do everything. Only use this when you have to, as this can be dangerous.
-</li>
+	<li>The <code>ls</code> command is to view the items in the directory.</li>
+	<li>The <code>cd</code> command is to go into or out of a folder (directory) like this <code>cd /</code> moves you to the very very main directory and <code>cd ../</code> moves you back one directory.</li>
+	<li>The <code>sudo</code> command is to become the Super-User, meaning you can do everything. Only use this when you have to, as this can be dangerous.</li>
 </ul>
 <strong>One of the most important command is vim or vi. It is a text editor that is built in the command line to edit text files directly. Type in <code>man vim</code> to read about vim. To edit something you type <code>vim <em>file-name.txt</em></code></strong>
 
@@ -90,7 +88,6 @@ You have a server running now, but it can't do anything useful...yet...
  
 <h3>Installing Apache</h3>
 So we will allow this server to display a simple website. For that, we will need to install Apache.
-
 Before you do anything, become the root user of this server, so type 
 <code>sudo su</code>
 
@@ -99,6 +96,7 @@ To install the Apache Web Server, type:
 
 Start the Apache Web Server:
 <code>service httpd start</code>
+
 Make sure it's running.
 <code>service httpd status</code>
 
@@ -117,7 +115,7 @@ Create a page to test your PHP installation:
 <code>cd /var/www/html</code>
 <code>vim test.php</code>
 Type i to start the insert mode
-Type <code>< ?php phpinfo() ?></code>
+Type <code><? php phpinfo() ?></code>
 Press "Control+C" (mac, windows, and linux)
 Then type :wq to write the file and quit vim
 
@@ -152,7 +150,7 @@ This will help you set a password for the root account, remove anonymous-user ac
 We will now set up an awesome php and mysql interface called phpmyadmin
 That will help run queries and optimize our databases.
 Run this command to download it 
-<code>wget http://sourceforge.net/projects/phpmyadmin/files/phpMyAdmin/3.5.3/phpMyAdmin-3.5.3-all-languages.zip</code>
+<pre>wget http://sourceforge.net/projects/phpmyadmin/files/phpMyAdmin/3.5.3/phpMyAdmin-3.5.3-all-languages.zip</pre>
 
 After it has downloaded, unzip it:
 <code>unzip phpMyAdmin-3.5.3-all-languages.zip -C /var/www/html</code>
@@ -192,25 +190,25 @@ Your <strong>httpd.conf</strong> file should now be open. <strong><em>DO NOT</em
 
 Scroll down and look for this piece of code:
 
-<div class="highlight"><pre><code class="bash">
+<pre>
 &lt;directory "/var/www/html"&gt;
     Options Indexes FollowSymLinks
     AllowOverride None
     Order allow,deny
     Allow from all
 &lt;/directory&gt;
-</code></pre></div>
+</pre>
 
 Press i then change this to:
 
-<div class="highlight"><pre><code class="bash">
+<pre>
 &lt;directory "/var/www/html"&gt;
     Options Indexes FollowSymLinks
     AllowOverride All
     Order allow,deny
     Allow from all
 &lt;/directory&gt;
-</code></pre></div>
+</pre>
 
 Make sure that <code>AllowOverride</code> is set to <code>All</code> otherwise, what we are about to do won't work.
 Next hit Control+C and type <code>:wq</code> 
@@ -227,20 +225,20 @@ Here is a list of things you should put in this file to make it more secure.
 
 <h4>Remove Access To Your Important Files And .htaccess</h4>
 
-<div class="highlight"><pre><code class="bash">
+<pre>
 &lt;filesmatch ".(htaccess|htpasswd|ini|phps|fla|psd|log|sh)$"&gt;
  Order Allow,Deny
  Deny from all
 &lt;/filesmatch&gt;
-</code></pre></div>
+</pre>
 
-<div class="highlight"><pre><code class="bash">
+<pre>
 &lt;files ~ "^.*\.([Hh][Tt][Aa])"&lt;
 order allow,deny
 deny from all
 satisfy all
 &lt;/files&lt;
-</code></pre></div>
+</pre>
 
 
 
@@ -248,7 +246,7 @@ satisfy all
 <div class="highlight"><pre><code class="bash">Options All -Indexes</code></pre></div>
 
 <h4>No Spam (Bad Bots and Hackers)</h4>
-<div class="highlight"><pre><code class="bash">
+<pre>
 # ----------------------------------------------------------------------^M
 # No Spam (Bad Bots and Hackers)
 # ----------------------------------------------------------------------^M
@@ -331,10 +329,10 @@ RewriteCond %{HTTP_USER_AGENT} ^WWWOFFLE [OR] ^M
 RewriteCond %{HTTP_USER_AGENT} ^Xaldon\ WebSpider [OR] ^M
 RewriteCond %{HTTP_USER_AGENT} ^Zeus ^M
 RewriteRule ^.* - [F,L]^M
-</code></pre></div>
+</pre>
 
 <h4>Compression</h4>
-<div class="highlight"><pre><code class="bash">
+<pre>
 # ----------------------------------------------------------------------
 # Gzip compression
 # ----------------------------------------------------------------------
@@ -380,10 +378,10 @@ RewriteRule ^.* - [F,L]^M
     AddOutputFilterByType DEFLATE image/x-icon image/svg+xml application/vnd.ms-fontobject application/x-font-ttf font/opentype
   &lt;/ifmodule&gt;
 
-</code></pre></div>
+</pre>
 
 <h4>Error Documents</h4>
-<div class="highlight"><pre><code class="bash">
+<pre>
 #---------------ERROR DOCUMENTS---------------#
 
 #BAD_REQUEST
@@ -397,7 +395,7 @@ ErrorDocument 403 /var/www/html/403.php
  
 #NOT_FOUND (Most Common)
 ErrorDocument 404 /var/www/html/404.php
-</code></pre></div>
+</pre>
 
 <h2>Amazon EC2 is Awesome!</h2>
 I hope you found my setup recipe (tutorial) for Amazon EC2 helpful. Sign up for <a href="https://aws.amazon.com/ec2" target="_blank">Amazon EC2</a>!

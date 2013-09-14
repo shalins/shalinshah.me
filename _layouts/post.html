@@ -1,91 +1,78 @@
 ---
 layout: layout
 class: post
-style: /css/compiled/post.css
 ---
 <div class="row center">
   <div class="span8 offset2">  
-    <div class="postHeader">
-      <div class="title">
-        <div id="big">
-        <h1 itemprop="headline" id="post"><a href="{{ page.url }}/">{{ page.title }}</a></h1>
-        </div>
-      </div>  
-      
-      <div class="byline">
-        <span>By <a href="/about/" title="Shalin Shah">Shalin Shah</a></span>
-        <time datetime="{{page.date | date: "%Y-%m-%d"}}">{{ page.date | date: "%B %e, %Y" }}</time>
-        Tagged with
-        <ul class="tags">
-          {% for tag in page.tags %}
-          <li><a href="/tag/{{ tag }}/">{{ tag | replace: '-', ' ' }}</a></li>
-          {% endfor %}
-        </ul>
-        </span>
-      </div>
-    </div>
-    <br>
-    {% if page.class == "post" %}
-      <div id="featured-wrap">
-        <img width="1400" height="1060" src="{{ page.image }}" class=" " />
-      </div>
-    {% endif %}
-      <br><br>
+      <h1 class="entry-title scale"><a href="{{ page.url }}" rel="bookmark" title="{{ post.title }}">{{ page.title }}</a></h1>
+          <span class="published">
+            <div class="entry-meta">
+              By <a href="http://www.shalinvs.tk">Shalin Shah</a> on <time datetime="{{post.date | date: "%Y-%m-%d"}}">
+              {{ page.date | date: "%B %e, %Y" }}.
+              </time>
+              Tagged with
+              <ul class="tags">
+                {% for tag in page.tags %}
+                <li><a href="/tag/{{ tag }}/">{{ tag | replace: '-', ' ' }}</a></li>
+                {% endfor %}
+              </ul>
+              <div class="right">
+              </div>                         
+            </div><!-- .entry-meta -->
+          </span>
       <br>
     <article>
       {{ content }}
     </article>
-
-    <section class="meta">
-      <h3>
-        Social Stuff
-        <a class="rss" href="http://feeds.feedburner.com/shalin/shah" title="Subscribe to Shalin's feed">
-          <img src="/images/rss.png" alt="RSS Feed Icon" />
-        </a>
-      </h3>
-
-      <section class="copy">
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)) js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-        <form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=shalin/shah', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
-
-          <p>
-            <a href="https://twitter.com/shlns" class="avatar">
-              <img src="/images/s-small.png" height="100" width="100" alt="Shalin Shah" />
-            </a>
-            Hey, thanks for reading! I'm <a href="/about/">Shalin Shah</a>, a web designer, mobile developer, and graphic designer.
-          </p>
-          {% if page.hn %}
-            <p>You can hate, love, or make fun of this post, over at <a href="{{ page.hn }}">Hacker News</a>.</p>
-          {% endif %}
-          <p>
-            If you enjoyed this article, you should <a href="https://twitter.com/shlns" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @shlns</a> or sign up to get an email whenever I write something new:
-            <input style="width:177px" type="email" name="email" placeholder="tony@starkindustries.com"/>
-            <input type="hidden" value="shalin/shah" name="uri"/>
-            <input type="hidden" name="loc" value="en_US"/>
-            <input class="btn btn-large btn-primary" type="submit" value="Go" />
-          </p>
-        </form>
-
-        <p style="color:black;"><strong>You like this? Then you should share it with your friends!</strong></p>
-
-       
-
-        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.shalinvs.tk{{ page.url }}/" data-text="{{ page.title | xml_escape }}" data-via="shlns" data-size="large" data-related="shlns">Tweet</a>
-
-        <div class="g-plusone"></div>
-
-        <div class="fb-like" data-href="http://wwwshalinvs.tk{{ page.url }}/" data-layout="button_count" data-send="true" data-width="570" data-show-faces="true"></div>
-      </section>
-
-
+    <br><br><br>
+    <div class="post-share">          
+      <a href="http://twitter.com/share?url=http://www.shalinvs.tk{{ page.url }}/&text= {{ page.title }} via @shlns" target="_blank" class="btn post-share-btn twitter-btn">Share on Twitter</a> 
+      
+      <a onClick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]={{ page.title }}&amp;p[summary]=&amp;p[url]=http://www.shalinvs.tk{{ page.url }}/&amp;&amp;p[images][0]=','sharer','toolbar=0,status=0,width=548,height=325');" href="javascript: void(0)" class="btn post-share-btn facebook-btn">Share on Facebook</a> 
+      <a href="https://plus.google.com/share?url=http://www.shalinvs.tk{{ page.url }}" target="_blank" class="btn post-share-btn googleplus-btn">Share on Google+</a>
+    </div><!-- END .post-share -->
+<br><br><br><br><br><br>
+<div class="about-author">
+    <div class="row">
+      <img alt='Shalin Shah' src='https://lh4.googleusercontent.com/-LqP3a-Lfrec/UXMUhVHmEvI/AAAAAAAAAXI/gpZgeiemCh4/w571-h588-no/photo.jpg' class='avatar photo' />      
+      <div class="author-right">
+        <p> 
+          <span class="author-name">
+            <a href="http://www.shalinvs.tk">Shalin Shah</a>           
+              <a href="http://www.shalinvs.tk" class="author-url"></a>
+          </span>
+          I'm a 14 year old kid living in California. I enjoy programming, especially front-end web-design, and also some mobile programming, mostly iOS. Besides coding, I like running, and listening to good music.
+        </p>
+        <ul class="author-icon-list">        
+            <li>
+              <a href="http://www.twitter.com/shlns" class="author-social-icon twitter" target="_blank" title="I'm on Twitter">@shlns</a>
+            </li>
+            <li>
+              <a href="http://dribbble.com/sln" class="author-social-icon dribbble" target="_blank" title="I'm on Dribbble"></a>
+            </li>          
+            <li>
+              <a href="https://www.facebook.com/shalinvs" class="author-social-icon facebook" target="_blank" title="I'm on Facebook"></a>
+            </li>          
+            <li>
+              <a href="http://instagram.com/shalinster" class="author-social-icon instagram" target="_blank" title="I'm on Instagram"></a>
+            </li>         
+            <li>
+              <a href="https://plus.google.com/105718561776352763084/posts" target="_blank" class="author-social-icon google_plus" title="I'm on Google Plus"></a>
+            </li>          
+            <li>
+              <a href="mailto:shalinvs@gmail.com" class="author-social-icon email" target="_blank" title="Email Me"></a>
+            </li>
+        </ul>
+      </div><!-- END #author-right -->  
+    </div><!-- END .row -->    
+  </div><!-- END #about-author -->
+<br><br><br><br><br><br><br><br><br>
       {% if page.previous.url %}
-        <a class="prev" href="{{ page.previous.url }}/" title="Previous Post: {{ page.previous.title }}">{{ page.previous.title }}</a>
+        <!-- <a class="prev" href="{{ page.previous.url }}/" title="Previous Post: {{ page.previous.title }}">{{ page.previous.title }}</a> -->
       {% endif %}
       {% if page.next.url %}
-        <a class="next" href="{{ page.next.url }}/" title="Next Post: {{ page.next.title }}">{{ page.next.title }}</a>
+        <!-- <a class="next" href="{{ page.next.url }}/" title="Next Post: {{ page.next.title }}">{{ page.next.title }}</a> -->
       {% endif %}
-
-
       <div id="disqus_thread"></div>
       <script type="text/javascript">
           var disqus_shortname = 'shalinvs';
@@ -102,3 +89,5 @@ style: /css/compiled/post.css
     </section>
   </div>
 </div>
+
+<br><br><br><br><br><br><br><br><br>

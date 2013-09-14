@@ -2,7 +2,8 @@
 old: true
 layout: post
 title: "Learning Objective C - Day One"
-image: /stuff/8230856113_de95fd666f_h.jpg
+image: /images/illustrations/touch.png
+identity: objectivec
 tags:
 - Coding
 - Me
@@ -16,7 +17,7 @@ I am planning on learning by following some online tutorials.
 
 ## Day one.
 I am watching some of the tutorials on <a href="http://www.teamtreehouse.com" target="_blank">Team Treehouse</a>. If you visit their site, it is a paid membership, but I emailed them saying I'm a student wanting to learn and I got it free for 6 months (which is loads of time). I am also using the Stanford CS193p course on iTunes-U for some of the fundamentals.
-I took less than an hour to go through all of the Hello World stuff. I had made a few demo hello world apps, too. I think that is great for someone (like me) who is a beginner at objective-c.
+I took less than an hour to go through all of the Hello World stuff. I have made a few demo hello world apps, too. I think that is great for someone (like me) who is a beginner at objective-c.
 
 I also read the apple documentation for objective-c constantly <a href="https://developer.apple.com/devcenter/ios/index.action" target="_blank"></a>. To me, the documentation and tutorials they have are absolutely genius! The link to the Stanford CS193p class is <a href="http://www.stanford.edu/class/cs193p/cgi-bin/drupal/blog/15" title="CS193P with Paul Hegarty" target="_blank">here</a>. It is on ios5, though.
 

@@ -34,7 +34,7 @@ task :default => :deploy
 desc "Deploy to S3"
 task :deploy do
   sh "jekyll"
-  sh "s3cmd sync _site/* s3://www.shalinvs.tk"
+  sh "s3cmd sync _site/* s3://www.shalinshah.me"
   sh "compass compile"
   sh "rm -r _site"
 end

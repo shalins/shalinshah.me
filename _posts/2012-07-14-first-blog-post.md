@@ -1,7 +1,9 @@
 ---
 old: true
 layout: post
-image: /stuff/blog.jpg
+image: /images/illustrations/book.png
+identity: first
+background: first-post
 title: "First Blog Post"
 tags:
 - Me

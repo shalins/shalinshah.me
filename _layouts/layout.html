@@ -1,291 +1,131 @@
 <!doctype html>
 <html>
-<!--
-    Shalin Shah
-    http://www.shalinvs.tk/
--->
+<!-- Shalin Shah -->
 <head>
-<!-- This be the title -->
-  <title>{% if page.class == "home" %}{{ page.title }}{% else %} {{ page.title }} &raquo; Shalin Shah{% endif %}</title>
-  <meta property="og:title" content="{% if page.class == 'home' %}{{ page.title }}{% else %} {{ page.title }} &raquo; Shalin Shah{% endif %}" />
-
-<!-- Google Chrome Frame for IE -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-<!-- Mobile Meta (yea buddy!) -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-
-<!-- Google, you no trust me? -->
-  <meta name="google-site-verification" content="RZsPuqLhMe5NQsaYn6rXk6apYq21PZFq4Dmk7Xd6XZo" />
-
-<!-- Discribing me -->
-  <meta name="description" content="{{ meta_desc }}">
-  <meta property="og:description" content="{{ meta_desc }}" />
-  {% capture meta_desc %}{% if page.summary %}{{ page.summary }}{% else %}Shalin Shah is a 13 year old kid who enjoys programming, web-design, mobile app development, and graphic design. He builds things to make his and other people's lives easier. He occasionally blogs.{% endif %}{% endcapture %}
-
-<!-- Beautifulizing this site -->
-    <!-- Loading Bootstrap -->
-    <link href="/css/bootstrap.css" rel="stylesheet">
-    <link href="/css/bootstrap-responsive.min.css" rel="stylesheet">    
-    <!-- Loading Flat UI -->
+  {% capture meta_desc %}{% if page.summary %}{{ page.summary }}{% else %}Hi. I am Shalin and this is my blog, where I enunciate my thoughts on random stuff. Thanks for reading.{% endif %}{% endcapture %}
+  <!-- This be the title -->
+    <title>{% if page.class == "blog" %}{{ page.title }}{% else %} {{ page.title }} &raquo; Shalin Shah{% endif %}</title>
+    <meta property="og:title" content="{% if page.class == 'blog' %}{{ page.title }}{% else %} {{ page.title }} &raquo; Shalin Shah{% endif %}" />
+  <!-- Google Chrome Frame for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <!-- Mobile Meta (yep, it's responsive) -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <!-- Google, you no trust me? -->
+    <meta name="google-site-verification" content="RZsPuqLhMe5NQsaYn6rXk6apYq21PZFq4Dmk7Xd6XZo" />
+  <!-- Describing me -->
+    <meta name="description" content="{{ meta_desc }}">
+    <meta property="og:description" content="{{ meta_desc }}" />
+  <!-- Beautifulizing this site -->
+    {% if page.class == "portfolio" %} <link href="/css/portfolio.css" rel="stylesheet"> {% endif %}      
+    <link href="/css/style.css" rel="stylesheet">    
+    <link href="/css/animations.css" rel="stylesheet">                                    
+    <link href="/css/screen.css" rel="stylesheet">  
+    <link href="/css/main.css" rel="stylesheet">
     <link href="/css/flat-ui.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/css/component.css" />
+    <link href="/css/component.css" rel="stylesheet">
     <script src="/js/modernizr.custom.js"></script>
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
-      <script src="/js/html5shiv.js"></script>
-    <![endif]-->
-    {% if page.class == "post" %}
-    <!-- Page-specific css -->
-    <link rel="stylesheet" type="text/css" href="{{ page.style }}" />
-    {% elsif page.class == "about" %}
-    <!-- Page-specific css -->
-    <link rel="stylesheet" type="text/css" href="{{ page.style }}" />
-    {% elsif page.class == "quotes" %}
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]--> 
+  {% if page.class == "post" %}
     <!-- Page-specific css -->
     <link rel="stylesheet" type="text/css" href="{{ page.style }}" />
     {% endif %}
-    
-
-    <link id="scrollUpTheme" rel="stylesheet" href="/css/themes/image.css">
-    <link id="scrollUpTheme" rel="stylesheet" href="/css/labs.css">
-    <script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="/js/jquery.scrollUp.min.js"></script>
-    <script>
-      $(function () {
-          $.scrollUp({
-        scrollImg: true
-      });
-        });
-    </script>
-
 <!-- The site icons -->
   <link rel="Shortcut Icon" type="image/x-icon" href="/images/favicon.png" />
   <meta property="og:image" content="/images/favicon.png" />
-
 <!-- Yep, I built this site -->
   <link type="text/plain" rel="author" href="http://www.shalinvs.tk/me.txt" />
   <link href="https://plus.google.com/105718561776352763084/posts" relc="author" />
   <meta property="article:author" content="http://www.shalinvs.tk/about/" />
-
-<!-- Meta canonicals for SEO -->
   {% if page.class == "post" %}
+<!-- Meta canonicals for SEO -->  
   <link rel="canonical" href="http://www.shalinvs.tk/{{ page.url }}/" />
   <meta property="og:url" content="http://www.shalinvs.tk{{ page.url }}/" />
-  {% elsif page.class == "home" %}
+  {% elsif page.class == "blog" %}
   <link rel="canonical" href="http://www.shalinvs.tk/" />
   <meta property="og:url" content="http://www.shalinvs.tk/" />
   {% endif %}
-
 <!-- Content Type -->
   <meta property="og:type" content="article" />
   {% if page.tags %}{% for tag in page.tags %}<meta property="article:tag" content="{{ tag | replace: '-', ' ' }}" />{% endfor %}{% endif %}
-
 <!-- My blog feed -->
   <link rel="alternate" type="application/atom+xml" title="Shalin Shah's Blog" href="http://feeds.feedburner.com/shalin/Shah" />  
-
-<!-- Typekit to please my inner designer -->
+<!-- Awesome fade-in effect -->
   <style>
   .page-loading{opacity: 0;}
   .page-active, .page-inactive {opacity: 1 !important;-moz-transition: 0.2s opacity ease-in;-webkit-transition: 0.2s opacity ease-in;transition: 0.2s opacity ease-in;}
   </style>
   <script type="text/javascript">
-    (function() {
-      var config = {
-        scriptTimeout: 200
-      };
-      var h=document.getElementsByTagName("html")[0];h.className+=" page-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)page-loading(\s|$)/g," ");h.className+=" page-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config);h.className+="page-active"}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
-    })();
+    (function() { var config = { scriptTimeout: 200 };
+      var h=document.getElementsByTagName("html")[0];h.className+=" page-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)page-loading(\s|$)/g," ");h.className+=" page-inactive"},config.scriptTimeout);})();
   </script>
-  
 </head>
-<body class="{{ page.class }} home blog ">
-  <div class="stripes">
-        <span class="stripe item1"></span>
-        <span class="stripe item2"></span>
-        <span class="stripe item3"></span>
-        <span class="stripe item4"></span>
-        <span class="stripe item5"></span>
-        <span class="stripe item6"></span>
-        <span class="stripe item7"></span>
-        <span class="stripe item8"></span>
-        <span class="stripe item9"></span>
-        <span class="stripe item10"></span>
-        <span class="stripe item11"></span>
-        <span class="stripe item12"></span>
-        <span class="stripe item13"></span>
-        <span class="stripe item14"></span>
-        <span class="stripe item15"></span>
-        <span class="stripe item16"></span>
-        <span class="stripe item17"></span>
-        <span class="stripe item18"></span>
-        <span class="stripe item19"></span>
-        <span class="stripe item20"></span>
-        <span class="stripe item21"></span>
-        <span class="stripe item22"></span>
-        <span class="stripe item23"></span>
-        <span class="stripe item24"></span>
-        <span class="stripe item25"></span>
-        <span class="stripe item26"></span>
-        <span class="stripe item27"></span>
-        <span class="stripe item28"></span>
-        <span class="stripe item29"></span>
-        <span class="stripe item30"></span>
-        <span class="stripe item31"></span>
-        <span class="stripe item32"></span>
-        <span class="stripe item33"></span>
-        <span class="stripe item34"></span>
-        <span class="stripe item35"></span>
-        <span class="stripe item36"></span>
-        <span class="stripe item37"></span>
-        <span class="stripe item38"></span>
-        <span class="stripe item39"></span>
-        <span class="stripe item40"></span>
-        <span class="stripe item41"></span>
-        <span class="stripe item42"></span>
-        <span class="stripe item43"></span>
-        <span class="stripe item44"></span>
-        <span class="stripe item45"></span>
-        <span class="stripe item46"></span>
-        <span class="stripe item47"></span>
-        <span class="stripe item48"></span>
-        <span class="stripe item49"></span>
-        <span class="stripe item50"></span>
-        <span class="stripe item2"></span>
-      </div>
-  <div id="inner-header" class="wrap clearfix">
-        <div class="demo-headline">
-        <h1 class="demo-logo">
-          Shalin Shah
-          <small>Occasional thoughts on random stuff...</small>
-        </h1>
-      </div> <!-- /demo-headline -->
-  <nav id="menu" class="nav">         
-          <ul>
-            <li>
-              <a href="/">
-                <span class="con">
-                  <i aria-hidden="true" class="con-home"></i>
-                </span>
-                <span>Home</span>
-              </a>
-            </li>
-            <li>
-              <a href="/portfolio/">
-                <span class="con">
-                  <i aria-hidden="true" class="con-portfolio"></i>
-                </span>
-                <span>Portfolio</span>
-              </a>
-            </li>
-            <li>
-              <a href="/blog/">
-                <span class="con">
-                  <i aria-hidden="true" class="con-blog"></i>
-                </span>
-                <span>Blog</span>
-              </a>
-            </li>
-            <li>
-              <a href="/about/">
-                <span class="con">
-                  <i aria-hidden="true" class="con-team"></i>
-                </span>
-                <span>About Me</span>
-              </a>
-            </li>
-            <li>
-              <a href="/contact/">
-                <span class="con">
-                  <i aria-hidden="true" class="con-contact"></i>
-                </span>
-                <span>Contact</span>
-              </a>
-            </li>
-            <li>
-              <a href="/quotes/">
-                <span class="con"> 
-                  <i aria-hidden="true" class="con-services"></i>
-                </span>
-                <span>Get Inspired</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <script>
-      //  The function to change the class
-      var changeClass = function (r,className1,className2) {
-        var regex = new RegExp("(?:^|\\s+)" + className1 + "(?:\\s+|$)");
-        if( regex.test(r.className) ) {
-          r.className = r.className.replace(regex,' '+className2+' ');
-          }
-          else{
-          r.className = r.className.replace(new RegExp("(?:^|\\s+)" + className2 + "(?:\\s+|$)"),' '+className1+' ');
-          }
-          return r.className;
-      };  
+{% if page.class == "post" %}
+<body id="page-journal"  class="journal-{{ page.identity }}">
+{% elsif page.class == "blog" %}  
+<body id="page-home">
+{% elsif page.class == "home" %}  
+<body id="page-journal" class="journal-home">
+{% elsif page.class == "contact" %}  
+<body id="page-journal" class="journal-contact">
+{% elsif page.class == "about" %}  
+<body id="page-journal" class="journal-about">
+{% elsif page.class == "portfolio" %}  
+<body id="page-journal" class="journal-portfolio">
+{% else %} 
+<body>
+{% endif %}
+{% if page.class == "about" %} 
+<header id="dark">
+{% else %}  
+<header>
+{% endif %}
+  <h3 class="logo">
+    <a href="/">
+      Shalin Shah
+    </a> 
+  </h3>
+  <ul class="nav">
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/portfolio/">Portfolio</a></li>
+    <li><a href="/about/">About</a></li>
+    <li><a href="/contact/">Contact</a></li>
+  </ul>
+</header>
 
-      //  Creating our button in JS for smaller screens
-      var menuElements = document.getElementById('menu');
-      menuElements.insertAdjacentHTML('afterBegin','<button type="button" id="menutoggle" class="navtoogle" aria-hidden="true"><i aria-hidden="true" class="con-menu"> </i> Menu</button>');
+{% if page.class == "post" %}
+<div class="journal-header-{{ page.identity }}"> 
+  <img src="{{ page.image }}" width="190" height="190">
+</div>
+{% endif %}
 
-      //  Toggle the class on click to show / hide the menu
-      document.getElementById('menutoggle').onclick = function() {
-        changeClass(this, 'navtoogle active', 'navtoogle');
-      }
-    </script>
-        
-      {% if page.class == "tags" %}
-      <div id="featured-wrap-other">
-        <img width="1600" height="1060" src="{{ page.image }}" class="attachment-creer-full wp-post-image" />
-      </div>
-      {% elsif page.class == "four" %}
-      <div id="featured-wrap-other">
-        <img width="1600" height="1060" src="http://lorempixel.com/1600/1060/" />
-      </div>   
-      {% elsif page.class == "about" %}
-      <div id="featured-wrap-other">
-        <img width="1600" height="1060" src="{{ page.image }}" />
-      </div>
-      {% elsif page.class == "contact" %}
-      <div id="featured">
-      <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-      <div id="map_canvas-4477" class="google-map" style="width: px; height: 350px;"></div>
-        <script type="text/javascript">
-          jQuery(document).ready(function($) {
-            var mapOptions = {
-              zoom: 16,
-              mapTypeId: google.maps.MapTypeId.ROADMAP,
-              disableDefaultUI: true
-            }
-            var map = new google.maps.Map(document.getElementById("map_canvas-4477"), mapOptions); 
-            geocoder = new google.maps.Geocoder();
-            var address = "Los Angeles";
-            geocoder.geocode( { "address": address }, 
-              function(results, status) {
-                if (status == google.maps.GeocoderStatus.OK) {
-                  map.setCenter(results[0].geometry.location);
-                  var marker = new google.maps.Marker({
-                    map: map, 
-                    position: results[0].geometry.location
-                  });
-                }
-              });
-          });
-        </script>                   
-      </div>
-      {% endif %}
+
+{% if page.class == "blog" %}
+<section id="content-wrapper">
+{% elsif page.class == "portfolio" %}
+{% else %}
+<section id="content-wrapper-two">
+{% endif %}
+
+{% if page.class == "portfolio" %}
+  {{ content }}
+{% else %}
   <div class="container">
-<br>
-<br>
-  <section class="content clearfix">
-    {{ content }}
-  </section>
-</div><!-- /container -->
+    <section class="content clearfix">
+      {{ content }}
+    </section>
+  </div><!-- /container -->
+{% endif %}
 
-
+{% if page.class == "portfolio" %}
+{% else %}
+</section>
+{% endif %}
 
 {% if page.script %}
 <!-- Page-specific script -->
@@ -324,70 +164,14 @@ $(function() {
   })();
   </script>
 {% endif %}
-<br><br>
-<div class="stripes">
-        <span class="stripe item1"></span>
-        <span class="stripe item2"></span>
-        <span class="stripe item3"></span>
-        <span class="stripe item4"></span>
-        <span class="stripe item5"></span>
-        <span class="stripe item6"></span>
-        <span class="stripe item7"></span>
-        <span class="stripe item8"></span>
-        <span class="stripe item9"></span>
-        <span class="stripe item10"></span>
-        <span class="stripe item11"></span>
-        <span class="stripe item12"></span>
-        <span class="stripe item13"></span>
-        <span class="stripe item14"></span>
-        <span class="stripe item15"></span>
-        <span class="stripe item16"></span>
-        <span class="stripe item17"></span>
-        <span class="stripe item18"></span>
-        <span class="stripe item19"></span>
-        <span class="stripe item20"></span>
-        <span class="stripe item21"></span>
-        <span class="stripe item22"></span>
-        <span class="stripe item23"></span>
-        <span class="stripe item24"></span>
-        <span class="stripe item25"></span>
-        <span class="stripe item26"></span>
-        <span class="stripe item27"></span>
-        <span class="stripe item28"></span>
-        <span class="stripe item29"></span>
-        <span class="stripe item30"></span>
-        <span class="stripe item31"></span>
-        <span class="stripe item32"></span>
-        <span class="stripe item33"></span>
-        <span class="stripe item34"></span>
-        <span class="stripe item35"></span>
-        <span class="stripe item36"></span>
-        <span class="stripe item37"></span>
-        <span class="stripe item38"></span>
-        <span class="stripe item39"></span>
-        <span class="stripe item40"></span>
-        <span class="stripe item41"></span>
-        <span class="stripe item42"></span>
-        <span class="stripe item43"></span>
-        <span class="stripe item44"></span>
-        <span class="stripe item45"></span>
-        <span class="stripe item46"></span>
-        <span class="stripe item47"></span>
-        <span class="stripe item48"></span>
-        <span class="stripe item49"></span>
-        <span class="stripe item50"></span>
-        <span class="stripe item49"></span>        
-      </div>
-    <footer>
+
+    <footer class="hovering">
       <div class="container">
         <div class="row">
             <center>
             <h3 class="footer-title"></h3>
-            <p>Copyright &copy; 2013 <a href="/">Shalin Shah</a>. Made in Los Angeles, California.</p>
-            <p class="pvl">
-              <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.shalinvs.tk/blog/" data-text="Check out this cool new blog I discovered" data-via="shlns" data-size="large">Tweet</a>
-              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-            </p>
+            <p>Copyright &copy; 2013 <a href="/">Shalin Shah</a>. Made with <b class="heart">&hearts;</b> in Los Angeles, California.</p>
+            <a class="btn btn-success btn-large btn-block" href="http://twitter.com/shlns" target="_blank">Follow @shlns</a>
           </center>
         </div>
       </div>
@@ -416,17 +200,24 @@ var sc_security="ea83eacd";
 
 <!-- Load JS here for greater good =============================-->
     <script src="/js/jquery-ui-1.10.0.custom.min.js"></script>
-    <script src="/js/jquery.dropkick-1.0.0.js"></script>
-    <script src="/js/custom_checkbox_and_radio.js"></script>
-    <script src="/js/custom_radio.js"></script>
-    <script src="/js/jquery.tagsinput.js"></script>
-    <script src="/js/bootstrap-tooltip.js"></script>
-    <script src="/js/jquery.placeholder.js"></script>
-    <script src="http://vjs.zencdn.net/c/video.js"></script>
     <script src="/js/application.js"></script>
     <!--[if lt IE 8]>
       <script src="/js/icon-font-ie7.js"></script>
       <script src="/js/icon-font-ie7-24.js"></script>
     <![endif]-->
+    {% if page.class == "contact" %}    
+    <script>
+      $(window).scroll(function() {
+        $('#example-5').each(function(){
+        var imagePos = $(this).offset().top;
+
+        var topOfWindow = $(window).scrollTop();
+          if (imagePos < topOfWindow+200) {
+            $('.graph-bar').addClass("pullUp");
+          }
+        });
+      });
+    </script>
+    {% endif %}
 </body>
 </html>
