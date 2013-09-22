@@ -1,5 +1,6 @@
 exclude: [config.rb, shalinvs.tk.sublime-project, shalinvs.tk.sublime-workspace, nginx.conf, Rakefile, README.md]
 markdown: rdiscount
+port:        4001
 pygments: true
 permalink: /:title
 rdiscount:
