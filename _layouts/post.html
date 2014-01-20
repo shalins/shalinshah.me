@@ -1,13 +1,16 @@
 ---
 layout: layout
 class: post
+style: /css/typography.css
 ---
 <div class="row center">
-  <div class="span8 offset2">  
-      <h1 class="entry-title scale"><a href="{{ page.url }}" rel="bookmark" title="{{ post.title }}">{{ page.title }}</a></h1>
-          <span class="published">
+  <div class="offset2">  
+      <h1 class="entry-title"><a href="{{ page.url }}" rel="bookmark" title="{{ post.title }}">{{ page.title }}</a></h1>
+      <p class="article-date">{{ page.date | date: "%B %e, %Y" }}</p>
+
+          <!-- <span class="published">
             <div class="entry-meta">
-              By <a href="http://www.shalinvs.tk">Shalin Shah</a> on <time datetime="{{post.date | date: "%Y-%m-%d"}}">
+              By <a href="http://www.shalinshah.me">Shalin Shah</a> on <time datetime="{{post.date | date: "%Y-%m-%d"}}">
               {{ page.date | date: "%B %e, %Y" }}.
               </time>
               Tagged with
@@ -18,18 +21,18 @@ class: post
               </ul>
               <div class="right">
               </div>                         
-            </div><!-- .entry-meta -->
-          </span>
+            </div> --><!-- .entry-meta -->
+          <!-- </span>  -->
       <br>
     <article>
       {{ content }}
     </article>
     <br><br><br>
     <div class="post-share">          
-      <a href="http://twitter.com/share?url=http://www.shalinvs.tk{{ page.url }}/&text= {{ page.title }} via @shlns" target="_blank" class="btn post-share-btn twitter-btn">Share on Twitter</a> 
+      <a href="http://twitter.com/share?url=http://www.shalinshah.me{{ page.url }}/&text= {{ page.title }} via @shlns" target="_blank" class="btn post-share-btn twitter-btn">Share on Twitter</a> 
       
-      <a onClick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]={{ page.title }}&amp;p[summary]=&amp;p[url]=http://www.shalinvs.tk{{ page.url }}/&amp;&amp;p[images][0]=','sharer','toolbar=0,status=0,width=548,height=325');" href="javascript: void(0)" class="btn post-share-btn facebook-btn">Share on Facebook</a> 
-      <a href="https://plus.google.com/share?url=http://www.shalinvs.tk{{ page.url }}" target="_blank" class="btn post-share-btn googleplus-btn">Share on Google+</a>
+      <a onClick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]={{ page.title }}&amp;p[summary]=&amp;p[url]=http://www.shalinshah.me{{ page.url }}/&amp;&amp;p[images][0]=','sharer','toolbar=0,status=0,width=548,height=325');" href="javascript: void(0)" class="btn post-share-btn facebook-btn">Share on Facebook</a> 
+      <a href="https://plus.google.com/share?url=http://www.shalinshah.me{{ page.url }}" target="_blank" class="btn post-share-btn googleplus-btn">Share on Google+</a>
     </div><!-- END .post-share -->
 <br><br><br><br><br><br>
 <div class="about-author">
@@ -38,10 +41,10 @@ class: post
       <div class="author-right">
         <p> 
           <span class="author-name">
-            <a href="http://www.shalinvs.tk">Shalin Shah</a>           
-              <a href="http://www.shalinvs.tk" class="author-url"></a>
+            <a href="http://www.shalinshah.me">Shalin Shah</a>           
+              <a href="http://www.shalinshah.me" class="author-url"></a>
           </span>
-          I'm a 14 year old kid living in California. I enjoy programming, especially front-end web-design, and also some mobile programming, mostly iOS. Besides coding, I like running, and listening to good music.
+          I'm a 14 year old kid living in California. I enjoy programming websites and iOS Apps. Besides coding, I like running and listening to good music.
         </p>
         <ul class="author-icon-list">        
             <li>

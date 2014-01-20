@@ -58,7 +58,7 @@
 pre {
 	margin: 45px 0px 40px 0px; 
 	padding: 13px 20px;
-	background-color: #F4F4F6;
+	background-color: #fff;
 	clear: both;
 	color: #22272A;
 	overflow: auto;
@@ -70,7 +70,7 @@ pre {
   
 code { 
  	padding: 7px 7px;
- 	background-color: #F4F4F6;
+ 	background-color: #fff;
  	border-radius: 0px;
  	color: #22272A;
  	font: 14px/22px Consolas, "Courier New", Courier, monospace;

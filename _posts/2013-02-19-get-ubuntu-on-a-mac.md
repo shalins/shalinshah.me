@@ -8,11 +8,11 @@ tags:
 - Tips and Tricks
 ---
 
-I have a 13 inch Macbook Pro and I just wanted to see if I could get Ubuntu running alongside OSX Mountain Lion. It's really not as hard to do that as I expected. You can even add three Operating Systems if you like and it would run fine. I just wanted to show the way I did it. Please, before beginning, **Make a backup**!!! Have a backup already? Great! Then let's get started.
+I have a 13 inch Macbook Pro and I just wanted to see if I could get Ubuntu running alongside OSX Mountain Lion. It's really not as hard to do that as I expected. You can even add three Operating Systems if you like and it would run fine. I just wanted to show the way I did it. Please, before beginning, **Make a backup!!!** Have a backup already? Great! Then let's get started.
 
 ## Step 1: Install rEFIt
 
-'rEFIt' is an beautiful (think BURG) boot-interrupter that allows you to boot between OS X and your Linux distribution(s) of choice.
+'rEFIt' is a beautiful boot-interrupter that allows you to boot between OS X and your Linux distribution(s) of choice (even Windows).
 
 <center><img src="/images/posts/rEFIt.jpg"></center>
 

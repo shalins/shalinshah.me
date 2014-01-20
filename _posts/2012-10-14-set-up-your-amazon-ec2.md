@@ -15,7 +15,7 @@ Also, If I'm going too slow, I'm sorry, but please bare with me because I made t
 
 ## Step 1: Create an Account
 
-Obviously, you need to create your AWS account; you can sign up <a href="http://aws.amazon.com/ec2/" target="_blank">here</a>. You have to provide your credit card to register and you'll need a valid phone number because Amazon will call you as part of the process. Amazon offers a <strong>Free Usage Tier</strong>, which is great to explore the services and even host real apps without being charged. You should look at the <a href="http://aws.amazon.com/free/" target="_blank">details</a>.
+Obviously, you need to create your AWS account; you can sign up <a href="http://aws.amazon.com/ec2/" target="_blank">here</a>. You have to provide your credit card to register and you'll need a valid phone number because Amazon will call you as part of the process. Amazon offers a **Free Usage Tier**, which is great to explore the services and even host real apps without being charged. You should look at the <a href="http://aws.amazon.com/free/" target="_blank">details</a>.
 
 
 ## Step 2: Create an Instance
@@ -29,7 +29,7 @@ Click the big "Launch Instance" button. Make sure "Classic Wizard" is selected a
 Instance details: Select the Instance Type you want to use. I chose Micro because it's free (t1.micro).
 Create a new key pair. Enter a name for your key pair (i.e. shalin) and download your key pair (i.e. shalin.pem).
 
-<em><strong>NOTE: DO NOT give anyone your key pair. It the access key to your whole instance. Don't lose or delete it either, otherwise you won't be able to connect to your instance!</strong></em>
+**NOTE: DO NOT give anyone your key pair. It the access key to your whole instance. Don't lose or delete it either, otherwise you won't be able to connect to your instance!**
 
 
 Select the create new security group, give it a name and description, and then, for the create the new rule, select:
@@ -60,50 +60,48 @@ Once you are in terminal, enter this command
 And change the .pem file's full path and name.
 
 Then Connect:
-<code>ssh -i Downloads/shalin.pem ec2-user@<em>ec2-your-public-dns-of-your-instance.amazonaws.com</em></code>
+<code>ssh -i Downloads/shalin.pem ec2-user@ec2-your-public-dns-of-your-instance.amazonaws.com</code>
 or you can type 
-<code>ssh -i Downloads/shalin.pem ec2-user@<em>your ip you just associated</em></code> either one works.
+<code>ssh -i Downloads/shalin.pem ec2-user@your ip you just associated</code> either one works.
 Make sure you change the .pem file's full path and name and your public DNS.
 
-Hit "Enter", you will be asked: "Are you sure you want to continue connecting (yes/no)?" Type <em><strong>yes</strong></em>.
+Hit "Enter", you will be asked: "Are you sure you want to continue connecting (yes/no)?" Type **yes.**
 
-<h2>Step 4: The Basics</h2>
+##Step 4: The Basics
 Okay, so now you've most likely followed everything in this tutorial successfully and now have a running instance that you've connected to. Lets begin the server stuff.
  
-<h3>Understanding The Command Line...It's very hard, at first</h3>
+###The command line is only confusing at first..
 Here are the basic terminal commands
 <ul>
-	<li>The <code>man</code> command is for a manual or help on something. (i.e. <code>man ls</code>)</li>
-	<li>The <code>ls</code> command is to view the items in the directory.</li>
-	<li>The <code>cd</code> command is to go into or out of a folder (directory) like this <code>cd /</code> moves you to the very very main directory and <code>cd ../</code> moves you back one directory.</li>
-	<li>The <code>sudo</code> command is to become the Super-User, meaning you can do everything. Only use this when you have to, as this can be dangerous.</li>
+	<li>The <code>man</code> command is for a manual or help on something. (i.e. <code>man ls</code>)</li><br>
+	<li>The <code>ls</code> command is to view the items in the directory.</li><br>
+	<li>The <code>cd</code> command is to go into or out of a folder (directory) like this <code>cd /</code> moves you to the very very main directory and <code>cd ../</code> moves you back one directory.</li><br>
+	<li>The <code>sudo</code> command is to become the Super-User, meaning you can do everything. Only use this when you have to, as this can be dangerous.</li><br>
 </ul>
-<strong>One of the most important command is vim or vi. It is a text editor that is built in the command line to edit text files directly. Type in <code>man vim</code> to read about vim. To edit something you type <code>vim <em>file-name.txt</em></code></strong>
+**One of the most important command is vim or vi. It is a command line text editor. Type in <code>man vim</code> to read about vim. To edit something you type <code>vim file-name.txt</code>**
 
 <a href="http://ss64.com/osx/" title="All commands" target="_blank">More Commands...</a>
 
 
-<h2>Step 5: Useful Software</h2>
+##Step 5: Useful Software
 You have a server running now, but it can't do anything useful...yet...
  
-<h3>Installing Apache</h3>
+###Installing Apache
 So we will allow this server to display a simple website. For that, we will need to install Apache.
 Before you do anything, become the root user of this server, so type 
 <code>sudo su</code>
 
 To install the Apache Web Server, type:
-<code>yum install httpd</code>
-
+<code>yum install httpd</code><br>
 Start the Apache Web Server:
-<code>service httpd start</code>
-
+<code>service httpd start</code><br>
 Make sure it's running.
-<code>service httpd status</code>
+<code>service httpd status</code><br>
 
 Now your website is working! To test your Web Server, open a browser and access your web site: http://ec2-the-public-dns-of-your-instance.amazonaws.com (Use your actual public DNS name). You should see a standard Amazon place holder page.
 
 
-<h3>Installing PHP</h3>
+###Installing PHP
 
 To install PHP, type:
 <code>yum install php php-mysql</code>
@@ -127,25 +125,23 @@ If you don't want this file, go back onto terminal and type:
 <code>/var/www/html/</code> is your root directory, meaning, that any files that you put in here, will automatically be put on your public DNS
 
 
-<h3>Installing MySQL</h3>
+###Installing MySQL
 
 To install MySQL, type:
-<code>yum install mysql mysql-server</code>
-
+<code>yum install mysql mysql-server</code><br>
 Then Start MySQL
-<code>service mysqld start</code>
-
+<code>service mysqld start</code><br>
 Then Set A New Password:
-<code>/usr/bin/mysqladmin -u root password 'new-password'</code>
+<code>/usr/bin/mysqladmin -u root password 'new-password'</code><br>
 
-<h3>MySQL Security</h3>
+###MySQL Security
 
 Before using MySQL in production, you'll want to improve your MySQL installation security. Run:
 
 <code>mysql_secure_installation</code>
 This will help you set a password for the root account, remove anonymous-user accounts, and remove the test database.
 
-<h3>phpMyAdmin</h3>
+###phpMyAdmin
 
 We will now set up an awesome php and mysql interface called phpmyadmin
 That will help run queries and optimize our databases.
@@ -165,7 +161,7 @@ Open a browser and access phpmyadmin/ to test your PHP installation: http://ec2-
 
 Then configure all the stuff it tells you to.
 
-<h3>Keep MySQL In Good Shape</h3>
+###Keep MySQL In Good Shape
 
 Over time your MySQL tables will get fragmented and queries will take longer to complete. You can keep your tables in top shape by regularly running OPTIMIZE TABLE on all your tables. But, since you'll never remember to do this regularly, we should set up a cron job to do this.
 
@@ -178,15 +174,15 @@ Then, add the following line:
 Also, you can do the same from phpmyadmin manually to verify that it works correctly.
 
 
-<h2>Step 6: Security</h2>
+##Step 6: Security
 
-If your going to make a website and put it on the internet, it has to be <strong><em>really</em></strong> secure. There are a bunch or people that will mess with your server or write a script to hack it. So, you have to prevent these.
+If your going to make a website and put it on the internet, it has to be **really** secure. There are a bunch or people that will mess with your server or write a script to hack it. So, you have to prevent these.
 
-<h3>httpd.conf</h3>
+###httpd.conf
 So first, enter this command:
 <code>vim /etc/conf/httpd/httpd.conf</code>
 
-Your <strong>httpd.conf</strong> file should now be open. <strong><em>DO NOT</em></strong> mess around with this unless you know what you're doing otherwise you may screw everything up.
+Your **httpd.conf** file should now be open. **DO NOT** mess around with this unless you know what you're doing otherwise you may screw everything up.
 
 Scroll down and look for this piece of code:
 
@@ -213,11 +209,11 @@ Press i then change this to:
 Make sure that <code>AllowOverride</code> is set to <code>All</code> otherwise, what we are about to do won't work.
 Next hit Control+C and type <code>:wq</code> 
 
-<h3>.htaccess</h3>
+###.htaccess
 Great! Now do:
 <code>cd /var/www/html/</code>
  
-and them create a file named .htaccess:
+and then, create a file named .htaccess:
 <code>vim .htaccess</code>
 
 You should get a blank text document because we haven't put anything in it.
@@ -397,7 +393,7 @@ ErrorDocument 403 /var/www/html/403.php
 ErrorDocument 404 /var/www/html/404.php
 </pre>
 
-<h2>Amazon EC2 is Awesome!</h2>
+##Amazon EC2 is Awesome!
 I hope you found my setup recipe (tutorial) for Amazon EC2 helpful. Sign up for <a href="https://aws.amazon.com/ec2" target="_blank">Amazon EC2</a>!
 
 If you want to buy a domain, please use <a href="Http://www.namecheap.com?aff=39838">this link</a> and I will get $1.00 off on my yearly plan for my domains. If not, you can use the <a href="http://www.namecheap.com/" target="_blank">normal link</a>.

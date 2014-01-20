@@ -10,8 +10,6 @@ tags:
 hn: http://news.ycombinator.com/item?id=4876379
 ---
 
-### Ever had a great idea?
-
 Ok, so a lot of us get all sorts of great ideas that run through our brains every day. So how can you store all of these ideas in your head without forgetting a lot of them? Well, you can use google docs, or notes on the iPhone or even use something like Evernote. But if you get that many ideas, it will get really hard to manage and prioritize (especailly with [everything buckets](http://lifehacker.com/5666954/avoid-everything-buckets-aka-why-i-cant-get-into-apps-like-evernote)). I have always had this problem whenever I think of new ideas. I am too lazy to pull out a peice of paper and write down my ideas. I also don't always have a pen and paper ready (and it's not convenient). But I do have my iPhone. So I built it. I built a simple functional version of an app that lets you take simple notes. 
 
 But wait, aren't there thousands of other apps that do the same. I needed a [vacuum](http://mobile.smashingmagazine.com/2012//1107/succeed-with-your-app/) to make this app different. So I sat down and thought, if I was going to use an app like this, then I would probably want it to have some way to prioritize it. I created a aimple rating functionality with the iPhone slider so the higher the slider, the greater the rating. The greater the rating, the more it would be at the top. I still had to work a bit on better design. I added some more color and features to it (without making it look ugly) and I got Ideya!

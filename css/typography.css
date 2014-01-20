@@ -1,0 +1,52 @@
+body {
+  font-size: 1.1em;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+}
+body,p,p a {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+}
+
+a {
+
+}
+
+p,li {
+  line-height: 0.1em;
+  font-size: 1.1em;
+}
+
+h1 a{
+  font-size: 1.4em;
+  line-height: 1.2em;
+  font-weight: 900;
+  color: #5e5e5d;
+ }
+
+h2 {
+  color: #575757;
+  font-size: 2.4em;
+  font-weight: 500;
+  margin-bottom: 2px;
+  border-bottom:3px solid #ccc;
+  padding-bottom: 2px;
+   }
+
+h3 {
+  color: #7A7A7A;
+  font-size: 2.0em;
+  font-weight: 300;
+  margin-bottom: 4px;
+  margin-top: 2px; 
+  border-bottom:3px solid #ccc;
+  padding-bottom: 2px;
+}
+
+h4 {
+  color: #8C8C8C;
+  font-size: 1.7em;
+  font-weight: 500;
+  margin-top: 4px; 
+ padding-bottom: 3px;
+border-bottom:2px solid #ccc;}

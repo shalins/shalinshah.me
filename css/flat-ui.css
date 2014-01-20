@@ -208,12 +208,11 @@
   content: "\e004"; }
 
 body {
-  color: #34495e;
   font-family: "proxima nova light","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
   font-size: 16px;
 }
 p,li {
-  font-family: "proxima nova light","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "proxima nova regular","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   line-height: 1.5em;
 }
 
@@ -704,3 +703,17 @@ textarea,
 .tagit li{display:inline}
 .tagit li:not(:last-child):after{content:", "}
 .row {}
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (max-width : 1000px) {
+/* Styles */
+
+body {
+  font-size: 0.87em;
+}
+
+
+}
+
+
