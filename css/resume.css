@@ -1,0 +1,330 @@
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+html {
+    overflow-y: scroll;
+}
+body {
+    border-top: 5px solid #00E1FF;
+    background-color: #fff;
+    color: #333;
+    font-family: "proxima-nova", Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 17px;
+    line-height: 1.5em;
+    margin: 0;
+    padding: 0;
+}
+@media only screen and (max-width: 1100px) {
+    body {
+    font-size: 16px;
+}
+}@media only screen and (max-width: 480px) {
+    body {
+    font-size: 15px;
+}
+}#container {
+    margin: 0 auto 60px auto;
+    max-width: 700px;
+    padding: 0 2%;
+    width: 92%}
+@media only screen and (max-width: 1100px) {
+    #container {
+    max-width: 600px;
+}
+}@media only screen and (max-width: 850px) {
+    #container {
+    max-width: 700px;
+}
+}.home #container, .about #container, .resume #container {
+    max-width: 1000px;
+}
+.left {
+    float: left;
+    width: 60%}
+.right {
+    float: right;
+    width: 35%;
+    overflow-x: hidden;
+}
+@media only screen and (max-width: 680px) {
+    .left, .right {
+    float: none;
+    width: 100%}
+}a:link, a:visited {
+    color: #00BFD9;
+    text-decoration: underline;
+}
+a:hover, a:focus, a:active {
+	color: #028799;
+    text-decoration: none;
+}
+h1, h2, h3, h4 {
+    color: #333;
+    line-height: 1.2em;
+    border-bottom: 1px solid #ccc;
+}
+h1 a:link, h1 a:visited, h2 a:link, h2 a:visited, h3 a:link, h3 a:visited, h4 a:link, h4 a:visited {
+    text-decoration: none;
+}
+h1 a:hover, h1 a:focus, h1 a:active, h2 a:hover, h2 a:focus, h2 a:active, h3 a:hover, h3 a:focus, h3 a:active, h4 a:hover, h4 a:focus, h4 a:active {
+    text-decoration: underline;
+}
+h1 {
+    font-size: 1.8em;
+    margin: 0.8em 0 0.2em 0;
+}
+h2 {
+    font-size: 1.5em;
+    margin: 1.2em 0 0.6em 0;
+}
+h3 {
+    font-size: 1.3em;
+    margin: 1.2em 0 0.6em 0;
+    color: #999;
+}
+h4 {
+    font-size: 1.1em;
+    margin: 1.2em 0 0.6em 0;
+    color: #999;
+}
+.content h1 a:link, .content h1 a:visited {
+    color: #333;
+    text-decoration: none;
+}
+p {
+    font-size: 1em;
+    margin: 1em 0;
+    line-height: 1.6em;
+}
+p code {
+    font-size: 12px;
+    background-color: #eee;
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 2px 4px;
+    white-space: nowrap;
+}
+blockquote {
+    padding: 0.7em 2em;
+    border: 1px solid #ccc;
+    border-left: 8px solid #e22c29;
+    background-color: #F7F7F7;
+    font-style: italic;
+    color: #555;
+}
+ul {
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+}
+li {
+    margin: 0.3em 0;
+}
+abbr[title] {
+    border-bottom: 1px dotted #999;
+}
+.red {
+    color: #e22c29;
+}
+.strong {
+    font-weight: bold;
+}
+img, iframe, object, embed, audio, video {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%}
+img {
+    padding: 3px;
+    border: 1px solid #eee;
+}
+.carbonad {
+    background: #f9f7f1 !important;
+    border: 1px solid #eee !important;
+}
+.carbonad img {
+    margin: 0;
+    max-width: none;
+    padding: 11px 0 0 11px;
+    border: 0;
+}
+.home .carbonad, .about .carbonad {
+    height: 100px !important;
+    padding: 10px !important;
+    position: static !important;
+    margin: 15px auto !important;
+    width: 260px !important;
+}
+.home .carbonad img, .about .carbonad img {
+    margin: 0;
+    padding: 0;
+}
+.post .carbonad {
+    position: absolute !important;
+    margin-top: -30px !important;
+    margin-left: 730px !important;
+    z-index: 5;
+}
+@media only screen and (max-width: 1100px) {
+    .post .carbonad {
+    margin-left: 625px !important;
+}
+}@media only screen and (max-width: 950px) {
+    .post .carbonad {
+    height: 100px !important;
+    padding: 10px !important;
+    position: static !important;
+    margin: 15px auto !important;
+    width: 260px !important;
+}
+.post .carbonad img {
+    margin: 0;
+    padding: 0;
+}
+}.home .carbonad-image, .about .carbonad-image {
+    margin: 0 10px 0 0 !important;
+    padding: 0 !important;
+}
+@media only screen and (max-width: 950px) {
+    .post .carbonad-image {
+    margin: 0 10px 0 0 !important;
+    padding: 0 !important;
+}
+}.home .carbonad-text, .about .carbonad-text, .home .carbonad-tag, .about .carbonad-tag {
+    margin: 2px 0 0 0 !important;
+    padding: 0 !important;
+}
+@media only screen and (max-width: 950px) {
+    .post .carbonad-text, .post .carbonad-tag {
+    margin: 2px 0 0 0 !important;
+    padding: 0 !important;
+}
+}.carbonad-text {
+    color: #999 !important;
+}
+.carbonad-text a {
+    color: #666 !important;
+}
+.carbonad-tag {
+    color: #999 !important;
+}
+.carbonad-tag a {
+    color: #999 !important;
+}
+.home .carbonad-tag, .about .carbonad-tag {
+    margin-top: 15px !important;
+}
+@media only screen and (max-width: 950px) {
+    .post .carbonad-tag {
+    margin-top: 15px !important;
+}
+}#header {
+    text-align: center;
+}
+#header h1 {
+    border-bottom: none;
+    font-family: Helvetica, "gothic-open-shaded", "Adobe Caslon Pro", Caslon, Baskerville, Palatino, "Palatino Linotype", "Hoefler Text", Garamond, "URW Palladio L", "Book Antiqua", Georgia, serif;
+    font-size: 5em;
+    font-weight: normal;
+    line-height: 1.5em;
+    margin: 40px 0 10px 0;
+}
+@media only screen and (max-width: 480px) {
+    #header h1 {
+    font-size: 3em;
+    margin: 30px 0 0 0;
+}
+}#header a:link, #header a:visited {
+    font-weight: normal;
+    text-decoration: none;
+    color: #00CDE8;
+}
+#header a:hover, #header a:focus, #header a:active {
+    border-bottom: 6px solid #00BFD9;
+}
+.resume h1 {
+    border-bottom: 0;
+    margin-top: 0;
+    text-align: center;
+}
+.resume h3 {
+    border-bottom: 0;
+    color: #333;
+    font-size: 1.05em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    text-decoration: none;
+    vertical-align: top;
+}
+.resume li span, .resume h3 span {
+    color: #666;
+    font-size: 0.8em;
+    font-weight: normal;
+    margin-left: 5px;
+}
+.resume li span:before, .resume h3 span:before {
+    content: " ["}
+.resume li span:after, .resume h3 span:after {
+    content: "]"}
+.resume .right h3 {
+    margin-bottom: 0.3em;
+}
+.resume .right h3+p {
+    margin: 0.3em 0;
+}
+.resume .right ul {
+    margin-top: 0.3em;
+}
+ul.listing {
+    margin: 20px 0 30px 0;
+    padding: 0;
+}
+ul.listing>li {
+    list-style: none;
+    margin: 20px 0;
+}
+ul.listing>li>a:link, ul.listing>li>a:visited {
+    font-size: 1.1em;
+    font-weight: bold;
+    text-decoration: none;
+}
+ul.listing>li>a:hover, ul.listing>li>a:focus, ul.listing>li>a:active {
+    text-decoration: underline;
+}
+ul.listing span, ul.listing time {
+    display: block;
+    color: #666;
+}
+ul.listing time a:link, ul.listing time a:visited {
+    color: #666;
+    text-decoration: underline;
+}
+ul.listing time a:hover, ul.listing time a:focus, ul.listing time a:active {
+    color: #e22c29;
+}
+@media print {
+    body, h1, h2, h3, h4, .content h1 a, .highlight {
+    color: #000;
+    background-color: #fff;
+}
+	#header h1 {
+    font-size: 4em;
+}
+body {
+    border-top: 3px solid #00E1FF;
+}
+h2 {
+    font-size: 1.2em;
+    }
+
+}
+article a:link:after, article a:visited:after {
+    content: " (" attr(href) ") ";
+    font-size: 90%}
+}
