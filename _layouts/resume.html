@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<!-- Shalin Shah -->
+<head>
+  <!-- This be the title -->
+    <title>Shalin Shah Resume</title>
+    <meta property="og:title" content="Shalin Shah Resume" />
+  <!-- Google Chrome Frame for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <!-- Mobile Meta (yep, it's responsive) -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <!-- Google, you no trust me? -->
+    <meta name="google-site-verification" content="RZsPuqLhMe5NQsaYn6rXk6apYq21PZFq4Dmk7Xd6XZo" />
+  <!-- Describing me -->
+    <meta name="description" content="Shalin Shah loves building websites and apps to improve people's lives, and just for the fun of it.">
+    <meta property="og:description" content="Shalin Shah loves building websites and apps to improve people's lives, and just for the fun of it." />
+  <!-- Beautifulizing this site -->
+    <link href="/css/resume.css" rel="stylesheet">     
+  <!-- The site icons -->
+    <link rel="Shortcut Icon" type="image/x-icon" href="/images/favicon.png" />
+    <meta property="og:image" content="/images/favicon.png" />
+  <!-- Yep, I built this site -->
+    <link type="text/plain" rel="author" href="http://www.shalinvs.tk/me.txt" />
+    <link href="https://plus.google.com/105718561776352763084/posts" relc="author" />
+    <meta property="article:author" content="http://www.shalinvs.tk/about/" />
+  <!-- Awesome fade-in effect -->
+    <style>
+    .page-loading{opacity: 0;}
+    .page-active, .page-inactive {opacity: 1 !important;-moz-transition: 0.2s opacity ease-in;-webkit-transition: 0.2s opacity ease-in;transition: 0.2s opacity ease-in;}
+    </style>
+    <script type="text/javascript">
+      (function() { var config = { scriptTimeout: 200 };
+        var h=document.getElementsByTagName("html")[0];h.className+=" page-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)page-loading(\s|$)/g," ");h.className+=" page-inactive"},config.scriptTimeout);})();
+    </script>
+</head>
+<body class="resume">
+  <div id="container">
+      {{ content }}
+  </div>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-34246687-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>    
+
+<!-- StatCounter -->
+<script type="text/javascript">
+var sc_project=8210349; 
+var sc_invisible=1; 
+var sc_security="ea83eacd"; 
+</script>
+<script type="text/javascript" src="http://www.statcounter.com/counter/counter.js"></script>
+
+<!-- Load JS here for greater good =============================-->
+    <script src="/js/jquery-ui-1.10.0.custom.min.js"></script>
+    <script src="/js/application.js"></script>
+    <!--[if lt IE 8]>
+      <script src="/js/icon-font-ie7.js"></script>
+      <script src="/js/icon-font-ie7-24.js"></script>
+    <![endif]-->
+    {% if page.class == "contact" %}    
+    <script>
+      $(window).scroll(function() {
+        $('#example-5').each(function(){
+        var imagePos = $(this).offset().top;
+
+        var topOfWindow = $(window).scrollTop();
+          if (imagePos < topOfWindow+200) {
+            $('.graph-bar').addClass("pullUp");
+          }
+        });
+      });
+    </script>
+    {% endif %}
+</body>
+</html>
