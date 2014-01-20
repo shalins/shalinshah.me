@@ -309,20 +309,22 @@ ul.listing time a:hover, ul.listing time a:focus, ul.listing time a:active {
     color: #e22c29;
 }
 @media print {
-    body, h1, h2, h3, h4, .content h1 a, .highlight {
-    color: #000;
-    background-color: #fff;
-}
 	#header h1 {
-    font-size: 4em;
+    font-size: 3em;
 }
 body {
     border-top: 3px solid #00E1FF;
+    font-size: 12px;
 }
 h2 {
-    font-size: 1.2em;
-    }
-
+    font-size: 14px;
+}
+h3 {
+    font-size: 12px;
+}
+ul, p, li {
+    font-size: 10px;
+}
 }
 article a:link:after, article a:visited:after {
     content: " (" attr(href) ") ";
