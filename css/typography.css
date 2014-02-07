@@ -8,12 +8,12 @@ body,p,p a {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 }
 
-a {
-
+h3.logo {
+    border-bottom:none;
 }
 
 p,li {
-  line-height: 0.1em;
+  /*line-height: 0.1em;*/
   font-size: 1.1em;
 }
 

@@ -30,7 +30,7 @@ And you're done! Incase any issues arise, rEFIt has a [troubleshooting section](
 Partitioning your hard-drive is basically creating parts of if or resizing it.
 We need to make some extra space for our Ubuntu install so we will need to create a partition.
 
-<center><img src="/images/posts/partition.jpg"></center>
+<!-- <center><img src="/images/posts/partition.jpg"></center> -->
 
 To partition your disk, just:
 
@@ -43,7 +43,7 @@ Be generous when you choose the amount of space because changing it later on can
 
 ## Step three: Set up Ubuntu Disk
 
-<center><img src="/images/posts/ubuntudisk.png" width="200px"></center>
+<!-- <center><img src="/images/posts/ubuntudisk.png" width="200px"></center> -->
 
 Phew! If you have the Ubuntu installer disk ready, skip this step. Okay so, first you have to [download the Ubuntu OS](http://www.ubuntu.com/download/desktop) and burn onto a disk that has about 800 MB of free memory (you need 791.3 MB to be exact). That is if you got the Ubuntu 12.10 64 Bit one. After you download it (fast or slow depending on your internet connection), you can burn the disk with Disk Utility or with Finder (I used Finder). That should be pretty easy to do.
 

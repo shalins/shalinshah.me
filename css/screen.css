@@ -943,6 +943,14 @@ body.journal-about header{
  height: 400px;
 }
 
+body.journal-home header{
+ background-image:url('/stuff/california.jpg');
+ font-weight: bold;
+ background-size: 100%; 
+ background-repeat: no-repeat;
+ height: 500px;
+}
+
 body.journal-portfolio header{
  background:#2ecc71
 }
@@ -1620,23 +1628,19 @@ a.prev:before, a.next:before {
   0% {
     opacity: 0;
     -webkit-transform: translateY(-80px) scale(1);
-
   }
 
   20% {
     opacity: 1;
     -webkit-transform: translateY(20px) scaleX(1.05) scaleY(.92);
-
   }
 
   40% {
     -webkit-transform: translateY(10) scaleX(.99) scaleY(1.0);
-
   }
 
   60%, 100% {
     -webkit-transform: translateY(0) scale(1);
-
   }
 }
 
