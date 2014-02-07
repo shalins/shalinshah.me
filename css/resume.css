@@ -13,15 +13,26 @@ html {
 }
 body {
     border-top: 5px solid #00E1FF;
-    background-color: #fff;
-    color: #333;
-    font-family: "proxima-nova", Helvetica, sans-serif;
+    background-color: #171f2c;
+    color: #fff;
+    font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Arial, Helvetica, sans-serif;
     -webkit-font-smoothing: antialiased;
     font-size: 17px;
     line-height: 1.5em;
     margin: 0;
     padding: 0;
 }
+header{
+ padding:0.5em 2em; 
+ clear:both; 
+ background-image:url('/stuff/caliblurred.png');
+ font-weight: bold;
+ background-size: 100%; 
+ background-repeat: no-repeat;
+ height: 200px;
+ margin-top: 0;
+}
+
 @media only screen and (max-width: 1100px) {
     body {
     font-size: 16px;
@@ -61,19 +72,29 @@ body {
 }a:link, a:visited {
     color: #00BFD9;
     text-decoration: underline;
+      -o-transition:.5s;
+      -ms-transition:.5s;
+      -moz-transition:.5s;
+      -webkit-transition:.5s;
+      transition:.5s;
 }
 a:hover, a:focus, a:active {
 	color: #028799;
     text-decoration: none;
 }
 h1, h2, h3, h4 {
-    color: #333;
-    line-height: 1.2em;
-    border-bottom: 1px solid #ccc;
-    
+    font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    color: #fff;
+    line-height: 2em;
+    border-bottom: 3px solid #fff;  
 }
 h1 a:link, h1 a:visited, h2 a:link, h2 a:visited, h3 a:link, h3 a:visited, h4 a:link, h4 a:visited {
     text-decoration: none;
+      -o-transition:.5s;
+      -ms-transition:.5s;
+      -moz-transition:.5s;
+      -webkit-transition:.5s;
+      transition:.5s;
 }
 h1 a:hover, h1 a:focus, h1 a:active, h2 a:hover, h2 a:focus, h2 a:active, h3 a:hover, h3 a:focus, h3 a:active, h4 a:hover, h4 a:focus, h4 a:active {
     text-decoration: underline;
@@ -83,8 +104,11 @@ h1 {
     margin: 0.8em 0 0.2em 0;
 }
 h2 {
-    font-size: 1.5em;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.9em;
     margin: 1.2em 0 0.6em 0;
+    /*width: 100px; */
 }
 h3 {
     font-size: 1.3em;
@@ -145,82 +169,6 @@ img {
     padding: 3px;
     border: 1px solid #eee;
 }
-.carbonad {
-    background: #f9f7f1 !important;
-    border: 1px solid #eee !important;
-}
-.carbonad img {
-    margin: 0;
-    max-width: none;
-    padding: 11px 0 0 11px;
-    border: 0;
-}
-.home .carbonad, .about .carbonad {
-    height: 100px !important;
-    padding: 10px !important;
-    position: static !important;
-    margin: 15px auto !important;
-    width: 260px !important;
-}
-.home .carbonad img, .about .carbonad img {
-    margin: 0;
-    padding: 0;
-}
-.post .carbonad {
-    position: absolute !important;
-    margin-top: -30px !important;
-    margin-left: 730px !important;
-    z-index: 5;
-}
-@media only screen and (max-width: 1100px) {
-    .post .carbonad {
-    margin-left: 625px !important;
-}
-}@media only screen and (max-width: 950px) {
-    .post .carbonad {
-    height: 100px !important;
-    padding: 10px !important;
-    position: static !important;
-    margin: 15px auto !important;
-    width: 260px !important;
-}
-.post .carbonad img {
-    margin: 0;
-    padding: 0;
-}
-}.home .carbonad-image, .about .carbonad-image {
-    margin: 0 10px 0 0 !important;
-    padding: 0 !important;
-}
-@media only screen and (max-width: 950px) {
-    .post .carbonad-image {
-    margin: 0 10px 0 0 !important;
-    padding: 0 !important;
-}
-}.home .carbonad-text, .about .carbonad-text, .home .carbonad-tag, .about .carbonad-tag {
-    margin: 2px 0 0 0 !important;
-    padding: 0 !important;
-}
-@media only screen and (max-width: 950px) {
-    .post .carbonad-text, .post .carbonad-tag {
-    margin: 2px 0 0 0 !important;
-    padding: 0 !important;
-}
-}.carbonad-text {
-    color: #999 !important;
-}
-.carbonad-text a {
-    color: #666 !important;
-}
-.carbonad-tag {
-    color: #999 !important;
-}
-.carbonad-tag a {
-    color: #999 !important;
-}
-.home .carbonad-tag, .about .carbonad-tag {
-    margin-top: 15px !important;
-}
 @media only screen and (max-width: 950px) {
     .post .carbonad-tag {
     margin-top: 15px !important;
@@ -230,9 +178,8 @@ img {
 }
 #header h1 {
     border-bottom: none;
-    font-family: Helvetica, "gothic-open-shaded", "Adobe Caslon Pro", Caslon, Baskerville, Palatino, "Palatino Linotype", "Hoefler Text", Garamond, "URW Palladio L", "Book Antiqua", Georgia, serif;
+    font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
     font-size: 5em;
-    font-weight: normal;
     line-height: 1.5em;
     margin: 40px 0 10px 0;
 }
@@ -247,7 +194,8 @@ img {
     color: #00CDE8;
 }
 #header a:hover, #header a:focus, #header a:active {
-    border-bottom: 6px solid #00BFD9;
+    color:#fff;
+    border-bottom: 2px dotted #fff;
 }
 .resume h1 {
     border-bottom: 0;
@@ -255,8 +203,9 @@ img {
     text-align: center;
 }
 .resume h3 {
+    font-family: 'HelveticaNeue', 'Helvetica Neue', Arial, Helvetica, sans-serif;
     border-bottom: 0;
-    color: #333;
+    color: #fff;
     font-size: 1.05em;
     font-weight: bold;
     margin-bottom: 0.5em;
@@ -316,6 +265,9 @@ ul.listing time a:hover, ul.listing time a:focus, ul.listing time a:active {
 body {
     border-top: 3px solid #00E1FF;
     font-size: 12px;
+}
+header {
+    height: 100px;
 }
 h2 {
     font-size: 14px;
