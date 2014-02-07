@@ -20,15 +20,20 @@ time, mark, audio, video{
 
 html{
  line-height:1;
-/* background-color: #f2f2f2; 
-*/}
+ background-color: #f2f2f2; 
+}
 
-html {
-  background-color: #f2f2f2;
+html.homepage{
+ line-height:1;
+ background-color: #141d2c; 
+}
+
+html.blogpage{
+ line-height:1;
+ background-color: #071b39; 
 }
 
 #page-home{
-  background-color: #fff;
   color: #5e5e5d;
   font-family: 'PT Serif', serif;
 }
@@ -109,7 +114,7 @@ header{
  clear:both; 
  height:115px; 
  font-size: 18px; 
- background-color:#f2f2f2
+ background-color:#fff;
 }
 
 .nav{
@@ -126,11 +131,12 @@ font-weight:bold;}
  border-bottom:3px solid #5e5e5d}
 
 .nav a{
+  color:#00d2ff;
  text-decoration:none; 
  padding:1em 0}
 
 .nav a:hover{
- border-bottom:4px solid #2980b9}
+ border-bottom:4px solid #00d2ff}
 
 .logo {
   padding-top: 1.5em;
@@ -139,6 +145,7 @@ font-weight:bold;}
   margin-left:3em
 }
 .logo a{
+  color:#00d2ff;
   text-decoration:none; 
   padding:0.5em 0
 }
@@ -303,7 +310,8 @@ h2{
  letter-spacing:0.01em}
 
 .journal-teaser li p{
- color:#9b9b9b}
+ color:#00d2ff;
+}
 
 .journal-teaser .journal-teaser-thumbnail{
  float:left; 
@@ -326,12 +334,20 @@ footer{
 
 footer p{
  margin:3em 0; 
- color:#c1c1c1; 
+ color:#979797; 
  font-size:1.2em; 
  letter-spacing:0.05em}
 
 footer a{
- color:#c1c1c1}
+ color:#525151;
+ border-bottom:1px dotted #9b9b9b; 
+}
+
+footer a:hover{
+ color:#979797;
+}
+
+ p.white {color:#fff;}
 
 /*.social{
  margin:0 auto; 
@@ -618,7 +634,7 @@ footer a{
  padding-top:.5em !important}
 
 .journal-list h4 a{
- color:#5e5e5d; 
+ color:#fff; 
  text-decoration:none}
 
 .journal-list p.entry{
@@ -860,6 +876,7 @@ footer a{
  background-color:#addccf; 
  padding:6em 0}
 
+
  #page-journal .journal-header-contact{
 /* background-image:url('/stuff/natgeo15-2013-02-13-1535.jpg');
 */}
@@ -924,10 +941,6 @@ footer a{
  background-color:#ee796f; 
  padding:7em 0}
 
-body.journal-home header{
- background:#3F3A36
-}
-
 body.journal-contact header{
  background-image:url('/stuff/map.png');
  background-size: 100%;
@@ -944,9 +957,11 @@ body.journal-about header{
 }
 
 body.journal-home header{
+ background: #141d2c;
  background-image:url('/stuff/california.jpg');
  font-weight: bold;
- background-size: 100%; 
+ background-size:100%;
+ display:block;
  background-repeat: no-repeat;
  height: 500px;
 }

@@ -1,5 +1,11 @@
 <!doctype html>
+{% if page.class == "home" %} 
+<html class="homepage"> 
+{% elsif page.class == "blog" %} 
+<html class="blogpage"> 
+{% else %} 
 <html>
+{% endif %}
 <!-- Shalin Shah -->
 <head>
   {% capture meta_desc %}{% if page.summary %}{{ page.summary }}{% else %}Hi. I am Shalin and this is my blog, where I enunciate my thoughts on random stuff. Thanks for reading.{% endif %}{% endcapture %}
@@ -118,6 +124,9 @@
           <li><a href="/contact/">Contact</a></li>
           <li><a href="/resume/">Resume</a></li>
         </ul>
+        {% if page.class == "home" %}
+          <h1 style="font-size:120px;" class="iamshalin bigEntrance">Hello, I'm Shalin.</h1>
+        {% endif %}
         <div class="scroller mobileBanner"><!-- this is for emulating position fixed of the nav -->
           <div class="scroller-inner">
             <!-- Top Navigation -->
