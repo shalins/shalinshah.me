@@ -1958,4 +1958,7 @@ html, body, .container, .scroller {
   body {
     font-size: 10%;
   }
+  .menunavbutton, .menunavbuttonblog, .menunavbutton:hover, .menunavbuttonblog:hover {
+    text-align: center;
+  }
 }

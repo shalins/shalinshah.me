@@ -89,25 +89,6 @@
 <body>
 {% endif %}
 
-<!-- For-Nav Container -->
-  <div class="container-fornavmenu">      
-  <!-- Push Wrapper -->
-    <div class="mp-pusher" id="mp-pusher">
-      <!-- mp-menu -->
-        <!-- <nav id="mp-menu" class="mp-menu">
-          <div class="mp-level">
-            <h2>Navigation</h2>
-            <ul>
-              <li><a href="/blog/">Blog</a></li>
-              <li><a href="/portfolio/">Portfolio</a></li>
-              <li><a href="/about/">About</a></li>
-              <li><a href="/contact/">Contact</a></li>
-              <li><a href="/resume/">Resume</a></li>
-            </ul>
-          </div>
-        </nav> -->
-      <!-- /mp-menu -->
-
       {% if page.class == "about" %} 
       <header id="dark">
       {% else %}  
@@ -118,26 +99,16 @@
             Shalin Shah
           </a> 
         </h3>
-        <ul class="nav clearfix">
-          <li><a href="/blog/">Blog</a></li>
-          <li><a href="/portfolio/">Portfolio</a></li>
-          <li><a href="/about/">About</a></li>
-          <li><a href="/contact/">Contact</a></li>
-          <li><a href="/resume/">Resume</a></li>
-        </ul>
+
+        {% if page.class == "blog" %} 
+        <a id="trigger-overlay" class="menunavbuttonblog"></a>
+        {% else %}  
+        <a id="trigger-overlay" class="menunavbutton"></a>
+        {% endif %}
+
         {% if page.class == "home" %}
           <h1 style="font-size:120px;" class="iamshalin bigEntrance">Hello, I'm Shalin.</h1>
         {% endif %}
-        <div class="scroller mobileBanner"><!-- this is for emulating position fixed of the nav -->
-          <div class="scroller-inner">
-            <!-- Top Navigation -->
-            <div class="content clearfix">
-              <div class="block block-40 clearfix">
-                <p><a href="#" id="trigger" class="menu-trigger">Menu</a></p>
-              </div>
-            </div>
-          </div><!-- /scroller-inner -->
-        </div><!-- /scroller -->  
       </header>
 
       {% if page.class == "post" %}
@@ -161,7 +132,6 @@
         <div class="container">
           <section class="content clearfix">
                   <!-- <p><button id="trigger-overlay" type="button">Open Overlay</button></p> -->
-                        <p><button id="trigger-overlay" class="menunavbutton" type="button"></button></p>
 
             {{ content }}
           </section>
@@ -222,10 +192,6 @@
     </div>
   </div>
 </footer>
-</div>
-    <!-- /Push Wrapper -->
-  </div>
-<!-- /For Nav -->
 
 <!-- Google Analytics -->
 <script type="text/javascript">
@@ -250,51 +216,27 @@ var sc_security="ea83eacd";
 <script type="text/javascript" src="http://www.statcounter.com/counter/counter.js"></script>
 <!-- /StatCounter -->
 
-<!-- Load JS here for greater good =============================
-  <script src="/js/jquery-ui-1.10.0.custom.min.js"></script>
-  <script src="/js/application.js"></script>
-  <script src="/js/classie.js"></script>
-  <script src="/js/mlpushmenu.js"></script>
-
-  <script>
-    new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'trigger' ) );
-  </script>
-  -->
+<!-- Load JS here for greater good ============================= -->
+    <script src="/js/classie.js"></script>
+    <script src="/js/demo1.js"></script>
 
   <!--[if lt IE 8]>
     <script src="/js/icon-font-ie7.js"></script>
     <script src="/js/icon-font-ie7-24.js"></script>
   <![endif]-->
-  {% if page.class == "contact" %}    
-  <script>
-    $(window).scroll(function() {
-      $('#example-5').each(function(){
-      var imagePos = $(this).offset().top;
-
-      var topOfWindow = $(window).scrollTop();
-        if (imagePos < topOfWindow+200) {
-          $('.graph-bar').addClass("pullUp");
-        }
-      });
-    });
-  </script>
-  {% endif %}
 
   <!-- open/close -->
     <div class="overlay overlay-door">
       <button type="button" class="overlay-close">Close</button>
       <nav>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Work</a></li>
-          <li><a href="#">Clients</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/portfolio/">Portfolio</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/contact/">Contact</a></li>
+          <li><a href="/resume/">Resume</a></li>
         </ul>
       </nav>
     </div>
-        <script src="/js/classie.js"></script>
-    <script src="/js/demo1.js"></script>
-
 </body>
 </html>

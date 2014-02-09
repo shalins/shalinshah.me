@@ -9,10 +9,26 @@
 }
 
 .menunavbutton {
-	width: 80px;
+	width:80px;
 	height: 80px;
 	float: right;
-	background: url(../images/cross.png) no-repeat center center;
+	background: url(../images/nav.png) no-repeat center center;
+	background-size: 50px 50px;
+}
+.menunavbutton:hover {
+	background: url(../images/nav-hover.png) no-repeat center center;
+	background-size: 50px 50px;
+}
+.menunavbuttonblog {
+	width:80px;
+	height: 80px;
+	float: right;
+	background: url(../images/nav-blog.png) no-repeat center center;
+	background-size: 50px 50px;
+}
+.menunavbuttonblog:hover {
+	background: url(../images/nav-hover.png) no-repeat center center;
+	background-size: 50px 50px;
 }
 
 /* Overlay closing cross */
