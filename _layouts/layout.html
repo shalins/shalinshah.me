@@ -24,16 +24,17 @@
     <meta name="description" content="{{ meta_desc }}">
     <meta property="og:description" content="{{ meta_desc }}" />
   <!-- Beautifulizing this site -->
-    {% if page.class == "portfolio" %} <link href="/css/portfolio.css" rel="stylesheet"> {% endif %}      
+    {% if page.class == "portfolio" %} <link href="/css/portfolio.css" rel="stylesheet"> {% endif %} 
+       <link href="/css/style6.css" rel="stylesheet">    
+      <link href="/css/normalize.css" rel="stylesheet">    
     <link href="/css/style.css" rel="stylesheet">    
     <link href="/css/animations.css" rel="stylesheet">                                    
     <link href="/css/screen.css" rel="stylesheet">  
     <link href="/css/main.css" rel="stylesheet">
     <link href="/css/flat-ui.css" rel="stylesheet">
     <link href="/css/component.css" rel="stylesheet">
-    <script src="/js/modernizr.custom.js"></script>
-    <script src="/js/modernizr.custom1.js"></script>    
-    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+          <script src="/js/modernizr.custom.js"></script>
+
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -93,7 +94,7 @@
   <!-- Push Wrapper -->
     <div class="mp-pusher" id="mp-pusher">
       <!-- mp-menu -->
-        <nav id="mp-menu" class="mp-menu">
+        <!-- <nav id="mp-menu" class="mp-menu">
           <div class="mp-level">
             <h2>Navigation</h2>
             <ul>
@@ -104,7 +105,7 @@
               <li><a href="/resume/">Resume</a></li>
             </ul>
           </div>
-        </nav>
+        </nav> -->
       <!-- /mp-menu -->
 
       {% if page.class == "about" %} 
@@ -159,6 +160,9 @@
       {% else %}
         <div class="container">
           <section class="content clearfix">
+                  <!-- <p><button id="trigger-overlay" type="button">Open Overlay</button></p> -->
+                        <p><button id="trigger-overlay" class="menunavbutton" type="button"></button></p>
+
             {{ content }}
           </section>
         </div><!-- /container -->
@@ -246,14 +250,16 @@ var sc_security="ea83eacd";
 <script type="text/javascript" src="http://www.statcounter.com/counter/counter.js"></script>
 <!-- /StatCounter -->
 
-<!-- Load JS here for greater good =============================-->
+<!-- Load JS here for greater good =============================
   <script src="/js/jquery-ui-1.10.0.custom.min.js"></script>
   <script src="/js/application.js"></script>
   <script src="/js/classie.js"></script>
   <script src="/js/mlpushmenu.js"></script>
+
   <script>
     new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'trigger' ) );
   </script>
+  -->
 
   <!--[if lt IE 8]>
     <script src="/js/icon-font-ie7.js"></script>
@@ -273,5 +279,22 @@ var sc_security="ea83eacd";
     });
   </script>
   {% endif %}
+
+  <!-- open/close -->
+    <div class="overlay overlay-door">
+      <button type="button" class="overlay-close">Close</button>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Work</a></li>
+          <li><a href="#">Clients</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+        <script src="/js/classie.js"></script>
+    <script src="/js/demo1.js"></script>
+
 </body>
 </html>
