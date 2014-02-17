@@ -7,7 +7,7 @@ require 'rake'
 
 desc "Compile everything"
 task :compile do
-  sh "compass compile"
+  # sh "compass compile"
   sh "jekyll build"
 end
 
@@ -20,10 +20,10 @@ task :jekyll do
   sh "jekyll serve --watch --port 2000"
 end
 
-desc "Watch-compile SCSS with Compass"
-task :compass do
-  sh "compass watch"
-end
+# desc "Watch-compile SCSS with Compass"
+# task :compass do
+#   sh "compass watch"
+# end
 
 #
 # Deploy
@@ -33,8 +33,8 @@ task :default => :deploy
 
 desc "Deploy to S3"
 task :deploy do
-  sh "jekyll"
+  # sh "jekyll"
   sh "s3cmd sync _site/* s3://www.shalinshah.me"
-  sh "compass compile"
+  # sh "compass compile"
   sh "rm -r _site"
 end
