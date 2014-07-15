@@ -8,13 +8,13 @@ layout: nil
 
   <updated>{{ site.time | date_to_xmlschema }}</updated>
 
-  <link rel="alternate" type="text/html" href="http://www.shalinvs.tk" />
-  <id>http://www.shalinvs.tk</id>
-  <link rel="self" type="application/atom+xml" href="http://www.shalinvs.tk/atom.xml" />
+  <link rel="alternate" type="text/html" href="http://www.shalinshah.me" />
+  <id>http://www.shalinshah.me</id>
+  <link rel="self" type="application/atom+xml" href="http://www.shalinshah.me/atom.xml" />
 
   <author>
     <name>Shalin Shah</name>
-    <uri>http://www.shalinvs.tk</uri>
+    <uri>http://www.shalinshah.me</uri>
   </author>
   
   {% for post in site.posts %}
@@ -22,13 +22,13 @@ layout: nil
     <title>{{ post.title | xml_escape }}</title>
     <author>
       <name>Shalin Shah</name>
-      <uri>http://www.shalinvs.tk</uri>
+      <uri>http://www.shalinshah.me</uri>
     </author>
     <link rel="alternate" type="text/html" href="http://feross.org{{ post.url }}/"/>
-    <id>http://www.shalinvs.tk{{ post.id }}</id>
+    <id>http://www.shalinshah.me{{ post.id }}</id>
     <updated>{{ post.date | date_to_xmlschema }}</updated>
     <summary type="html"><![CDATA[{{ post.content | strip_html | truncatewords: 55 }}]]></summary>
-    <content type="html" xml:base="http://www.shalinvs.tk{{ post.url }}/"><![CDATA[{% if post.dynamic || post.script %}<p><em><strong>This blog post contains JavaScript and other dynamic content that will not display correctly in most RSS readers. I recommend <a href="http://www.shalinvs.tk{{ post.url }}/">reading this post</a> directly in your web browser.</strong></em></p>{% endif %}{{ post.content }}]]></content>
+    <content type="html" xml:base="http://www.shalinshah.me{{ post.url }}/"><![CDATA[{% if post.dynamic || post.script %}<p><em><strong>This blog post contains JavaScript and other dynamic content that will not display correctly in most RSS readers. I recommend <a href="http://www.shalinshah.me{{ post.url }}/">reading this post</a> directly in your web browser.</strong></em></p>{% endif %}{{ post.content }}]]></content>
   </entry>
   {% endfor %}
 

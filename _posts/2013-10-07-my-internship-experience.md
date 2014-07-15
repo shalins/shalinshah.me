@@ -21,4 +21,4 @@ And not only that, but almost every week, MGWU invited startup founders and game
 
 Even the friends I made while there, were people with similar interests as me. I would just like to thank MakeGamesWith.Us for actually having an internship because it gave me an opportunity to actually explore the real world, instead of just sitting in my bedroom programming in isolation.
 
-Thanks [MGWU](https://www.makegameswith.us/ "MakeGamesWith.Us"), becuase now, I want to do an internship every summer that I can. (Maybe not sophomore summer because I need to study for the SAT).
+Thanks [MGWU](https://www.makegameswith.us/ "MakeGamesWith.Us"), because now, I want to do an internship every summer that I can. (Maybe not sophomore summer because I need to study for the SAT).

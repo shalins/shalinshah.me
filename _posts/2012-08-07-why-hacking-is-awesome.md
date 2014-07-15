@@ -21,7 +21,7 @@ Due to the mass attention given to blackhat hackers from the media, the whole ha
 
 ## The Hacking I Do
 
-Okay, so I don't like hacking things for destructive purposes. But I love hacking. Somethings I like to hack are ipods (okay, not really hacking..), servers (simple ), browser (using simple JavaScript hacks), apps (iOS), web languages (CSS, JS, Ruby, etc.), I hack all day-to-day used objects and stuff... (from how I tie my shoes to hacking computer stuff). Hackers are not just for protecting computers or destroying them. They tweak things for and mod them for their own benefits. (Finding loopoles)
+Okay, so I don't like hacking things for destructive purposes. But I love hacking. Somethings I like to hack are iPods (okay, not really hacking, jailbreaking), servers (just to make things simpler), browser (using simple JavaScript hacks), apps (iOS), web languages (CSS, JS, Ruby, etc.), I hack all day-to-day used objects and stuff... (from how I tie my shoes to hacking computer stuff). Hackers are not just for protecting computers or destroying them. They tweak things for and mod them for their own benefits (finding loopholes).
 
 So just cause I like to hack, I am not a bad guy. And I'm not saying that there aren't bad hackers, it's that not all of them are bad, and shouldn't be judged as bad either.
 

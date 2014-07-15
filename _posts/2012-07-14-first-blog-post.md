@@ -10,7 +10,7 @@ tags:
 ---
 
 
-Welcome to www.shalinvs.tk (soon to be www.shalin.me), the blog of Shalin Shah. I'm just a 8th Grade (13 year old) student, web developer, and hacker. Please enjoy this blog. I will be posting cool articles, hacks, tips and tricks, and some stuff about the web (and programming).
+Welcome to www.shalinvs.tk (soon to be www.shalinshah.me), the blog of Shalin Shah. I'm just a 8th Grade (13 year old) student, web developer, and hacker. Please enjoy this blog. I will be posting cool articles, hacks, tips and tricks, and some stuff about the web (and programming).
 
 :)
 

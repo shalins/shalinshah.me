@@ -31,14 +31,14 @@ Today I learned a ton of stuff done in Objective-C. I learned how to deal with s
 
 I still haven't even scratched the surface but I think I did pretty good so far! The team treehouse tutorials have helped me the most so far but they don't have everything so I looked in the apple documentation and it's great! I am also spending lots of time on stack overflow but I'm trying to figure things out myself rather than to rely on other people's answers. Also, I have built a simple prediction app where I can ask a question and it randomly generates an answer. It isn't much, but I think I'm grasping the Objective-C syntax although I do think it is a bit rigid.
 
-I am thinking of building a simple but problem-solving project after I get a substancial amount of knowledge on Objective-C so that I can dive right in! I have a few ideas about the app I should build but I'm not sure if the app will be easy or extremely hard to build.
+I am thinking of building a simple but problem-solving project after I get a substantial amount of knowledge on Objective-C so that I can dive right in! I have a few ideas about the app I should build but I'm not sure if the app will be easy or extremely hard to build.
 
 #Day Three
 
 Learned a lot of new stuff in Obj-C like Web-Views (inserting html, loading a html or pdf page, or loading an actual website) and making a Safari type application with forward and back buttons.
 
-I have been watching a lot of videos and doing a lot of quizes and homework they give.
-One really good thing about TeamTreehouse is that it makes you pass all of your quizes before they let you move on, so if you don't pass, you either have to rewatch the video (the stuff they  ask on the quiz/test is always in the video) or post in their forums. But the quizes are easy. Another good thing is that their videos are only like 7 minutes long (they have a lot of videos, though) so I don't fall asleep (the stanford cs193p videos I watch are like 1+ hours long and I usually stay up until about 12pm - 1am learning and coding).
+I have been watching a lot of videos and doing a lot of quizzes and homework they give.
+One really good thing about TeamTreehouse is that it makes you pass all of your quizzes before they let you move on, so if you don't pass, you either have to re-watch the video (the stuff they  ask on the quiz/test is always in the video) or post in their forums. But the quizzes are easy. Another good thing is that their videos are only like 7 minutes long (they have a lot of videos, though) so I don't fall asleep (the Stanford cs193p videos I watch are like 1+ hours long and I usually stay up until about 12pm - 1am learning and coding).
 
 This is what I plan on learning next:
 
@@ -86,7 +86,7 @@ My goal is to finish this app by day 7 (tomorrow).
 
 #Day Seven
 
-Woohoo! Ideya is now done! Well, at least for now, it is funtional and it looks pretty good, too.
+Woohoo! Ideya is now done! Well, at least for now, it is functional and it looks pretty good, too.
 
 ##Today I accomplished:
 An awesome icon to go with the app!
