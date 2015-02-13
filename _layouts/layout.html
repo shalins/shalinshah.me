@@ -18,7 +18,7 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-  <!-- Google, you no trust me? -->
+  <!-- Google, y u no trust me? -->
     <meta name="google-site-verification" content="RZsPuqLhMe5NQsaYn6rXk6apYq21PZFq4Dmk7Xd6XZo" />
   <!-- Describing me -->
     <meta name="description" content="{{ meta_desc }}">
@@ -89,25 +89,40 @@
 <body>
 {% endif %}
 
+
+<!-- Header -->
       {% if page.class == "about" %} 
       <header id="dark">
       {% else %}  
       <header class="clearfix">
       {% endif %}
-        <h3 class="logo">
+<!--         <h3 class="logo">
           <a href="/">
             Shalin Shah
           </a> 
         </h3>
-
+ -->
         {% if page.class == "blog" %} 
-        <a id="trigger-overlay" class="menunavbuttonblog"></a>
+        <!-- <a id="trigger-overlay" class="menunavbuttonblog"></a> -->
         {% else %}  
-        <a id="trigger-overlay" class="menunavbutton"></a>
+        <!-- <a id="trigger-overlay" class="menunavbutton"></a> -->
         {% endif %}
 
+        <nav id="nav">
+            <ul>
+              <li class="home"><a href="/">Home</a></li>
+              <li><a href="/blog/">Blog</a></li>
+              <li><a href="/portfolio/">Portfolio</a></li>
+              <li><a href="/about/">About</a></li>
+              <li><a href="/contact/">Contact</a></li>
+              <li><a href="/resume.pdf">Resume</a></li>
+            </ul>
+          </nav>
+
+
+
         {% if page.class == "home" %}
-          <h1 style="font-size:120px;" class="iamshalin bigEntrance">Hello, I'm Shalin.</h1>
+          <h1 class="iamshalin bounceDown" id="ginome">Hello, I'm Shalin.</h1>
         {% endif %}
       </header>
 
@@ -182,7 +197,8 @@
       {% endif %}
       
 
-<footer class="hovering">
+<!-- <footer class="hovering"> -->
+<footer>  
   <div class="container">
     <div class="row">
         <center>

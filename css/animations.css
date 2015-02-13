@@ -12,6 +12,33 @@ justin@justinaguilar.com
 ==============================================
 */
 
+
+/*
+==============================================
+cssTyping
+==============================================
+*/
+
+.cssTyping
+{
+	margin: 10px 0 0 10px;
+	color: #43d4e5;
+    width: 15em;
+    white-space:nowrap;
+    overflow:hidden;
+    -webkit-animation: type 5s steps(50, end);
+    animation: type 5s steps(50, end);
+}
+
+@keyframes type{
+    from { width: 0; }
+}
+
+@-webkit-keyframes type{
+    from { width: 0; }
+}
+
+
 /*
 ==============================================
 slideDown
