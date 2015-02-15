@@ -1,23 +1,38 @@
-
-<!--A Design by W3layouts
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE HTML>
 <html>
 <head>
 <title>Voice | An app that lets blind people read</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
-<script src="js/jquery.min.js"></script>
+
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <link rel="icon" 
       type="image/png" 
       href="images/logo.png">
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<script src="js/Chart.js"></script>
+<!-- Custom Theme files -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- Google Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+<script src="js/wow.min.js"></script>
+<link href="css/animate.css" rel='stylesheet' type='text/css' />
+<script>
+	new WOW().init();
+</script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+	$(".scroll").click(function(event){		
+		event.preventDefault();
+		$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+	});
+});
+</script>
+
 </head>
 <body>
 
@@ -31,187 +46,144 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-
-<!-- start header -->
-<div class="header_bg">
-<div class="wrap">
-	<div id="content">
-      <header id="topnav">
-        <nav>
-        		 <ul>
-					<li class="active"><a class="scroll" href="#home">Home</a></li>
-					<li><a class="scroll"href="#service">Features</a></li>
-					<li><a  class="scroll" href="#contact">Contact</a></li>
-					<div class="clear"> </div>
-				</ul>
-        </nav>
-         <div class="logo"><a href="index.html"><img src="images/logo.png" height="70px" width="70px"></a></div>
-        <a href="#" id="navbtn">Nav Menu</a>
-        <div class="clear"> </div>
-      </header><!-- @end #topnav -->
-      <script type="text/javascript"  src="js/menu.js"></script>
-    </div>
-</div>
-</div>
-<!--start-slider---->
-<div class="slider" id="home"> 
-				<div class="wrap">
-				<!---start-da-slider------>
-				<div id="da-slider" class="da-slider">
-				<div class="da-slide">
-					<h2>Voice.</h2>
-					<p>An app that lets blind people read</p>
-					<a href="https://itunes.apple.com/us/app/voice-take-picture-have-it/id903772588" class="da-link">Get This App</a>
-				</div>
-				<!-- <div class="da-slide">
-					<h2>This is a main heading</h2>
-					<p>Lorem ipsum is simply dummy text of the printing</p>
-					<a href="#" class="da-link">Learn more</a>
-				</div>
-				<div class="da-slide">
-					<h2>This is a main heading</h2>
-					<p>Lorem ipsum is simply dummy text of the printing</p>
-					<a href="#" class="da-link">Learn more</a>
-				</div> -->
-<!-- 				<nav class="da-arrows">
-					<span class="da-arrows-prev"></span>
-					<span class="da-arrows-next"></span>
-				</nav>
- -->			</div>
-			<link rel="stylesheet" type="text/css" href="css/slider.css" />
-			<script type="text/javascript" src="js/modernizr.custom.28468.js"></script>
-			<script type="text/javascript" src="js/jquery.cslider.js"></script>
-			<script type="text/javascript">
-				$(function() {
-				
-					$('#da-slider').cslider({
-						autoplay	: true,
-						bgincrement	: 450
-					});
-				
-				});
-			</script>
-				<!---//End-da-slider----->
+<!-- Header Part Starts Here -->
+<div class="header" id="home">
+	<div class="container">
+		<div class="col-md-8 header-matter">
+			<div class="logo wow bounceInLeft animated">
+				<a href="index.html"><img src="images/big-logo.png" alt=""/></a>
 			</div>
+			<h1 class="wow bounceIn animated">An app that lets <span>blind</span> people read.</h1>
+				<form action="https://itunes.apple.com/us/app/voice-take-picture-have-it/id903772588" class="ap-but down wow fadeInUp animated">
+					<input type="submit" value="" />
+				</form>
+			
+		</div>
+		<div class="col-md-4 iphone wow bounceInRight animated" >
+			<img src="images/iphone.PNG" alt="" />
+		</div>	
+	</div>
+
 </div>
-<!-----------service------------>
-<!-- <div  class="sevice" id="service">
-	<div class="wrap">
-		<div class="service-grids">
-						<div class="images_1_of_4">
-					 		<img src="images/round1.png">
-					 		<h3>An intelligent time-saver.</h3>
-					 		<p>Running late for work? Just snap a photo of a newspaper article, put on your headphones, and let Voice do the reading for you while you drive peacefully.</p>
-				     		<div class="button"><span><a href="#">Read More</a></span></div>
-						</div>
-						<div class="images_1_of_4">
-							 <img src="images/round2.png">
-							 <h3>Simple interface</h3>
-							 <p>It takes 3 taps to go from opening the app to actually listening to it. All you have to do is snap a photo, click read, and that's it!</p>
-						     <div class="button"><span><a href="#">Read More</a></span></div>
-						</div>
-						<div class="images_1_of_4">
-							 <img src="images/round3.png">
-							 <h3>Awesome tech</h3>
-							 <p>Voice automatically scans your photos using OCR (Optical Character Recognition) technology, and starts using something called TTS (text-to-speech).</p>
-						     <div class="button"><span><a href="#">Read More</a></span></div>
-						</div>
-						<div class="clear"> </div>
-		 </div>
-</div> -->
-<!-----------//service//------------>
+<!-- Header Part Ends Here -->
 
-<!---------text-slider-------------->
-			
-		 <div class="wmuSlider example1" id="service">
-		 	<div class="wrap">
-			   <article style="position: absolute; width:64%; opacity: 0;"> 
-				   	
-					<div class="cont span_2_of_3">
-						    <h4>An intelligent reader.</h1>
-							<p class="hi">Printing things in Braille is expensive. As a result, so many newspaper articles and books are never printed in Braille. This tool allows blind people to listen to their books.</p>
-						 
-					</div>
-				</article>
-				 <article style="position: absolute; width:64%; opacity: 0;"> 
-				   	<div class="cont span_2_of_3">
-						    <h4>Simple interface</h4>
-						    <p class="hi">It takes 3 taps to go from opening the app to actually listening to it. Just snap a photo, click read, and that's it!</p>
-					</div>
-				 </article>
-				 <article style="position: absolute; width:64%; opacity: 0;"> 
-				   	<div class="cont span_2_of_3">
-						    <h4>Awesome tech</h4>
-						    <p class="hi">Voice automatically scans the photos using OCR (Optical Character Recognition) technology, and starts speaking it using a TTS engine (text-to-speech).</p>
-					</div>
-				 </article>
-				 <article style="position: absolute; width:64%; opacity: 0;"> 
-				   	<div class="cont span_2_of_3">
-						    <h4>Integrating technology with global issues</h4>
-						    <p class="hi">Voice is trying to use modern day technology like mobile phones and Optical Character Recognition to help with major global issues such as blindness.</p>
-					</div>
-				 </article>
-		 
-                  <script src="js/jquery.wmuSlider.js"></script> 
-					<script>
-       				     $('.example1').wmuSlider();         
-   					</script> 	           	      
-	         </div>
-	     </div>
-<!----------//text-slider------------>
-<!--------start-contact------------> 
- <div class="contact" id="contact">
-	<div class="wrap">
-		<h2>Contact</h2>				
- 				<h3>Email me at <a href="mailto:shalinvs@gmail.com" target="_blank">shalinvs@gmail.com</a> for any questions.</h3>
- 				<br>
- 				<center><h3>
-				<!-- tw -->
- 				<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.shalinshah.me/voice/" data-via="shlns" data-size="large">Tweet</a>
-				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
- 				<br>
-				<!-- fb -->
-				<div class="fb-like" data-href="http://www.shalinshah.me/voice/" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div>
- 				<br>
-				<a href="https://mixpanel.com/f/partner"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a>
- 				</h3></center>
+<div class="usage wow fadeInUp animated">
+	<div class="container">
+		<div class="col-md-4 feature-data">
+			<div class="feat-da-grid  wow bounceIn animated">
+				<h4>Simple to use</h4>
+				<p>It takes two taps to go from opening the app to actually listening to it. Just snap a photo, click read, and that's it!</p>
+			</div>
+			<div class="feat-da-grid  wow bounceIn animated">
+				<h4>Book Mode</h4>
+				<p>Take multiple pictures and Voice reads them one after another.</p>
+			</div>
+			<div class="feat-da-grid  wow bounceIn animated">
+				<h4>Voice-Over</h4>
+				<p>Easy user interface that is compatible with Voice-Over. Just switch Voice-Over on, and you're ready to go.</p>
+			</div>
+		</div>
+		<div class="col-md-4 feature-img wow bounceIn animated">
+			<img src="images/voice1.png" alt="" />
+		</div>
+		<div class="col-md-4 feature-data d_2">
+			<div class="feat-da-grid  wow bounceIn animated">
+				<h4>Filters</h4>
+				<p>Special filters for producing grayscale and color documents optimized to improve the OCR results and overall reading.</p>
+			</div>
+			<div class="feat-da-grid  wow bounceIn animated">
+				<h4>Customizable</h4>
+				<p>Change the speaking speed. There are three speeds that you can choose from.</p>
+			</div>
+			<div class="feat-da-grid  wow bounceIn animated">
+				<h4>Comparable OCR</h4>
+				<p>Comparable, if not better, OCR results to those of other expensive, paid services.</p>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
 
- 		<a class="mov-top" href="#home1"> <span> </span></a>
-					 <div class="clear"> </div>
-				</div>
-     </div>
-<!--------//end-contact------------>
+<div class="package wow fadeInUp animated">
+	<div class="container">
+		<div class="pack-text">
+			<h4>Integrating technology with global issues</h4>
+			<p>Voice is trying to use modern day technology like mobile phones and Optical Character Recognition to help with major global issues such as blindness.</p>
+		</div>
+		
+	</div>
+</div>
 
-<!-- scroll_top_btn -->
-		<script type="text/javascript" src="js/move-top.js"></script>
-		<script type="text/javascript" src="js/easing.js"></script>
-	    <script type="text/javascript">
-			$(document).ready(function() {
-			
-				var defaults = {
-		  			containerID: 'toTop', // fading element id
-					containerHoverID: 'toTopHover', // fading element hover id
-					scrollSpeed: 1200,
-					easingType: 'linear' 
-		 		};
-				
-				
-				$().UItoTop({ easingType: 'easeOutQuart' });
-				
-			});
-		</script>
-		<script type="text/javascript">
-		jQuery(document).ready(function($) {
-			$(".scroll").click(function(event){		
-				event.preventDefault();
-				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
-			});
-		});
-	</script>
+<div class="features wow fadeInUp animated" id="about">
+	<div class="container">
+		<div class="col-md-4 feature-data">
+			<div class="feat-da-grid  wow bounceIn animated">
+				<h4>Auto Capture</h4>
+				<p>This app takes the photo for you - automatically and precisely.</p>
+			</div>
+			<div class="feat-da-grid  wow bounceIn animated">
+				<h4>Smart Cropping</h4>
+				<p>Looks for documents and estimates the document area's boundary to make a decision about cropping.</p>
+			</div>
+			<div class="feat-da-grid  wow bounceIn animated">
+				<h4>Perspective Correction</h4>
+				<p>Two-dimensional geometric and three-dimensional perspective distortion correction. It straightens the scanned document before it gets processed and read.</p>
+			</div>
+		</div>
+		<div class="col-md-4 feature-img wow bounceIn animated">
+			<img src="images/voice2.png" alt="" />
+		</div>
+		<div class="col-md-4 feature-data d_2">
+			<div class="feat-da-grid  wow bounceIn animated">
+				<h4>High Picture Quality</h4>
+				<p>Camera matrix digital noise reduction and brightness/contrast equalization for better picture and OCR quality.</p>
+			</div>
+			<div class="feat-da-grid  wow bounceIn animated">
+				<h4>Reads By Columns</h4>
+				<p>Clever vertical and horizontal column detection and column-based reading - ex: newspapers and magazines</p>
+			</div>
+			<div class="feat-da-grid  wow bounceIn animated">
+				<h4>Useful Everyday</h4>
+				<p>Use it to read store signs and information boards, business cards, restaurant menus, museum placards, receipts, and business documents (i.e. forms, reports, statements, approvals), and more!</p>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
 
-		 <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
+<!-- Footer Part Starts here -->
+<div class="footer  wow bounceIn animated">
+	<div class="container">
+		<h3>Ready to try it?</h3>
+		<div class="ap-stor">
+			<a href="https://itunes.apple.com/us/app/voice-take-picture-have-it/id903772588"><img src="images/footer-app.PNG" alt=""/></a>
+		</div>
+		<div class="foot-bot">
+			<div class="mail wow fadeInLeft animated" data-wow-delay="0.5s" style="visibility: visible; -webkit-animation: fadeInLeft 0.5s;">
+				<h3>Email</h3>
+				<a href="mailto:shalinvs@gmail.com">shalinvs@gmail.com</a>
+			</div>
+			<div class="social wow fadeInRight animated" data-wow-delay="0.5s" style="visibility: visible; -webkit-animation: fadeInLeft 0.5s;">
+				<h3>Share</h3>
+				<ul class="social-list">
+					<li><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.shalinshah.me/voice/" data-via="shlns" data-size="large">Tweet</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></li>
+					<li><div class="fb-like" data-href="http://www.shalinshah.me/voice/" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"></div></li>
 
-		 <!-- Google Analytics -->
+				</ul>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<div class="foot-nav">
+		<ul>
+			<li><p>Voice 3.1. Copyright &copy; 2015 Shalin Shah.&nbsp;&nbsp;</p></li>
+			<li><a href="https://mixpanel.com/f/partner" target="_about"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- Google Analytics -->
 <script type="text/javascript">
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-34246687-1']);
@@ -233,5 +205,7 @@ var sc_security="ea83eacd";
 </script>
 <script type="text/javascript" src="http://www.statcounter.com/counter/counter.js"></script>
 <!-- /StatCounter -->
+
+<!-- Footer Part Ends here -->
 </body>
-</html>		
+</html>
