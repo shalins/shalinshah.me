@@ -20,6 +20,10 @@ body a:hover{
 	-ms-transition:0.5s all;
 	text-decoration:none;
 }
+ a.blog {
+ 	color: white;
+ 	border-bottom:2px solid white;
+ }
 /*-- Header Part Starts Here --*/
 .header{
 	background:url(../images/banner.jpg)no-repeat;
@@ -51,10 +55,36 @@ body a:hover{
 	color:#383838;
 	margin:0 0 4em 0;
 }
+/*.ap-lin {
+	width:229px;
+	height:61px;
+
+	display:inline-block;
+	border:0;
+	vertical-align: text-bottom;
+	margin-right: 1em;
+}*/
+
+.ap-lin{
+	margin-top:5em;
+}
+.ap-lin a img{
+	width:229px;
+	display:inline-block;
+	border:0;
+	vertical-align: text-bottom;
+	margin-right: 1em;
+}
+.ap-lin a img:hover{
+	opacity:0.8;
+	transition: 0.5s all;
+}
+
+
 form.ap-but input[type="submit"]{
 	width:229px;
 	height:61px;
-	background:url(../images/ap-but.png)no-repeat;
+	background:url(../images/ap-but.png) no-repeat;
 	display:inline-block;
 	cursor:pointer;
 	border:0;
