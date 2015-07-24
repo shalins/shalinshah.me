@@ -19,5 +19,4 @@ As time passes, it becomes the past, right? Our brains, although it may feel lik
 
 So we may not live completely in the past, but we are living in the past by 80 ms.
 
-What do you think?
-
+This was just something I thought was cool.
