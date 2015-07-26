@@ -24,7 +24,7 @@
     <meta name="description" content="{{ meta_desc }}">
     <meta property="og:description" content="{{ meta_desc }}" />
   <!-- Beautifulizing this site -->
-    {% if page.class == "portfolio" %} <link href="/css/portfolio.css" rel="stylesheet"> {% endif %} 
+    {% if page.class == "projects" %} <link href="/css/portfolio.css" rel="stylesheet"> {% endif %} 
        <link href="/css/style6.css" rel="stylesheet">    
       <link href="/css/normalize.css" rel="stylesheet">    
     <link href="/css/style.css" rel="stylesheet">    
@@ -83,7 +83,7 @@
 <body id="page-journal" class="journal-contact">
 {% elsif page.class == "about" %}  
 <body id="page-journal" class="journal-about">
-{% elsif page.class == "portfolio" %}  
+{% elsif page.class == "projects" %}  
 <body id="page-journal" class="journal-portfolio">
 {% else %} 
 <body>
@@ -112,7 +112,7 @@
             <ul>
               <li class="home"><a href="/">Home</a></li>
               <li><a href="/blog/">Blog</a></li>
-              <li><a href="/portfolio/">Portfolio</a></li>
+              <li><a href="/projects/">Projects</a></li>
               <li><a href="/about/">About</a></li>
               <li><a href="/contact/">Contact</a></li>
               <li><a href="/resume.pdf">Resume</a></li>
@@ -136,12 +136,12 @@
       <section id="content-wrapper-blog">
       {% elsif page.class == "blog" %}
       <section id="content-wrapper">
-      {% elsif page.class == "portfolio" %}
+      {% elsif page.class == "projects" %}
       {% else %}
       <section id="content-wrapper-two">
       {% endif %}
 
-      {% if page.class == "portfolio" %}
+      {% if page.class == "projects" %}
         {{ content }}
       {% else %}
         <div class="container">
@@ -153,7 +153,7 @@
         </div><!-- /container -->
       {% endif %}
 
-      {% if page.class == "portfolio" %}
+      {% if page.class == "projects" %}
       {% else %}
       </section>
       {% endif %}
@@ -245,7 +245,7 @@ var sc_security="ea83eacd";
       <nav>
         <ul>
           <li><a href="/blog/">Blog</a></li>
-          <li><a href="/portfolio/">Portfolio</a></li>
+          <li><a href="/projects/">Projects</a></li>
           <li><a href="/about/">About</a></li>
           <li><a href="/contact/">Contact</a></li>
           <li><a href="/resume.pdf">Resume</a></li>
