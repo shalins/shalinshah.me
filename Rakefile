@@ -17,7 +17,7 @@ end
 
 desc "Watch-compile jekyll site"
 task :jekyll do
-  sh "jekyll serve --watch --port 2000"
+  sh "jekyll serve --watch"
 end
 
 # desc "Watch-compile SCSS with Compass"

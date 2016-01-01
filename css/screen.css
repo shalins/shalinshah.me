@@ -899,6 +899,11 @@ p.gray {color:#444948;}
  background-color: #1a1924;
  padding:6em 0} 
 
+ #page-journal .journal-header-newyear{
+ text-align:center; 
+ background-color: #00e5ff;
+ padding:6em 0} 
+
 #page-journal .journal-header-twentytwelve{
  text-align:center; 
  background-color: #e74c3c;
@@ -1011,6 +1016,9 @@ body.journal-ubuntumac header{
 
 body.journal-mgwu header{
  background: #1a1924}
+
+body.journal-newyear header{
+ background: #00e5ff}
 
 body.journal-twentytwelve header{
  background: #e74c3c} 

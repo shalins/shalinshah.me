@@ -26,18 +26,13 @@
 
 Author: Shalin Shah
 Email: shalinvs@gmail.com
-Site: http://www.shalinvs.tk/
+Site: http://www.shalinshah.me/
 
 
 /* INFORMATION */
 
   Twitter: @shlns
-  Facebook: http://www.facebook.com/shalinvs
   Linkedin: http://www.linkedin.com/in/shalins
-  Dribbble: http://www.dribbble.com/sln
-  Google +: https://plus.google.com/u/0/105718561776352763084/posts
-  Pinterest: http://www.pinterest.com/shal1n
-
 
 
 Copyright (c) 2012 Shalin Shah. All Rights Reserved.                        

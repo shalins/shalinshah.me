@@ -1,12 +1,10 @@
 ---
-layout: post
+layout: article
+class: article
 title: "My Internship Experience"
-image: /stuff/MGWU.png
+image: /stuff/mgwu.png
 identity: mgwu
-tags:
-- Me
-- Internships
-- Experiences
+
 ---
 
 

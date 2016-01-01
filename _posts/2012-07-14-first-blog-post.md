@@ -1,12 +1,12 @@
 ---
 old: true
-layout: post
+layout: article
+class: article
 image: /images/illustrations/book.png
 identity: first
 background: first-post
 title: "First Blog Post"
-tags:
-- Me
+
 ---
 
 

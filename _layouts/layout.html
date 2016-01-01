@@ -39,24 +39,25 @@
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]--> 
-  {% if page.class == "post" %}
-    <!-- Page-specific css -->
-    <link rel="stylesheet" type="text/css" href="{{ page.style }}" />
-    {% endif %}
+    {% if page.class == "article" %} <link rel="stylesheet" type="text/css" href="/css/typography.css" />
+ {% endif %} 
+
+
+
 <!-- The site icons -->
   <link rel="Shortcut Icon" type="image/x-icon" href="/images/favicon.png" />
   <meta property="og:image" content="/images/favicon.png" />
 <!-- Yep, I built this site -->
-  <link type="text/plain" rel="author" href="http://www.shalinvs.tk/me.txt" />
+  <link type="text/plain" rel="author" href="http://www.shalinshah.me/me.txt" />
   <link href="https://plus.google.com/105718561776352763084/posts" relc="author" />
-  <meta property="article:author" content="http://www.shalinvs.tk/about/" />
-  {% if page.class == "post" %}
+  <meta property="article:author" content="http://www.shalinshah.me/about/" />
+  {% if page.class == "article" %}
 <!-- Meta canonicals for SEO -->  
-  <link rel="canonical" href="http://www.shalinvs.tk/{{ page.url }}/" />
-  <meta property="og:url" content="http://www.shalinvs.tk{{ page.url }}/" />
+  <link rel="canonical" href="http://www.shalinshah.me/{{ page.url }}/" />
+  <meta property="og:url" content="http://www.shalinshah.me{{ page.url }}/" />
   {% elsif page.class == "blog" %}
-  <link rel="canonical" href="http://www.shalinvs.tk/" />
-  <meta property="og:url" content="http://www.shalinvs.tk/" />
+  <link rel="canonical" href="http://www.shalinshah.me/" />
+  <meta property="og:url" content="http://www.shalinshah.me/" />
   {% endif %}
 <!-- Content Type -->
   <meta property="og:type" content="article" />
@@ -73,7 +74,7 @@
       var h=document.getElementsByTagName("html")[0];h.className+=" page-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)page-loading(\s|$)/g," ");h.className+=" page-inactive"},config.scriptTimeout);})();
   </script>
 </head>
-{% if page.class == "post" %}
+{% if page.class == "article" %}
 <body id="page-journal"  class="journal-{{ page.identity }}">
 {% elsif page.class == "blog" %}  
 <body id="page-home">
@@ -126,13 +127,13 @@
         {% endif %}
       </header>
 
-      {% if page.class == "post" %}
+      {% if page.class == "article" %}
       <div class="journal-header-{{ page.identity }}">
         <img src="{{ page.image }}" width="190" height="190">
       </div>
       {% endif %}
 
-      {% if page.class == "post" %}
+      {% if page.class == "article" %}
       <section id="content-wrapper-blog">
       {% elsif page.class == "blog" %}
       <section id="content-wrapper">
@@ -172,7 +173,7 @@
       {{ page.demo }}
       {% endif %}
 
-      {% if page.class == "post" %}
+      {% if page.class == "article" %}
       <!-- Facebook -->
         <div id="fb-root"></div>
         <script>(function(d, s, id) {

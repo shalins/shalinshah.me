@@ -1712,13 +1712,16 @@ li.box a:hover{
 	width:100%;
 	}
 p.variation{
-	color:#838383;
-	font-size:15px;
+	color:#303030;
+	font-size:17px;
 	margin:0 0 2em;
 	line-height:30px;
 	font-family: 'Raleway', sans-serif;
 	font-style:normal;
 	}
+p.variation a {
+	color:#0093C4;
+}
 p.variation span{
 	display:block;
 	margin: 1em 0 0;

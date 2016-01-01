@@ -1,11 +1,10 @@
 ---
-layout: post
+layout: article
+class: article
 title: "We all live in the past"
 image: /images/illustrations/clock.png
 identity: past
-tags:
-- Me
-- Thoughts
+
 hn: http://news.ycombinator.com/item?id=4886914
 ---
 

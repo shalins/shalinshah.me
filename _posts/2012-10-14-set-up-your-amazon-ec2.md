@@ -1,12 +1,10 @@
 ---
-layout: post
+layout: article
+class: article
 title: "Set Up Your Amazon EC2"
 image: /stuff/iterm2.png
 identity: ec2
-tags:
-- Tutorial
-- Tips and Tricks
-- Coding
+
 ---
 
 So, if you want have an Amazon EC2 instance to run <a href="http://www.wordpress.org/" target="_blank">Wordpress</a> or simply a website you made, you can do that for cheap using Amazon's <a href="http://aws.amazon.com/ec2/" target="_blank">Elastic Compute Cloud</a> (EC2). So let's get right into it! You will be using the command line for this (or PuTTY), but if you don't know, that's okay, because I'll cover that. 
